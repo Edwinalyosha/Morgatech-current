@@ -1,0 +1,154 @@
+.pg-fade{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    z-index:101;
+    opacity:0;
+    pointer-events:none;
+    transition:0.4s ease-out;
+}
+
+.pg-fade.is-active{
+    opacity:1;
+    pointer-events:all;
+}
+
+.pg-left{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    left:-110%;
+    z-index:101;
+    transition:0.4s ease-out;
+}
+
+.pg-left.is-active{
+    left:0;
+}
+
+.pg-right{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    right:-110%;
+    z-index:101;
+    transition:0.4s ease-out;
+}
+
+.pg-right.is-active{
+    right:0;
+}
+
+.pg-up{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    top:-100%;
+    z-index:101;
+    transition:0.4s ease-out;
+}
+
+.pg-up.is-active{
+    top:0;
+}
+
+.pg-down{
+    position:fixed;
+    width:100vw;
+    height:100vh;
+    bottom:-100%;
+    z-index:101;
+    transition:0.4s ease-out;
+}
+
+.pg-down.is-active{
+    bottom:0;
+}
+
+.loader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader p {
+    position: absolute;
+    transform: translate3d(110px,15px,0);
+    font-size: clamp(1.5rem, 4.5vw, 3rem);
+    text-align: center;
+    width: 100%;
+}
+
+@media screen and (min-width:780px){
+    .loader p {
+        transform: translate3d(-330px,20px,0);
+        /* transform: translateX(-330px); */
+    }
+}
+
+
+
+/* now to handle the loadeing animation  */
+
+.cont{
+    width: clamp(100px, 20vw, 200px);
+}
+
+
+
+/* the animation is only placed on the div when it the cover is active to reduce the jerks on consecutive loads */
+
+.is-active .loading{
+    width: clamp(50px, 10vw, 100px);
+    height: clamp(50px, 10vw, 100px);
+    background-image:url("images/gear.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-radius:50%;
+    animation:load-anim 3s ease-in-out infinite;
+    animation-fill-mode:both;
+    animation-play-state:running;
+}
+
+
+@keyframes load-anim{
+
+    /* this animation reverses itself so there is no need to place the animation direction for reverse  */
+    0%{
+        transform:rotate(0);
+    }
+
+
+    50%{
+        transform:rotate(-360deg);
+    }
+
+
+    100%{
+        transform:rotate(180deg);
+    }
+
+    /* this animation reverses itself so there is no need to place the animation direction for reverse  */
+}
+
+@media only screen and (max-width:750px){
+    .loading{
+        position:absolute;
+        top:35vh;
+    }
+
+    .loader p{
+        top:45vh;
+        right:33vw;
+    }
+
+    .is-active .loading{
+        height:20vw;
+        width:20vw;
+    }
+
+}

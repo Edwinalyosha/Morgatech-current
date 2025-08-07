@@ -1,0 +1,155 @@
+#pg-title h1{
+    color:#081B46;
+    padding:10px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
+#pg-title .container{
+    margin-left:0;
+}
+
+.layers{
+    margin:5px;
+    position:relative;
+    height:fit-content;
+}
+
+.layers p{
+    margin-bottom:1px;
+}
+
+@media only screen and (min-width: 770px){
+    #pg-title h1{
+        background-color:#081B46;
+        color:white;
+        padding:10px;
+        border-radius:10px;
+        font-weight:300;
+        z-index:11;
+    }
+    #pg-title .col{
+        position:relative;
+    }
+    
+    #pg-title h1{
+        letter-spacing:-1px;
+        position:absolute;
+        right:8%;
+        top:18px;
+    }
+
+    .layers{
+        margin:5px;
+        position:relative;
+        top:40px;
+        height:fit-content;
+    }
+
+    .layers .card{
+        z-index:10;
+    }
+}
+
+.img-header{
+    width:100%;
+    background-image: url("img/morg-1.avif");
+    background-size:cover;
+    height:50vh;
+}
+
+.img-header h3{
+    padding:10px;
+    background-color:rgba(180,180,220,0.7);
+    width:fit-content;
+    font-weight: bolder;
+    font-size:xx-large;
+}
+
+.layers .card{
+    padding:10px;
+    border-radius:5px;
+    
+}
+
+@media only screen and (min-width: 770px){
+    .img-header{
+        max-width:65%;
+        background-image: url("img/morg-2.avif");
+        background-position: right;
+        background-size:cover;
+        height:75vh;
+        margin:5vh auto 7vh 3vw;
+    }
+
+    .img-header h3{
+        transform: translate(-15px, -15px);
+    }
+
+    .layers .card{
+        border-radius:10px;
+        width:40vw;
+        position:absolute;
+        right:10px;
+        bottom:-60px;
+    }
+}
+
+#wwd{
+    background-image:linear-gradient(#e4e9fd,#e6ebfd);
+    overflow-y:hidden;
+    position:relative;
+}
+
+#wwd img{
+    display:flex;
+    align-self:center;
+}
+@media only screen and (max-width:760px){
+    #wwd img{
+        display:none;
+    }
+}
+
+@media only screen and (min-width:760px){
+    #wwd img{
+        position:relative;
+        top:15%;
+        width:120%;
+        transform:translateX(-15%);
+        z-index:0;
+    }
+
+    #wwd .order-md-1{
+        z-index:100;
+    }
+    #wwd .order-md-2{
+        z-index:0;
+    }
+
+}
+
+.join-our-team {
+    text-align: center;
+    padding: 7vh 10vw;
+    background-color: #f8f8f8;
+}
+
+.join-our-team h1 {
+    margin-bottom: 5vh;
+    text-decoration: underline;
+}
+
+.join-our-team p {
+    line-height: 1.6;
+    max-width:70vw;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .join-our-team p {
+        max-width:80vw;
+    }
+}

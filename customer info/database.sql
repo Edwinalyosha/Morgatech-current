@@ -1,0 +1,6 @@
+CREATE TABLE expiring_links (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    token VARCHAR(255) NOT NULL UNIQUE,
+    expiration_time DATETIME NOT NULL
+);

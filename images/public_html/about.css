@@ -1,0 +1,80 @@
+#pg-title h1, #contacts h2{
+    letter-spacing:-1px
+}
+
+#pg-title{
+    background-image:radial-gradient(at right, #00B9f1 15%, #081B46 85%);
+    background-image:-moz-radial-gradient(at right, #00B9f1 15%, #081B46 85%);
+}
+
+.morg-img picture, .morg-img img{
+    width:18rem;
+}
+
+#why-us .crd-img{
+    width:25vw;
+}
+
+#wwd{
+    background-image:linear-gradient(#e4e9fd,#e6ebfd);
+    overflow-y:hidden;
+}
+
+#wwd img{
+    display:flex;
+    align-self:center;
+}
+
+@media only screen and (max-width:760px){
+    #wwd img{
+        max-width:15rem;
+    }
+
+}
+
+@media only screen and (min-width:760px){
+    #wwd img{
+        position:relative;
+        top:15%;
+        width:120%;
+        transform:translateX(-15%);
+        z-index:0;
+    }
+
+    #wwd .order-md-1{
+        z-index:100;
+    }
+    #wwd .order-md-2{
+        z-index:0;
+    }
+
+}
+
+@media only scren and (max-width:700px){
+    .why-us img{
+        max-width:60vw !important;
+    }
+}
+
+.join-our-team {
+    text-align: center;
+    padding: 10vh 10vw 7vh;
+    background-color: #f8f8f8;
+}
+
+.join-our-team h1 {
+    margin-bottom: 5vh;
+    text-decoration: underline;
+}
+
+.join-our-team p {
+    line-height: 1.6;
+    max-width:70vw;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .join-our-team p {
+        max-width:80vw;
+    }
+}

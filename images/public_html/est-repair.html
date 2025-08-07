@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/430632a012.js" crossorigin="anonymous"></script>
+
+    <meta name="description" content="Car repair cost estimator tool for a first online estimate">
+    <meta name="geo.region" content="US-MD" />
+    <meta name="geo.placename" content="Beltsville" />
+    <meta name="geo.position" content="39.05;-76.9" />
+    <meta name="subject" content="Car engine Repair services">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="General">
+    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="creator" content="Edsites">
+    <meta name="publisher" content="Edsites">
+    <meta itemprop="name" content="Morgatech Repair estimator">
+    <meta itemprop="description" content="Estimator tool for car repair costs built to give the customer an online repair estimate.">
+    <meta itemprop="image" content="https://morgatechauto.com/services/auto%20electrical.html">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Morgatech Car repair estimator tool">
+    <meta property="og:description" content="Estimator tool for car repair costs built to give the customer an online repair estimate.">
+    <meta property="og:image" content="https://morgatechauto.com/images/logo%20word1.png">
+    <meta property="og:url" content="https://morgatechauto.com/est-repair.html">
+    <meta property="og:type" content="webpage">
+
+    <title>Morgatech Estimator</title>
+    <link rel="icon" type="image/x-icon" href="images/logo word1.png">
+</head>
+
+<body>
+   
+
+    <!-- back to top button-->
+    <button id="backToTop" class="hidden"><i class="fas fa-arrow-up"></i></button>
+
+    <!--now the info bar  (stuck to the top)-->
+
+    <section class="infobar bg-blue-s">
+      <div class="container">
+        <div class="row align-content-center">
+          <div class="col col-12 info text-center">
+            <span> <a href="https://maps.app.goo.gl/5y6Vwa86yKJ6djPV9"><i class="fa-solid fa-location-dot fa-2xl"></i>&nbsp;</a></span>
+
+          <span><a href="tel:13014774113" class="no-decor"><i class="fa-solid fa-phone-flip fa-2xl"></i> &nbsp; </a></span>
+
+            <span id="times"><i class="fa-regular fa-clock fa-2xl"></i>&nbsp;</span>
+            <span>M-F: 8am-6pm <br> Sat: 8am-5pm </span>
+
+            <span><a href="https://wa.me/12403545427" class="no-decor"><i class="fa-brands fa-whatsapp fa-2xl"></i>&nbsp;</a></span>
+
+           <span > 
+            <a href="https://www.facebook.com/Morgatech-auto-llc-107460814213988/" class="no-decor pr-2" target="_blank">
+              <i class="fa-brands fa-facebook fa-2xl"></i> &nbsp;
+            </a></span>
+            
+            <span>
+            <a href="https://www.yelp.com/biz/morgatech-auto-beltsville" class="no-decor" target="_blank"><i class="fa-brands fa-yelp fa-2xl"></i></a>
+
+          </span>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+      <!-- now tha navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-pr1 py-0">
+        
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="images/logo word1.png" alt=" morgatech" class="maxw-md-10vw max-w7em ml-4vw"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav mb-2 mb-lg-0 ml-auto mr-4vw">
+                <li class="nav-item">
+                  <a class="nav-link fs-5" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fs-5 " aria-current="page" href="about.html">About us</a>
+                </li>
+                <li class="nav-item">
+                  <div class="btn-group">
+                    <a href="services.html" class="no-decor"> <button type="button" class="btn fs-5 nav-link ">Services</button></a>
+                   
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="services/Car maintenance essentials.html">Car maintenance essentials</a></li>
+                      <li><a class="dropdown-item" href="services/auto electrical.html">Auto Electrical Services</a></li>
+                      <li><a class="dropdown-item" href="services/engine.html">Engine Services</a></li>
+                      <li><a class="dropdown-item" href="services/Exhaust Services.html">Exhaust services</a></li>
+                      <li><a class="dropdown-item" href="services/heating and Air conditioning.html">Heating and Air conditioning</a></li>
+                      <li><a class="dropdown-item" href="services/Tire Services.html">Tire Services</a></li>
+                      <li><a class="dropdown-item" href="services/Transmission.html">Transmission Services</a></li>
+                      
+                    </ul>
+                  </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link fs-5" aria-current="page" href="contact.html">Contact Us</a>
+                </li>
+                  
+              </ul>
+              
+            </div>
+          </div>
+        </nav>
+        
+        <h1 class=" sec display-5 fw-bold px-5vw"> Auto Repair Cost Estimator</h1>
+        <p class="estimator-intro">This repair estimator provides a maximum and minimum cost estimates for repair jobs for this area code. Simply fill the estimator form below which will take you about <span class="fw-bolder">less than a minute.</span> Our prices at morgatech auto are <span class="fw-bolder">always below the minimum estimate generated.</span> </p>
+        <iframe id="estimator-widget-preview" style="width: 100%; min-height: 700px; border: none;" src="https://repairpal.com/estimator_widgets/v3/embedded?service_location_id=425248"/>
+
+        
+        <footer>
+          <div class="container pt-4">
+            <div class="row justify-content-center">
+              <div class="col-lg-4 col-md-12 mb-4">
+                <img src="images/logo word1.png" alt="logo" class="maxw-md-15vw max-w50vw mx-auto pb-2vh pt-2vh d-flex">
+                <p class="text-center fs-3 fw-lighter">
+                  We'll fix it for you.
+                </p>
+              </div>
+              <div class="col-lg-5 col-sm-5 col-6 mb-4 links">
+                <h5 class="mb-3 title">BROWSE</h5>
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="index.html" >Home</a>
+                  </li>
+                  <li >
+                    <a href="about.html" >About us</a>
+                  </li>
+                  <li >
+                    <a href="services.html" >Our services</a>
+                  </li>
+                  <li>
+                    <a href="contact.html" >Contact us</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-sm-5 col-7 mb-4">
+                <h5 class=" title">OPENING HOURS</h5>
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Mon - Fri:</td>
+                      <td>8am - 6pm</td>
+                    </tr>
+                    <tr>
+                      <td>Sat - Sun:</td>
+                      <td>8am - 5pm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-between" style="background-color: rgba(0, 0, 0, 0.2);">
+            <div class="text-center p-3 col-6" >
+              © 2024 Copyright:
+              <a href="index.html">Morgatech Auto Repair</a>
+            </div>
+            <div class="text-center p-3 col-6" >
+              Website Powered by 
+              <img src="images/logo 2w.png" alt="" class="maxw-7vw">
+            </div>
+          </div>
+          
+          <!-- Copyright -->
+        </footer>
+        
+        
+                  
+        
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "AutoRepair",
+            "name": "Morgatech Auto",
+            "image": "https://morgatechauto.com/images/logo%20word1.png",
+            "@id": "",
+            "url": "https://morgatechauto.com/",
+            "telephone": "13014774113",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Ammendale road",
+              "addressLocality": "Ammendale",
+              "addressRegion": "MD",
+              "postalCode": "2705",
+              "addressCountry": "US"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 39.0526308,
+              "longitude": -76.92257339999999
+            },
+            "openingHoursSpecification": [{
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:00",
+              "closes": "18:00"
+            },{
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "08:00",
+              "closes": "17:00"
+            }] 
+          }
+          </script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="loader.js "></script>
+        <script src="index.js "></script>
+        </body>
+    </html>

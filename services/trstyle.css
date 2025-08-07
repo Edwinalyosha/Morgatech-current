@@ -1,0 +1,24 @@
+.list-container {
+    width: 300px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    transition: all 0.5s ease;
+}
+
+.title, img {
+    cursor: pointer;
+}
+
+.list-content {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+/* When expanded, increase max-height to an arbitrary large value to show all content */
+.list-container.expanded .list-content {
+    max-height: fit-content; /* Adjust this value based on the content size */
+}

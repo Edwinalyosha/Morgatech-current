@@ -1,0 +1,167 @@
+#pg-title h1, #contacts h2{
+    letter-spacing:-1px
+}
+
+#pg-title{
+    background-image:radial-gradient(at right, #00B9f1 15%, #081B46 85%);
+    background-image:-moz-radial-gradient(at right, #00B9f1 15%, #081B46 85%);
+}
+
+#pg-title.s{
+    background-image:radial-gradient( at bottom, #00B9f1, transparent 250px);
+    background-image:-moz-radial-gradient(at right, #00B9f1 15%, #081B46 85%);
+}
+
+
+
+.dropdown-menu{
+    width: max-content;
+}
+
+.drop-link{
+    font-weight:lighter;
+    text-decoration:none;
+    padding-left:1vw;
+    padding-right:2vw;
+    color:initial;
+}
+
+#serv-nav{
+    height:fit-content;
+}
+
+@media only screen and(max-width:790px){
+    #serv-nav{
+        padding-left:5w;
+    }
+}
+
+#serv-nav *{
+    text-align:left;
+}
+
+@media only screen and (max-width:770px){
+    .serv-drop{
+        display:none;
+    }
+
+    .serv-drop.active{
+        display:initial;
+    }
+
+    #serv-nav:hover .serv-drop{
+        display:initial;
+    }
+
+    #serv-nav{
+        padding-left:5vw;
+        order:2;
+    }
+
+    #serv-full{
+        padding-top:0;
+        order:1;
+    }
+}
+
+/* now the code to make the service cards act as i wish*/
+.services-container {
+    display: inline-flex;
+    flex-wrap: wrap; /* This allows items to wrap to the next line as needed */
+    justify-content: space-between; /* Adjusts spacing between the cards */
+    align-items: stretch; /* Ensures cards of unequal heights align neatly */
+    padding: 10px;
+    gap: 10px; /* Adds space between cards */
+    margin-bottom:3vh;
+
+  }
+
+.service-card {
+    border: 1px solid #ccc;
+    width: 25vw;
+    position: relative;
+    overflow: visible;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.service-card .fs-3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.7);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    z-index: 2; /* Ensure the title is always visible */
+}
+
+.service-card .list-content {
+    transform: translateY(100%); /* Starts off-screen below the card */
+    opacity: 0; /* Initially invisible */
+    width: 100%;
+    background-color: rgba(50, 50, 50, 0.7);
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    position: absolute;
+    bottom: -100%; /* Position it right below the card */
+    left: 0;
+    z-index: 10; /* Ensure it is under the heading */
+    list-style: none; /* No bullets */
+    pointer-events: none;
+}
+
+.service-card:hover .list-content {
+    transform: translateY(0); /* Bring it into view */
+    opacity: 1; /* Make it fully visible */
+    pointer-events:initial;
+}
+
+.service-card:hover .fs-3 {
+    display: none;
+}
+
+@media only screen and (max-width:700px){
+    .service-card{
+        width:80%;
+        margin-left: auto;
+        margin-right:auto;
+    }
+}
+
+#services .container{
+    padding: 5vh 5vw;
+}
+
+.service-cta{
+    font-weight:bold;
+    margin-top:7px;
+    padding:10px;
+    border: 3px #580a81 solid;
+    border-radius:15px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:fit-content;
+}
+
+#more-info {
+    padding-top:4vh;
+}
+
+.cta{
+    margin-top:3vh;
+}
+

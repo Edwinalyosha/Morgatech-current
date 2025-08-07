@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^estimator_widget_v3/load_setup.js$ proxy.php [L]
+

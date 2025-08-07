@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Expiring Link</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    #logohead{
+        width:15vw;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input[type="email"] {
+      padding: 10px;
+      font-size: 1em;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    button {
+      padding: 10px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #580a81;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-bottom:1.5em;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .message {
+      margin-top: 15px;
+      font-size: 0.9em;
+      color: #333;
+    }
+
+    .link-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.link-container {
+    display:block;
+    text-align:left;
+}
+
+#separateLinkField {
+  width: calc(100% - 50px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  color: #888;
+  box-sizing: border-box;
+}
+
+#separateCopyButton {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #83768a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#separateCopyButton:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="../images/logo word1.png" alt=" Morgatech" id="logohead">
+    <h1>Generate Expiring Link</h1>
+    <form id="requestForm">
+      <input type="email" id="email" placeholder="Enter client's email" required />
+      <button type="submit">Request Link</button>
+    </form> 
+    <div class="link-container">
+        <h3>Your link:</h3>
+        <input type="text" id="separateLinkField" disabled placeholder="Generated link will appear here">
+        <button id="separateCopyButton" title="Copy to clipboard">
+          📋
+        </button>
+      </div>
+      <div id="message"></div>
+      
+  </div>
+
+  <script>
+    document.getElementById('requestForm').addEventListener('submit', async function (e) {
+      e.preventDefault(); // Prevent default form submission
+
+      // Get the email from the input field
+      const email = document.getElementById('email').value;
+
+      // Message display element
+      const messageDiv = document.getElementById('message');
+
+      try {
+        // Send the request to the backend
+        const response = await fetch('https://morgatechauto.com/customer%20info/customerinfo/request-link', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email }),
+        });
+
+        // Process the response
+        if (response.ok) {
+          const result = await response.json();
+          messageDiv.textContent = `Link generated successfully!`;
+          messageDiv.style.color = 'green';
+          populateSeparateLinkField(result.link);
+        } else {
+          throw new Error('Failed to generate the link.');
+        }
+      } catch (error) {
+        messageDiv.textContent = error.message;
+        messageDiv.style.color = 'red';
+      }
+    });
+
+    // Function to populate the separate field with the link
+function populateSeparateLinkField(link) {
+  const separateLinkField = document.getElementById("separateLinkField");
+  const separateCopyButton = document.getElementById("separateCopyButton");
+
+  // Populate the link field and enable it
+  separateLinkField.value = link;
+  separateLinkField.disabled = false;
+
+  // Enable the copy button
+  separateCopyButton.disabled = false;
+}
+
+
+
+
+// Add event listener for the copy button
+document.getElementById("separateCopyButton").addEventListener("click", function () {
+  const separateLinkField = document.getElementById("separateLinkField");
+  
+  // Select and copy the link text
+  separateLinkField.select();
+  separateLinkField.setSelectionRange(0, 99999); // For mobile devices
+
+  try {
+    navigator.clipboard.writeText(separateLinkField.value);
+    alert("Link copied to clipboard!");
+  } catch (err) {
+    alert("Failed to copy the link.");
+  }
+});
+
+  </script>
+</body>
+</html>

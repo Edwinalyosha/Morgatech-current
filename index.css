@@ -1,0 +1,432 @@
+*{
+    font-size: 12pt;
+    line-height:24pt;
+}
+
+.bg-img {
+    background-image: url("img/bg\ img\ 3_9-16.avif");
+    background-size: cover;
+    background-position:center;
+    min-height:70vh;
+    padding-left:3vw;
+    color:#f4f4f6;
+
+}
+
+.bg-img .container{
+    box-sizing: border-box;
+    height:70vh;
+    position:relative;
+    bottom:0;
+
+}
+
+.hero-content{
+    position: absolute;
+    bottom:0;
+    height:fit-content;
+    padding: 2em;  
+}
+
+@media only screen and (min-width: 770px){
+    .bg-img {
+    background-image: url("img/bg\ img\ 3_16-9.avif");
+    background-size: cover;
+    min-height:87vh;
+    
+}
+
+.bg-img .container{
+    height: 87vh;
+    }
+}
+
+.serve:nth-of-type(1), .serve:nth-of-type(2) {
+    margin-bottom:5vh;
+}
+
+@media only screen and (max-width: 900px){
+    .serve:nth-of-type(1), .serve:nth-of-type(2) {
+        margin-bottom: initial;
+    }
+
+    .serve {
+        max-width: 70vw;
+    }
+
+    .serve > h3 {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        /*width: fit-content;*/
+        align-self: center;
+        font-weight:0.4em;
+    }
+    
+    .serve>p{
+        opacity: 0.8;
+    }
+}
+
+
+.services{
+    padding-top:1rem;
+    padding-bottom:3rem;
+}
+
+.services .serve:after {
+    content: " ";
+    height: 0.3vh;
+    background-color: #081B46;
+    display: block;
+    width: 100%;
+    max-width: 25vw;
+    margin-top: 1vh;
+}
+
+.services h3{
+    margin-top:1rem;
+}
+
+.services .col {
+    padding-right: 3vw;
+}
+
+.offers .col {
+    border: 2px #f4f4f6 solid;
+}
+
+
+.fade{
+    animation: fades 7s;
+    animation-fill-mode: backwards;
+    -webkit-animation: fades 7s;
+    -moz-animation: fades 7s;
+    -o-animation: fades 7s;
+}
+
+@keyframes fades{
+    0%{opacity:0;}
+    10%{opacity:1;}
+    95%{opacity:1;}
+    100%{opacity:0;}
+}
+
+
+#hdln1 h2,#hdln2 h2, #hdln3 h2{
+    letter-spacing:-2%;
+}
+
+@media only screen and(min-width:900px){
+    #hdln1 h2,#hdln2 h2, #hdln3 h2{
+        line-height:70px;
+        color: red;
+    }
+    
+}
+
+#hiring{
+    display:none; /*initially*/
+    position:relative;
+    left:65vw;
+    bottom:2vh;
+    width:18rem;
+    background-color:#f4f4f6;
+    opacity:0.85;
+    padding:1vw;
+    padding-top:5vh;
+    text-align:center;
+}
+
+#hiring.d-md-block{
+    top:-100px;
+}
+
+#hiring *{
+    font-size:10pt;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+#hiring h4{
+    color:#081B46;
+    font-weight: bolder;
+    font-size:14pt;
+}
+
+#hiring img{
+    height:4rem;
+    position: absolute;
+    top:-25%;
+    right:35%;
+}
+
+#hiring p{
+    padding-top:1.5rem;
+}
+
+#hiring a:hover{
+    color:white;
+}
+
+.fade-in{
+    animation: fadeIn 3s;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+}
+
+@keyframes fadeIn{
+    0%{opacity:0;}
+    100%{opacity:1;}
+   
+}
+
+@media only screen and (max-width:780px){
+    #hiring{
+        position:relative;
+        left:0;
+        bottom:0;
+        width:18rem;
+        margin:5vh auto 0 auto;
+        padding-top:5vh;
+    }
+
+    #hiring img{
+        height:4rem;
+        position: absolute;
+        top:-25%;
+    }
+
+    #hiring p{
+        padding-top:.5rem;
+    }
+}
+
+#intro{
+    padding-top:3rem;
+    padding-bottom:1.5rem;
+}
+
+#intro h2{
+    font-size:2.4rem;
+    margin-bottom:0;
+    
+}
+@media only screen and (min-width:791px){
+    .intro-text{
+        margin-top:20%;
+        }
+
+    .intro-text .bg{
+        background-color:rgba(200,200,220,0.6);
+        padding:11px;
+        border-radius:7px;
+    }
+}
+
+
+/* 
+.morg-img picture, .morg-img img{
+    width:18rem;
+} */
+
+
+.ratings{
+    padding-top:1.5rem;
+}
+
+.offers{
+    padding-top:5vh;
+}
+
+.offers .col{
+    height:inherit;
+    text-align:center;
+    background-color:#f4f4f6;
+    border-bottom:#081B46 7px solid;
+    border-radius: 7px;
+    padding-bottom:10px;
+    margin-bottom:5vh;
+}
+
+.offers .col:hover{
+    transform:scale(1.15);
+    transition:ease-in-out;
+    transition-duration:0.2s;
+}
+
+.fa{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.offers i{
+    color:#081B46;
+}
+
+.num,.miles{
+    font-weight: bolder;
+}
+
+/* @media (min-width:890px) and (max-width:990px){
+    .morg-img img, .morg-img picture{
+        transform:translateX(-3rem);
+    }
+} */
+
+@media only screen and (max-width:790px){
+    #intro{
+        padding:2vh 3vw;
+    }
+
+    .morg-img{
+        padding-right:5vw;
+    }
+
+    .morg-img img{
+        width:100%;
+        transform:initial;
+        padding-top:3rem;
+        margin-bottom:1rem;
+    }
+
+    .ratings{
+        padding-top:0.5rem;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 900px) {
+    .services .row {
+        position: relative;
+    }
+    
+    .services .serve {
+        width: 50%;
+        max-width: 50%;
+    }
+    
+    
+    
+    .promo-card {
+        min-height: 400px;
+        aspect-ratio: 16/9;
+    }
+    
+    .promo-floating-image img {
+        width: 100px;
+        height: 100px;
+        aspect-ratio: 1;
+    }
+        
+    
+}
+  
+
+    .promo-content {
+        position: relative;
+        height: 100%;
+        background-image: url('/img/oil\ change_4-5.avif');
+        background-size:cover;
+        background-position: top;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:2rem 0.2rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        color: white;
+    }
+
+    .promo-announcement {
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .promo-price {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        width:70%;
+        align-self:flex-start;
+        padding-left:17%;
+        
+    }
+
+    .promo-price span{
+        font-weight:bolder;
+        color:rgb(209, 212, 7);
+        font-size: 1.75rem;
+    }
+
+    .promo-floating-image {
+        position: absolute;
+        top: 35%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+    }
+
+    .promo-floating-image img{
+        height:100px;
+        width:100px;
+    }
+
+    .promo-floating-image:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+        
+    }
+
+    .promo-cta {
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top:9em;
+        font-size: 1.25rem;
+        font-weight:bolder;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position:relative;
+    }
+
+    .promo-cta:hover {
+        background-color: #0a2461;
+    }
+
+    @media (max-width:1000px){
+        .promo-floating-image{
+            position: absolute;
+            top: 50%;
+        }
+
+        .promo-announcement {
+            font-size: 2rem;
+            text-align:center;
+        }
+
+        .promo-price {
+            padding-top:10%;
+            padding-left:15%;
+            width:90%;
+        }
+
+        .promo-content {
+            background-image: url('/images/oil\ change.jpg');
+            background-size:cover;
+            background-position:top;
+            
+        }
+    }
+
+
+    @media (max-width:700px){
+        .promo-floating-image{
+            position: absolute;
+            top: 60%;
+            left:90%;
+        }
+    }
