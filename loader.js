@@ -1,23 +1,37 @@
+// Google Analytics 4 (GA4)
+if (!window.gtag) {
+    window.dataLayer = window.dataLayer || [];
 
-function loadFunc(){
-    const loader=document.querySelector('.loader');
-    const anchors=document.querySelectorAll('a.trans');
+    function gtag() { dataLayer.push(arguments); } // eslint-disable-line no-unused-vars
+    (function() {
+        const ga = document.createElement('script');
+        ga.async = true;
+        ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-JD2XZYN52G';
+        document.head.appendChild(ga);
+    })();
+    gtag('js', new Date());
+    gtag('config', 'G-JD2XZYN52G');
+}
+
+function loadFunc() {
+    const loader = document.querySelector('.loader');
+    const anchors = document.querySelectorAll('a.trans');
 
     // these variables are for the randomizer not to be confused with the rest of the code
-    
-    var classes=["pg-left", "pg-right", "pg-fade", "pg-up", "pg-down"];
 
-    setTimeout(()=>{
+    var classes = ["pg-left", "pg-right", "pg-fade", "pg-up", "pg-down"];
+
+    setTimeout(() => {
         loader.classList.remove('is-active');
-    },500);
+    }, 500);
 
-    for(let i=0; i<anchors.length;i++){
-        const anchor=anchors[i];
+    for (let i = 0; i < anchors.length; i++) {
+        const anchor = anchors[i];
 
-        anchor.addEventListener('click', e =>{
+        anchor.addEventListener('click', e => {
             e.preventDefault();
-            let target=e.currentTarget.href;
-        
+            let target = e.currentTarget.href;
+
             loader.classList.add('is-active');
 
 
@@ -41,25 +55,25 @@ function loadFunc(){
             // else loader.classList.replace(curr_class,"pg-down");
 
             // here ends the code resonsible for switching animations
-            
 
-            setTimeout(()=>{
-                window.location.href=target;
-            },1500);
+
+            setTimeout(() => {
+                window.location.href = target;
+            }, 1500);
 
         });
     }
 }
 
-window.onload= loadFunc();
+window.onload = loadFunc();
 
 
 // now we need to work on fixing the info bar to the top when we scroll. 
-const header= document.querySelector(".infobar")
-const navbar=document.querySelector("nav")
+const header = document.querySelector(".infobar")
+const navbar = document.querySelector("nav")
 
-const sectionOneOptions={
-// to be used in future cases where other changes are to be made. not necessary here
+const sectionOneOptions = {
+    // to be used in future cases where other changes are to be made. not necessary here
 }
 
 // const sectionOneObserver= new IntersectionObserver(
@@ -78,14 +92,14 @@ const sectionOneOptions={
 
 //     sectionOneObserver.observe(navbar);
 
-    //the 'back to top' button; necessary on each page
-    // Get the button:
+//the 'back to top' button; necessary on each page
+// Get the button:
 let mybutton = document.getElementById("b2t");
 
 // When the user scrolls down 20px from the top of the document, show the button
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const backToTopButton = document.getElementById('backToTop');
-    
+
     window.onscroll = function() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             backToTopButton.style.display = 'flex';
@@ -96,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-    backToTopButton.addEventListener('click', function () {
+    backToTopButton.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
             left: 0,
@@ -117,4 +131,4 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             document.getElementById('infobar').innerHTML = data;
         });
-  });
+});
