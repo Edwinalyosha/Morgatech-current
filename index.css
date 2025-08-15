@@ -311,9 +311,11 @@
     
     
     .promo-card {
-        min-height: 400px;
-        width: 40vw;
-        aspect-ratio: 16/9;
+        position: absolute;
+        top: 0;
+        right: 10vw;
+        width: 40%;
+        height: 100%;
     }
     
     .promo-floating-image img {
