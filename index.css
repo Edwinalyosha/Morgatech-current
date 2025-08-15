@@ -312,6 +312,7 @@
     
     .promo-card {
         min-height: 400px;
+        width: 40vw;
         aspect-ratio: 16/9;
     }
     
@@ -319,6 +320,7 @@
         width: 100px;
         height: 100px;
         aspect-ratio: 1;
+        display:none;
     }
         
     
