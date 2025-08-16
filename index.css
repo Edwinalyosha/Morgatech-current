@@ -323,7 +323,7 @@
 .promo-content {
     position: relative;
     height: 100%;
-    background-image: url('/img/oil\ change_4-5.avif');
+    background-image: url('img/oil-change_4-5.avif');
     background-size: cover;
     background-position: top;
     display: flex;
@@ -406,7 +406,7 @@
         width: 90%;
     }
     .promo-content {
-        background-image: url('/images/oil\ change.jpg');
+        background-image: url('img/oil-change_4-5.avif');
         background-size: cover;
         background-position: top;
     }
