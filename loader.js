@@ -1,16 +1,20 @@
-// Google Analytics 4 (GA4)
-if (!window.gtag) {
-    window.dataLayer = window.dataLayer || [];
+// Google Analytics 4 (GA4) - Defer loading for better performance
+function loadGoogleAnalytics() {
+    if (!window.gtag) {
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() { dataLayer.push(arguments); } // eslint-disable-line no-unused-vars
-    (function() {
+        function gtag() { dataLayer.push(arguments); } // eslint-disable-line no-unused-vars
+        window.gtag = gtag;
+
         const ga = document.createElement('script');
         ga.async = true;
         ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-JD2XZYN52G';
+        ga.onload = function() {
+            gtag('js', new Date());
+            gtag('config', 'G-JD2XZYN52G');
+        };
         document.head.appendChild(ga);
-    })();
-    gtag('js', new Date());
-    gtag('config', 'G-JD2XZYN52G');
+    }
 }
 
 function loadFunc() {
@@ -21,9 +25,18 @@ function loadFunc() {
 
     var classes = ["pg-left", "pg-right", "pg-fade", "pg-up", "pg-down"];
 
+    // Mobile-optimized loader timing for better LCP
+    var isMobile = window.innerWidth <= 768;
+    var loaderDelay = isMobile ? 50 : 100; // Faster on mobile
+
     setTimeout(() => {
         loader.classList.remove('is-active');
-    }, 500);
+        // Load GA after critical content is visible - delayed more on mobile
+        var gaDelay = isMobile ? 500 : 100;
+        requestIdleCallback ?
+            requestIdleCallback(loadGoogleAnalytics, { timeout: gaDelay }) :
+            setTimeout(loadGoogleAnalytics, gaDelay);
+    }, loaderDelay);
 
     for (let i = 0; i < anchors.length; i++) {
         const anchor = anchors[i];
@@ -65,7 +78,8 @@ function loadFunc() {
     }
 }
 
-window.onload = loadFunc();
+// Optimize page load timing
+document.addEventListener('DOMContentLoaded', loadFunc);
 
 
 // now we need to work on fixing the info bar to the top when we scroll. 
@@ -119,16 +133,50 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Optimize content loading to prevent CLS
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer-placeholder').innerHTML = data;
+    // Use requestIdleCallback for non-critical content
+    const loadSecondaryContent = () => {
+        fetch('infobar.html')
+            .then(response => response.text())
+            .then(data => {
+                const infobar = document.getElementById('infobar');
+                infobar.innerHTML = data;
+                infobar.style.minHeight = 'auto'; // Remove placeholder height once loaded
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                const footer = document.getElementById('footer-placeholder');
+                footer.innerHTML = data;
+                footer.style.minHeight = 'auto'; // Remove placeholder height once loaded
+            });
+    };
+
+    // Load secondary content when browser is idle or after a short delay
+    if (requestIdleCallback) {
+        requestIdleCallback(loadSecondaryContent, { timeout: 1000 });
+    } else {
+        setTimeout(loadSecondaryContent, 100);
+    }
+
+    // Remove min-height from image container once image is loaded to prevent CLS
+    const morgImg = document.querySelector('.morg-img img');
+    if (morgImg) {
+        morgImg.addEventListener('load', function() {
+            const container = this.closest('.morg-img');
+            if (container) {
+                container.style.minHeight = 'auto';
+            }
         });
 
-    fetch('infobar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('infobar').innerHTML = data;
-        });
+        // If image is already loaded (cached)
+        if (morgImg.complete) {
+            const container = morgImg.closest('.morg-img');
+            if (container) {
+                container.style.minHeight = 'auto';
+            }
+        }
+    }
 });

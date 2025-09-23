@@ -1,6 +1,8 @@
 * {
     font-size: 12pt;
     line-height: 24pt;
+    font-display: swap;
+    /* Improve font loading performance */
 }
 
 .bg-img {
@@ -189,6 +191,17 @@
 }
 
 @media only screen and (max-width:780px) {
+    /* Mobile-optimized styles for better performance */
+    * {
+        font-size: 11pt;
+        line-height: 20pt;
+    }
+    .bg-img {
+        min-height: 60vh !important;
+        height: 60vh !important;
+        background-attachment: scroll;
+        /* Better performance on mobile */
+    }
     #hiring {
         position: relative;
         left: 0;
@@ -210,6 +223,25 @@
 #intro {
     padding-top: 3rem;
     padding-bottom: 1.5rem;
+    contain: layout;
+}
+
+.morg-img {
+    min-height: 280px;
+    contain: layout;
+}
+
+@media (min-width: 768px) {
+    .morg-img {
+        min-height: 350px;
+    }
+}
+
+.morg-img img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    display: block;
 }
 
 #intro h2 {

@@ -10,19 +10,437 @@
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <!-- DNS and connection optimization -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://kit.fontawesome.com">
+    <link rel="dns-prefetch" href="https://storage.googleapis.com">
+    <link rel="dns-prefetch" href="https://static.elfsight.com">
+    <link rel="dns-prefetch" href="https://portal.autoops.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
     <link rel="preconnect" href="https://storage.googleapis.com" crossorigin>
     <link rel="canonical" href="https://morgatechauto.com/" />
-    <link rel="preload" as="image" href="img/morg-1.avif" imagesrcset="img/morg-2.avif 480w, img/morg-1.avif 1200w" imagesizes="(max-width: 768px) 100vw, 500px">
+    <!-- Mobile-optimized critical resource preloads -->
+    <link rel="preload" as="image" href="img/bg img 3_9-16.avif" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="img/bg img 3_16-9.avif" media="(min-width: 769px)" fetchpriority="high">
+    <link rel="preload" as="image" href="img/morg-2.avif" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="img/morg-1.avif" media="(min-width: 769px)" fetchpriority="high">
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="preload" as="style" href="loader.css">
+    <link rel="preload" as="style" href="shared.css">
+    <link rel="preload" as="style" href="index.css">
 
+    <!-- Critical CSS inline for better FCP -->
+    <style>
+        /* Critical above-the-fold styles with CLS prevention */
+        
+        * {
+            font-display: swap;
+        }
+        /* Mobile-first critical optimizations */
+        
+        @media (max-width: 768px) {
+            * {
+                font-size: 14px;
+                line-height: 1.4;
+            }
+            .bg-img {
+                background-image: url("img/bg img 3_9-16.avif");
+                background-size: cover;
+                background-position: center;
+                min-height: 60vh;
+                height: 60vh;
+                contain: layout style paint;
+                will-change: transform;
+                background-repeat: no-repeat;
+            }
+            .hero-content {
+                position: absolute;
+                bottom: 10px;
+                height: fit-content;
+                padding: 1em;
+            }
+            .navbar {
+                min-height: 48px;
+                padding: 0.25rem 1rem;
+            }
+            .navbar-brand img {
+                max-width: 4em;
+                width: 60px;
+                aspect-ratio: 80/48;
+            }
+        }
+        /* CLS Prevention using CSS instead of HTML attributes */
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .navbar-brand img {
+            aspect-ratio: 80/48;
+            width: 80px;
+        }
+        
+        .morg-img img {
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            display: block;
+        }
+        
+        .morg-img {
+            min-height: 280px;
+            contain: layout;
+        }
+        
+        @media (min-width: 768px) {
+            .morg-img {
+                min-height: 350px;
+            }
+        }
+        
+        .promo-floating-image img {
+            aspect-ratio: 1/1;
+            width: 100px;
+        }
+        /* Reserve space for dynamic content to prevent CLS */
+        
+        .elfsight-app-9c6e49b2-11af-437f-ae62-2080e53534ea {
+            min-height: 350px;
+            width: 100%;
+            contain: layout style paint;
+            background: #f8f9fa;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Loading skeleton for reviews widget */
+        
+        .elfsight-app-9c6e49b2-11af-437f-ae62-2080e53534ea::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            height: 60%;
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: skeleton-loading 1.5s infinite;
+            border-radius: 4px;
+        }
+        
+        @keyframes skeleton-loading {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+        
+        #chatbot-container {
+            contain: layout style;
+        }
+        
+        #infobar {
+            min-height: 60px;
+            contain: layout;
+        }
+        
+        #footer-placeholder {
+            min-height: 200px;
+            contain: layout;
+        }
+        /* Font fallback optimization to prevent CLS */
+        
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span,
+        div {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        @font-face {
+            font-family: 'system-fallback';
+            src: local('system-ui'), local('-apple-system'), local('BlinkMacSystemFont');
+            font-display: swap;
+            size-adjust: 100%;
+        }
+        /* Prevent FOUT and smooth loading */
+        
+        html {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        body {
+            visibility: visible;
+        }
+        /* CLS prevention while preserving Bootstrap functionality */
+        
+        img,
+        iframe,
+        video,
+        embed,
+        object {
+            /* Only disable transitions on elements that cause CLS */
+            transition: none !important;
+        }
+        /* Strategic layout containment for CLS prevention */
+        
+        .container,
+        .container-fluid {
+            position: relative;
+            /* Minimal styling to prevent empty rule */
+        }
+        
+        .row {
+            position: relative;
+            /* Minimal styling to prevent empty rule */
+        }
+        
+        .col,
+        [class*="col-"] {
+            position: relative;
+            /* Minimal styling to prevent empty rule */
+        }
+        /* Prevent button/form shifts */
+        
+        .btn {
+            min-height: 38px;
+        }
+        /* Navbar stability without breaking dropdowns */
+        
+        .navbar {
+            min-height: 56px;
+            /* Removed contain: layout to allow dropdowns to work */
+        }
+        /* Strategic section containment */
+        
+        section:not(.ratings) {
+            position: relative;
+            /* Allow ratings section to expand for widget */
+        }
+        
+        .pg-fade {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: 101;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease-out;
+            will-change: opacity;
+            contain: strict;
+        }
+        
+        .pg-fade.is-active {
+            opacity: 1;
+            pointer-events: all
+        }
+        
+        .loader {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+        
+        .loader p {
+            position: absolute;
+            transform: translate3d(-40%, 0, 0);
+            font-size: clamp(1.5rem, 4.5vw, 3rem);
+            text-align: center;
+            width: 100%
+        }
+        
+        .cont {
+            width: clamp(100px, 20vw, 200px)
+        }
+        
+        .is-active .loading {
+            width: clamp(50px, 10vw, 100px);
+            height: clamp(50px, 10vw, 100px);
+            background-image: url("images/gear.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 50%;
+            animation: load-anim 3s ease-in-out infinite;
+            animation-fill-mode: both
+        }
+        
+        @keyframes load-anim {
+            0% {
+                transform: rotate(0)
+            }
+            50% {
+                transform: rotate(-360deg)
+            }
+            100% {
+                transform: rotate(180deg)
+            }
+        }
+        
+        .bg-pr {
+            background-color: #e4e9fd
+        }
+        
+        .bg-blue-s {
+            background-color: #081B46;
+            color: white
+        }
+        
+        .infobar {
+            padding-bottom: 1vh;
+            height: fit-content
+        }
+        
+        .info span {
+            padding-right: 2em;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 11pt;
+            line-height: 13pt
+        }
+        
+        .navbar-brand img {
+            max-width: 5em;
+            margin-left: 4vw
+        }
+        
+        .bg-img {
+            background-image: url("img/bg img 3_9-16.avif");
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+            height: 70vh;
+            padding-left: 3vw;
+            color: #f4f4f6;
+            contain: layout style paint;
+            will-change: transform;
+            background-repeat: no-repeat;
+        }
+        
+        .bg-img .container {
+            box-sizing: border-box;
+            height: 70vh;
+            position: relative;
+            bottom: 0
+        }
+        
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            height: fit-content;
+            padding: 2em
+        }
+        
+        .blue-p {
+            color: #081B46
+        }
+        
+        @media(min-width:770px) {
+            .bg-img {
+                background-image: url("img/bg img 3_16-9.avif");
+                min-height: 87vh;
+                height: 87vh;
+                contain: layout style paint;
+                background-repeat: no-repeat;
+            }
+            .bg-img .container {
+                height: 87vh
+            }
+            .loader p {
+                transform: translate3d(-42%, 20%, 0)
+            }
+        }
+        
+        @media(max-width:750px) {
+            .loading {
+                position: absolute;
+                top: 35vh
+            }
+            .is-active .loading {
+                height: 20vw;
+                width: 20vw
+            }
+        }
+    </style>
+
+    <!-- Mobile-optimized CSS loading strategy -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="loader.css">
-    <link rel="stylesheet" href="shared.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/430632a012.js" crossorigin="anonymous"></script>
-    <!-- Fallback FontAwesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <script>
+        // Load CSS based on device type for optimal performance
+        (function() {
+            var isMobile = window.innerWidth <= 768;
+            var cssFiles = ['loader.css', 'shared.css', 'index.css'];
+
+            if (isMobile) {
+                // Mobile: Load CSS files asynchronously after critical styles
+                window.addEventListener('DOMContentLoaded', function() {
+                    cssFiles.forEach(function(file, index) {
+                        setTimeout(function() {
+                            var link = document.createElement('link');
+                            link.rel = 'stylesheet';
+                            link.href = file;
+                            document.head.appendChild(link);
+                        }, index * 50); // Stagger loading
+                    });
+                });
+            } else {
+                // Desktop: Load CSS files immediately (preserve current performance)
+                cssFiles.forEach(function(file) {
+                    document.write('<link rel="stylesheet" href="' + file + '">');
+                });
+            }
+        })();
+    </script>
+
+    <!-- Mobile-optimized FontAwesome loading -->
+    <script>
+        // Load FontAwesome based on device performance
+        (function() {
+            var isMobile = window.innerWidth <= 768;
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            var isSlowConnection = connection && (connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' || connection.effectiveType === '3g');
+
+            if (isMobile || isSlowConnection) {
+                // Mobile/slow connection: Load FontAwesome after critical content
+                window.addEventListener('load', function() {
+                    setTimeout(function() {
+                        var fontAwesome = document.createElement('link');
+                        fontAwesome.rel = 'stylesheet';
+                        fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+                        fontAwesome.crossOrigin = 'anonymous';
+                        document.head.appendChild(fontAwesome);
+                    }, 500);
+                });
+            } else {
+                // Desktop/fast connection: Load immediately
+                var script = document.createElement('script');
+                script.src = 'https://kit.fontawesome.com/430632a012.js';
+                script.crossOrigin = 'anonymous';
+                document.head.appendChild(script);
+
+                var fallback = document.createElement('link');
+                fallback.rel = 'stylesheet';
+                fallback.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+                fallback.crossOrigin = 'anonymous';
+                document.head.appendChild(fallback);
+            }
+        })();
+    </script>
 
     <meta name="description" content="Expert Auto repair services in Beltsville MD, trust us for affordable and quality vehicle repairs.">
     <meta name="keywords" content="Auto repair, car service, european auto repair, car mechanic">
@@ -75,7 +493,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-pr1 py-0">
 
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html"><img src="images/logo-word1.png" alt="Morgatech Auto repair logo"></a>
+            <a class="navbar-brand" href="index.html"><img src="images/logo-word1.png" alt="Morgatech Auto repair logo" loading="eager"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -174,9 +592,11 @@
             <div class="row align-content-center justify-content-around">
                 <div class="col-12 col-md-6 morg-img">
 
-                    <img srcset="img/morg-2.avif 480w,
-                                   img/morg-1.avif 1200w" sizes="(max-width: 768px) 100vw, 
-                                   500px" src="img/morg-1.avif" alt="Professional auto repair shop in Beltsville, MD">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="img/morg-2.avif" width="480" height="360">
+                        <source media="(min-width: 769px)" srcset="img/morg-1.avif" width="1200" height="800">
+                        <img src="img/morg-2.avif" alt="Professional auto repair shop in Beltsville, MD" loading="eager" fetchpriority="high" width="480" height="360">
+                    </picture>
 
                 </div>
                 <div class="col-12 col-md-6 jst intro-text">
@@ -195,8 +615,52 @@
     <section class="ratings bg-pr">
         <div class="container ">
             <div class="row pb-5vh pl-5vw ">
-                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
                 <div class="elfsight-app-9c6e49b2-11af-437f-ae62-2080e53534ea"></div>
+                <script>
+                    // Mobile-optimized Elfsight widget loading 
+                    window.addEventListener('load', function() {
+                        const widget = document.querySelector('.elfsight-app-9c6e49b2-11af-437f-ae62-2080e53534ea');
+                        const isMobile = window.innerWidth <= 768;
+
+                        // Delay widget loading more on mobile to prioritize critical content
+                        const loadDelay = isMobile ? 2000 : 500;
+
+                        setTimeout(() => {
+                            // Create intersection observer to load widget when visible
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach(entry => {
+                                    if (entry.isIntersecting) {
+                                        const script = document.createElement('script');
+                                        script.src = 'https://static.elfsight.com/platform/platform.js';
+                                        script.setAttribute('data-use-service-core', '');
+                                        script.defer = true;
+                                        script.async = true;
+
+                                        script.onload = function() {
+                                            // Wait for widget to fully render, then remove skeleton
+                                            const cleanupDelay = isMobile ? 3000 : 2000;
+                                            setTimeout(() => {
+                                                if (widget) {
+                                                    widget.style.minHeight = 'auto';
+                                                    widget.style.background = 'transparent';
+                                                }
+                                            }, cleanupDelay);
+                                        };
+
+                                        document.head.appendChild(script);
+                                        observer.unobserve(entry.target);
+                                    }
+                                });
+                            }, {
+                                rootMargin: isMobile ? '200px' : '100px'
+                            });
+
+                            if (widget) {
+                                observer.observe(widget);
+                            }
+                        }, loadDelay);
+                    });
+                </script>
             </div>
     </section>
 
@@ -224,7 +688,7 @@
                     <div class="promo-announcement">Oil Change Special!!</div>
                     <div class="promo-price">Fully synthetic oil change at <span>$49.99</span></div>
                     <div class="promo-floating-image">
-                        <img src="images/promotion badge.png" alt="Oil change promotion badge" loading="lazy">
+                        <img src="images/promotion badge.png" alt="Oil change promotion badge" loading="lazy" width="100" height="100">
                     </div>
                     <button class="promo-cta bg-acc" aria-label="Book Oil Change">Book Oil Change</button>
                 </div>
@@ -284,28 +748,43 @@
     </section>
 
     <div id="chatbot-container"></div>
-    <script nowprocket async>
-        window.kwixiConfig = {
-            clientId: "cus_SQoK9wSmCg1tJ0"
-        };
-        (function(d, s, id) {
-            if (!d.getElementById(id)) {
-                const js = d.createElement(s);
-                js.id = id;
-                js.src = "https://storage.googleapis.com/kwixi-webstorage/embedding/kwixi-embed.js";
-                const firstScript = d.getElementsByTagName(s)[0];
-                firstScript.parentNode.insertBefore(js, firstScript);
+    <!-- Defer chatbot loading until after critical content -->
+    <script>
+        window.addEventListener('load', function() {
+            window.kwixiConfig = {
+                clientId: "cus_SQoK9wSmCg1tJ0"
             };
-        })(document, "script", "kwixi-chatbot-script");
+            (function(d, s, id) {
+                if (!d.getElementById(id)) {
+                    const js = d.createElement(s);
+                    js.id = id;
+                    js.src = "https://storage.googleapis.com/kwixi-webstorage/embedding/kwixi-embed.js";
+                    const firstScript = d.getElementsByTagName(s)[0];
+                    firstScript.parentNode.insertBefore(js, firstScript);
+                };
+            })(document, "script", "kwixi-chatbot-script");
+        });
     </script>
 
     <footer id="footer-placeholder"></footer>
 
-    <script id="portal-scripts" data-api-key="0e6b17283832489ca613af6cda22bc3e" data-google-analytics-enabled="true" data-loading-color="393381" src="https://portal.autoops.com/portal-scripts.js"></script>
-    <!-- Bootstrap JS bundle for navbar toggler -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <!-- Optimize script loading order -->
     <script src="loader.js" defer></script>
     <script src="index.js" defer></script>
+    <!-- Bootstrap JS bundle for navbar toggler -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+    <!-- Non-critical third-party scripts loaded after page load -->
+    <script>
+        window.addEventListener('load', function() {
+            const portalScript = document.createElement('script');
+            portalScript.id = 'portal-scripts';
+            portalScript.setAttribute('data-api-key', '0e6b17283832489ca613af6cda22bc3e');
+            portalScript.setAttribute('data-google-analytics-enabled', 'true');
+            portalScript.setAttribute('data-loading-color', '393381');
+            portalScript.src = 'https://portal.autoops.com/portal-scripts.js';
+            document.body.appendChild(portalScript);
+        });
+    </script>
 </body>
 
 </html>

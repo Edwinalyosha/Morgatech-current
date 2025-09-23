@@ -1,6 +1,15 @@
+/* Font optimization for better LCP */
+
+@font-face {
+    font-family: system-ui;
+    font-display: swap;
+}
+
 * {
     font-size: 12pt;
     line-height: 22pt;
+    font-display: swap;
+    /* Improve font loading performance */
 }
 
 .estimator-intro {
