@@ -12,7 +12,15 @@
     background-image:-moz-radial-gradient(at right, #00B9f1 15%, #081B46 85%);
 }
 
+.catchphrase{
+    font-size:1.8em;
+    font-weight:bolder;
+    margin-bottom:4em;
+}
 
+#serv-full{
+        padding-top:3em;
+    }
 
 .dropdown-menu{
     width: max-content;
