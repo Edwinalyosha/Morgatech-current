@@ -5,6 +5,8 @@
 #pg-title{
     background-image:radial-gradient(at right, #00B9f1 15%, #081B46 85%);
     background-image:-moz-radial-gradient(at right, #00B9f1 15%, #081B46 85%);
+    padding-top: 1em;
+    padding-bottom:1em;
 }
 
 #pg-title.s{
@@ -13,9 +15,9 @@
 }
 
 .catchphrase{
-    font-size:1.8em;
-    font-weight:bolder;
-    margin-bottom:4em;
+    font-size:1.3em;
+    font-weight:lighter;
+    font-style:italic;
 }
 
 #serv-full{
@@ -36,6 +38,10 @@
 
 #serv-nav{
     height:fit-content;
+}
+
+h3{
+    opacity:0.8;
 }
 
 @media only screen and(max-width:790px){
@@ -67,7 +73,7 @@
     }
 
     #serv-full{
-        padding-top:0;
+        padding-top:1.5em;
         order:1;
     }
 }
