@@ -155,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // Load secondary content when browser is idle or after a short delay
-    if ('requestIdleCallback' in window && typeof window.requestIdleCallback === 'function') {
-        window.requestIdleCallback(loadSecondaryContent, { timeout: 1000 });
+    if (requestIdleCallback) {
+        requestIdleCallback(loadSecondaryContent, { timeout: 1000 });
     } else {
         setTimeout(loadSecondaryContent, 100);
     }
@@ -180,46 +180,3 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 });
-
-// Ensure AutoOps is available on first click even if script hasn't loaded yet
-(function ensureAutoOpsLoader() {
-    function loadPortalScriptIfNeeded() {
-        if (!document.getElementById('portal-scripts')) {
-            const portalScript = document.createElement('script');
-            portalScript.id = 'portal-scripts';
-            portalScript.setAttribute('data-api-key', '0e6b17283832489ca613af6cda22bc3e');
-            portalScript.setAttribute('data-google-analytics-enabled', 'true');
-            portalScript.setAttribute('data-loading-color', '393381');
-            portalScript.src = 'https://portal.autoops.com/portal-scripts.js';
-            document.body.appendChild(portalScript);
-        }
-    }
-
-    function callWhenAutoOpsReady(callback) {
-        var maxWaitMs = 8000; // safety timeout
-        var start = Date.now();
-        (function check() {
-            if (window.AutoOps && typeof window.AutoOps.show === 'function' && window.AutoOps !== shim) {
-                callback();
-                return;
-            }
-            if (Date.now() - start > maxWaitMs) {
-                return; // give up silently
-            }
-            setTimeout(check, 100);
-        })();
-    }
-
-    var shim = {
-        show: function() {
-            loadPortalScriptIfNeeded();
-            callWhenAutoOpsReady(function() {
-                try { window.AutoOps.show(); } catch (e) { /* no-op */ }
-            });
-        }
-    };
-
-    if (!window.AutoOps || typeof window.AutoOps.show !== 'function') {
-        window.AutoOps = shim;
-    }
-})();
