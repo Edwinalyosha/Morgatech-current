@@ -155,8 +155,8 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // Load secondary content when browser is idle or after a short delay
-    if (requestIdleCallback) {
-        requestIdleCallback(loadSecondaryContent, { timeout: 1000 });
+    if ('requestIdleCallback' in window && typeof window.requestIdleCallback === 'function') {
+        window.requestIdleCallback(loadSecondaryContent, { timeout: 1000 });
     } else {
         setTimeout(loadSecondaryContent, 100);
     }
