@@ -616,7 +616,7 @@
     <section class="ratings bg-pr">
         <div class="container ">
             <div class="row pb-5vh pl-5vw ">
-                <div class="elfsight-app-9c6e49b2-11af-437f-ae62-2080e53534ea"></div>
+                <!-- <div class="elfsight-app-9c6e49b2-11af-437f-ae62-2080e53534ea"></div>
                 <script>
                     // Mobile-optimized Elfsight widget loading 
                     window.addEventListener('load', function() {
@@ -661,7 +661,9 @@
                             }
                         }, loadDelay);
                     });
-                </script>
+                </script> -->
+                <div id="shapo-widget-7e885a2b6f1a0abdcc72"></div>
+                <script id="shapo-embed-js" type="text/javascript" src="https://cdn.shapo.io/js/embed.js" defer></script>
             </div>
     </section>
 
@@ -750,22 +752,7 @@
 
     <div id="chatbot-container"></div>
     <!-- Defer chatbot loading until after critical content -->
-    <script>
-        window.addEventListener('load', function() {
-            window.kwixiConfig = {
-                clientId: "cus_SQoK9wSmCg1tJ0"
-            };
-            (function(d, s, id) {
-                if (!d.getElementById(id)) {
-                    const js = d.createElement(s);
-                    js.id = id;
-                    js.src = "https://storage.googleapis.com/kwixi-webstorage/embedding/kwixi-embed.js";
-                    const firstScript = d.getElementsByTagName(s)[0];
-                    firstScript.parentNode.insertBefore(js, firstScript);
-                };
-            })(document, "script", "kwixi-chatbot-script");
-        });
-    </script>
+    
 
     <footer id="footer-placeholder"></footer>
 
