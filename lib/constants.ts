@@ -26,15 +26,16 @@ export const NAV_LINKS: NavLink[] = [
 export const BUSINESS = {
   name: "Morgatech Auto Repair",
   shortName: "Morgatech",
-  phone: "(555) 012-3456",
+  phone: "(301)-477-4113",
   email: "service@morgatech.com",
-  address: "123 Industrial Way, Beltsville, MD 20705",
+  address: "6713 Ammendale Rd, Beltsville, MD 20705",
   hours: {
     weekday: "Mon - Fri: 8:00 AM - 6:00 PM",
     saturday: "Sat: 9:00 AM - 2:00 PM",
     sunday: "Sun: Closed",
   },
-  emergency: "(555) 999-0000",
+  emergency: "(301)-477-4113",
+  mapQuery: "6713+Ammendale+Rd+Beltsville+MD+20705",
 } as const;
 
 // ─── Services (grid cards on home & services page) ───────────────────────────
@@ -76,6 +77,9 @@ export const SERVICES: Service[] = [
     description:
       "Testing and installation of high-performance batteries with warranties.",
     icon: "battery_charging_full",
+    image:
+      "/battery-change.jpg",
+    imageAlt: "Close up of a car battery being replaced",
   },
   {
     slug: "transmission-repair",
@@ -298,7 +302,7 @@ export const CONTACT_CARDS: ContactInfo[] = [
     icon: "phone_in_talk",
     title: "Phone",
     subtitle: "Available during hours",
-    value: "(555) 123-4567",
+    value: "(301)-477-4113",
   },
   {
     icon: "mail",
@@ -398,6 +402,7 @@ export const GALLERY_IMAGES: GalleryImage[] = [
 // ─── Home Page Images ────────────────────────────────────────────────────────
 
 export const HOME_IMAGES = {
+  logo: "/logo.png",
   hero: "/homeHero.jpg",
   beforeRepair:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuA97C42_pZ1HY15QlacPLOQt2RKKp62vlENmzO2l7ZbxyN_aAhYCZ9Sck1e1aqItXjI-n8OqZqCIb8qAE7cfXvpMpTQlPgc_EoJupBfTPRWGmOQenhtLzUU31HZtBuynJJwh4CI9PpD_j4203fZ7mEZB_7fXP9JCIvBoY75zGfZdk5AElaWZ98MZilFUCfnCs5si0jRWT4HA4dWxezGbifywylXAl29Tkz-dpegb7RSsoIMxgeAOdocI_cVw2-0WuBo9v9GIEF-Z6qx",

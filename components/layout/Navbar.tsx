@@ -4,8 +4,9 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MaterialIcon } from "@/components/ui/MaterialIcon";
-import { NAV_LINKS, BUSINESS } from "@/lib/constants";
+import { NAV_LINKS, BUSINESS, HOME_IMAGES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -17,7 +18,15 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 text-primary">
-            <MaterialIcon name="handyman" className="text-3xl font-bold" />
+            <div className="relative w-18 h-18 overflow-hidden">
+              <Image
+                src={HOME_IMAGES.logo}
+                alt={`${BUSINESS.name} logo`}
+                fill
+                className="object-contain transition-transform duration-300 group-hover:scale-110"
+                priority
+              />
+            </div>
             <h1 className="text-xl font-extrabold tracking-tight uppercase text-slate-900">
               {BUSINESS.shortName}
             </h1>

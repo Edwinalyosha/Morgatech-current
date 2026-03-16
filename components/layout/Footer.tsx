@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { MaterialIcon } from "@/components/ui/MaterialIcon";
-import { BUSINESS, NAV_LINKS, SERVICES } from "@/lib/constants";
+import { BUSINESS, NAV_LINKS, SERVICES, HOME_IMAGES } from "@/lib/constants";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -10,7 +11,15 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2 text-primary">
-              <MaterialIcon name="handyman" className="text-3xl font-bold" />
+              <div className="relative w-18 h-18 overflow-hidden">
+                <Image
+                  src={HOME_IMAGES.logo}
+                  alt={`${BUSINESS.name} logo`}
+                  fill
+                  className="object-contain transition-transform duration-300 group-hover:scale-110"
+                  priority
+                />
+              </div>
               <h2 className="text-2xl font-extrabold tracking-tight uppercase text-slate-900">
                 {BUSINESS.shortName}
               </h2>
