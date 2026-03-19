@@ -1,9 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { MaterialIcon } from "@/components/ui/MaterialIcon";
 import { BUSINESS, NAV_LINKS, SERVICES, HOME_IMAGES } from "@/lib/constants";
 import Image from "next/image";
-
+import { useBooking } from "@/hooks/useBooking";
 export function Footer() {
+  const { openBooking } = useBooking();
   return (
     <footer className="bg-white border-t border-slate-200 text-slate-900 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,6 +64,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/booking"
+                  onClick={openBooking}
                   className="text-slate-600 hover:text-primary text-sm transition-colors"
                 >
                   Book Now

@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import type { ServiceDetail } from "@/types";
+import { useBooking } from "@/hooks/useBooking";
 
 interface ServiceDetailHeroProps {
   service: ServiceDetail;
 }
 
 export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
+  const { openBooking } = useBooking();
   return (
     <section className="py-8">
       <div
@@ -24,12 +28,13 @@ export function ServiceDetailHero({ service }: ServiceDetailHeroProps) {
           <p className="text-slate-300 text-lg lg:text-xl font-normal leading-relaxed mb-8 max-w-lg">
             {service.description}
           </p>
-          <Link
-            href="/booking"
+          <button
+            onClick={openBooking}
+            aria-label="Schedule Service"
             className="inline-flex items-center justify-center rounded-xl h-14 px-8 bg-primary text-white text-lg font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/25"
           >
             Schedule {service.title} Service
-          </Link>
+          </button>
         </div>
       </div>
     </section>

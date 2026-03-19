@@ -1,9 +1,11 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import { MaterialIcon } from "@/components/ui/MaterialIcon";
 import { CONTACT_IMAGES, BUSINESS } from "@/lib/constants";
-
+import { useBooking } from "@/hooks/useBooking";
 export function ContactHero() {
+  const { openBooking } = useBooking();
   return (
     <section className="relative py-16 px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
@@ -26,16 +28,17 @@ export function ContactHero() {
               needs. Expert service you can trust.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                href="/booking"
-                className="flex items-center gap-2 rounded-xl h-12 px-8 bg-primary text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/20"
+              <button
+                onClick={openBooking}
+                aria-label="Schedule Service"
+                className="flex items-center gap-2 rounded-xl h-12 px-8 bg-primary text-white font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/20 cursor-pointer"
               >
                 <MaterialIcon name="calendar_month" />
                 Schedule Service
-              </Link>
+              </button>
               <a
                 href={`tel:${BUSINESS.phone.replace(/[^0-9]/g, "")}`}
-                className="flex items-center gap-2 rounded-xl h-12 px-8 bg-white text-slate-900 font-bold hover:bg-slate-50 transition-all border border-slate-200 shadow-sm"
+                className="flex items-center gap-2 rounded-xl h-12 px-8 bg-white text-slate-900 font-bold hover:bg-slate-50 transition-all border border-slate-200 shadow-sm cursor-pointer"
               >
                 <MaterialIcon name="call" />
                 Call Now

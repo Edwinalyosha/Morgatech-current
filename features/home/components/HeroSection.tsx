@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { MaterialIcon } from "@/components/ui/MaterialIcon";
 import { HOME_IMAGES, BUSINESS } from "@/lib/constants";
+import { useBooking } from "@/hooks/useBooking";
 
 export function HeroSection() {
+  const { openBooking } = useBooking();
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-slate-900/40 z-10" />
@@ -28,13 +31,13 @@ export function HeroSection() {
             vehicle running at peak performance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/booking"
-              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-xl shadow-primary/30 transition-all flex items-center justify-center gap-2"
+            <button
+              onClick={openBooking}
+              className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-xl text-lg font-bold shadow-xl shadow-primary/30 transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <MaterialIcon name="calendar_month" />
               Book Appointment
-            </Link>
+            </button>
             <a
               href={`tel:${BUSINESS.phone.replace(/[^0-9]/g, "")}`}
               className="bg-slate-800/80 hover:bg-slate-700 text-white backdrop-blur-md px-8 py-4 rounded-xl text-lg font-bold border border-slate-600 transition-all flex items-center justify-center gap-2"

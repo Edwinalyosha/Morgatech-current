@@ -1,11 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import { BUSINESS } from "@/lib/constants";
+import { useBooking } from "@/hooks/useBooking";
 
 interface ServiceCTAProps {
   title?: string;
 }
 
 export function ServiceCTA({ title = "Don't Wait Until It's Too Late" }: ServiceCTAProps) {
+  const { openBooking } = useBooking();
   return (
     <section className="py-16 text-center">
       <div className="bg-primary/10 border border-primary/20 rounded-xl p-12 lg:p-20">
@@ -17,12 +21,13 @@ export function ServiceCTA({ title = "Don't Wait Until It's Too Late" }: Service
           for any situation on the road.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link
-            href="/booking"
-            className="w-full sm:w-auto px-10 py-4 bg-primary text-white font-bold rounded-xl hover:scale-105 transition-transform text-lg"
+          <button
+            onClick={openBooking}
+            aria-label="Schedule Service"
+            className="w-full sm:w-auto px-10 py-4 bg-primary text-white font-bold rounded-xl hover:scale-105 transition-transform text-lg cursor-pointer"
           >
             Schedule Service
-          </Link>
+          </button>
           <a
             href={`tel:${BUSINESS.phone.replace(/[^0-9]/g, "")}`}
             className="w-full sm:w-auto px-10 py-4 border border-slate-200 font-bold rounded-xl hover:bg-slate-50 transition-colors text-lg text-slate-900"

@@ -1,6 +1,9 @@
+"use client";
 import Link from "next/link";
+import { useBooking } from "@/hooks/useBooking";
 
 export function ServicesHero() {
+  const { openBooking } = useBooking();
   return (
     <section className="relative py-20 overflow-hidden bg-white">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent" />
@@ -15,14 +18,12 @@ export function ServicesHero() {
             specialists are at your service.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link
-              href="/booking"
-              className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-all shadow-xl shadow-primary/30"
+            <button
+              onClick={openBooking}
+              aria-label="Schedule Service"
+              className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-all shadow-xl shadow-primary/30 cursor-pointer"
             >
               Schedule Service
-            </Link>
-            <button className="bg-slate-200 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-300 transition-all">
-              View Pricing
             </button>
           </div>
         </div>

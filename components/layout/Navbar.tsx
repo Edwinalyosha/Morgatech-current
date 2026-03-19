@@ -7,11 +7,12 @@ import { MaterialIcon } from "@/components/ui/MaterialIcon";
 import { NAV_LINKS, BUSINESS, HOME_IMAGES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useBooking } from "@/hooks/useBooking";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
-
+  const { openBooking } = useBooking();
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/90 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,12 +60,13 @@ export function Navbar() {
               <MaterialIcon name="call" className="text-xl" />
               <span>{BUSINESS.phone}</span>
             </a>
-            <Link
-              href="/booking"
+            <button
+              onClick={openBooking}
+              aria-label="Schedule Service"
               className="hidden sm:inline-flex bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-primary/20 transition-all"
             >
               Schedule Service
-            </Link>
+            </button>
 
             {/* Mobile Menu Button */}
             <button
@@ -96,13 +98,16 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/booking"
-            onClick={() => setMobileOpen(false)}
+          <button
+            onClick={(e) => {
+              setMobileOpen(false);
+              openBooking(e);
+            }}
+            aria-label="Schedule Service"
             className="block w-full text-center bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-primary/20 transition-all mt-4"
           >
             Schedule Service
-          </Link>
+          </button>
         </div>
       )}
     </header>

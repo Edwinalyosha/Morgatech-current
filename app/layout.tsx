@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,10 +18,37 @@ export const metadata: Metadata = {
   },
   description:
     "Certified mechanics, honest pricing, and fast repairs in Beltsville, MD. We keep your vehicle running at peak performance.",
+    keywords: ["Auto repair", "car service", "european auto repair", "car mechanic", "Beltsville MD"],
+  
+  // Geographic SEO (The "Juice")
+  other: {
+    "geo.region": "US-MD",
+    "geo.placename": "Beltsville",
+    "geo.position": "39.05;-76.9",
+    "ICBM": "39.05, -76.9",
+  },
+
   openGraph: {
-    type: "website",
-    locale: "en_US",
+    title: "Auto Repair Shop in Beltsville, MD | Morgatech Auto Repair",
+    description: "Certified mechanics and honest pricing in Beltsville, MD.",
+    url: "https://morgatechauto.com",
     siteName: "Morgatech Auto Repair",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  
+  // Favicon configuration
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
   },
 };
 
@@ -41,6 +69,21 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+
+        {/* --- BOOKING TOOL INTEGRATION --- */}
+        {/* This loads the AutoOps logic in the background */}
+        <Script
+          id="portal-scripts"
+          src="https://portal.autoops.com/portal-scripts.js"
+          data-api-key="0e6b17283832489ca613af6cda22bc3e"
+          strategy="lazyOnload"
+        />
+        
+        {/* Shapo Reviews Widget */}
+        <Script 
+          src="https://cdn.shapo.io/js/embed.js" 
+          strategy="lazyOnload" 
+        />
       </body>
     </html>
   );
