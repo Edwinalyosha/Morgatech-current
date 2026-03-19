@@ -1,6 +1,10 @@
+"use client"
+
 import Link from "next/link";
+import { useBooking } from "@/hooks/useBooking.ts"
 
 export function CTASection() {
+  const { openBooking } = useBooking();
   return (
     <section className="py-20">
       <div className="bg-primary rounded-2xl p-8 md:p-16 text-center text-white relative overflow-hidden">
@@ -16,6 +20,7 @@ export function CTASection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Link
               href="/booking"
+              onClick={openBooking}
               className="w-full sm:w-auto bg-white text-primary hover:bg-slate-100 rounded-lg h-14 px-10 text-lg font-bold transition-all shadow-xl inline-flex items-center justify-center"
             >
               Schedule Service

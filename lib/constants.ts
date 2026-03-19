@@ -42,14 +42,14 @@ export const BUSINESS = {
 
 export const SERVICES: Service[] = [
   {
-    slug: "oil-change",
-    title: "Oil Change",
+    slug: "car-maintenance",
+    title: "Car Maintenance",
     description:
-      "Full synthetic and high-mileage options with premium filter replacement.",
-    icon: "oil_barrel",
+      "Complete vehicle health and longevity through precision care.",
+    icon: "build_circle",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBLPL8Npeq4oU0dAxbXVOF8e0--yx9_VzUYr1JebmxTuYo-wECfk3gnVG-tLcHqCkoOpGoBUWFxN-uj3A7NQWadmJtlsY4ELYgz7GmaTrsUwEyjpNARN5Z4WJDrZScJcbCmdUYgmIvpm9mvUoP94xRXKrlbbLqPqlHQwTigeTnQV4JwKe_i36VMoMkKMQlEPuNlEC0ODlzghZsznSKD1Dn7YXsB95fkogp9--2a21lCpaLK01OkHRljby0h75GGJ0ccA7iAXKb_UvSj",
-    imageAlt: "Close up of oil being poured into a car engine",
+      "/services/car-maintenance.jpg",
+    imageAlt: "Mechanic performing a multi-point inspection on a modern vehicle engine",
   },
   {
     slug: "brake-repair",
@@ -58,7 +58,7 @@ export const SERVICES: Service[] = [
       "Pads, rotors, and fluid service to ensure your safety on every journey.",
     icon: "minor_crash",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBhtomUpOPT6s7Pm9bU4E7MfqGQ0d8ymNYtPJOXmGRsBrHIC-AwmgGFEGWep6u4mtmL5k982ZW3M6onuAU4WtBq87kOt7-IyMDqYlA3pkAiTBFjyyxg4nMbKDOM7NwVy5foi-5jAmGZia9askCP4ofaXXNVYblYLAUDZusx00T6MedBtqLj-rurH3KjNwOfwq5QyL7Iv0iVtSc1NMOeAvN2MlWSusqgTi4f1C6LCmRZuo6E5OzD9WjSP_wPz84eobnd5GmM8om20Hnw",
+      "/services/car-brake.jpg",
     imageAlt: "Mechanical inspection of metallic car brake disc and caliper",
   },
   {
@@ -68,47 +68,47 @@ export const SERVICES: Service[] = [
       "Advanced computer scanning to identify and resolve complex issues quickly.",
     icon: "build_circle",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuD5UO5wf3MM5TFngTTv0sov1gAJ8yMpUBGcI7qefZyo1ae8p77UXMIL96IgEBdUKeNFKjlA_-Jqz6esQyMnzB5JClVPQj_MMfEDtjoBmSgLbW-tKALYRmgQ6fN7v7NH4pYV62oYel8CTY_w0s4PMRJiUmx0gUUUoPeQFdMGqaCFLFftqo2dOd_Iartoz62bXLkW-TdxbO7Vn8hWsUKlbsgExPzW0kZpRjGn5_Di_rxFqg5Ju5SHu9bCNlSsAdYi1qqZI4wFpnYEcPDD",
+      "/services/engine.jpg",
     imageAlt: "Mechanic using a digital diagnostic tool on a modern car",
   },
   {
-    slug: "battery-replacement",
-    title: "Battery Replacement",
-    description:
-      "Testing and installation of high-performance batteries with warranties.",
-    icon: "battery_charging_full",
-    image:
-      "/battery-change.jpg",
-    imageAlt: "Close up of a car battery being replaced",
-  },
-  {
-    slug: "transmission-repair",
-    title: "Transmission Repair",
+    slug: "transmission-service",
+    title: "Transmission Service",
     description:
       "Expert service and maintenance for automatic and manual transmissions.",
     icon: "settings_input_component",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAcCDtu398E-_3CZivbIXIl-3f4wIsirofpaXTtaDc41GClvx4dSfPdgv8Uy-BvPwevwu8Ahy476S2amtFUI04Yhp4iiOmVxHHS3NA-DXTazqX5XddnlS8TGonDezDDknJwOTUSt4YC_MPUvT8nVdNrn8sDXYZIO6ArgvzEt3ypG1CoY2GzLyPIHtrXZ6Tf-wBH6i039Xsh43QZLSA9S3sUESgu0q1B1iHvoJxOUkxb3QMsME2iCB_WxVe8WIiG0DR7Dn2RoAIFgMWu",
+      "/services/transmission-repair.jpg",
     imageAlt: "Close up of a car gearbox and transmission components",
   },
   {
-    slug: "electrical-system",
-    title: "Electrical System",
+    slug: "auto-electrical-service",
+    title: "Auto Electrical Service",
     description:
       "Specialized wiring, sensor, and electronic module diagnostics and repair.",
     icon: "bolt",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB6MgMh81PKABfIrcTSZrsb8_WCkbIXgsAJ1bnonTo8yN5B1XSVs4pB0DxmPX2yA3cL8UPvJnvhg32nIXg99J-Ri7beKBg7AA9Jv57BeECGHUIPH8d8fPknc4z21TBAIUg_7Ye90atzRGbnoSfcUMc_q_tuYLmclUfKj2bE5E-FyNyZMRBq2eZcBFAM0QRh-PVPrbdRbaHh_Q-f0vJMfLrdzRDqWDtX0p80H08_rMLgEIDxqhH8UTe8DQL_5EAZn1OVt_5Gbdml2zDj",
+      "/services/auto-electrical-service.jpg",
     imageAlt: "Car battery and electrical wiring in an engine bay",
   },
   {
-    slug: "ac-repair",
-    title: "AC Repair",
+    slug: "exhaust-system",
+    title: "Exhaust System",
+    description:
+      "Full-service exhaust repair to keep your vehicle quiet and eco-friendly.",
+    icon: "battery_charging_full",
+    image:
+      "/services/exhaust-system.jpg",
+    imageAlt: "Close up of a car exhaust system being replaced",
+  },
+  {
+    slug: "ac-heating-services",
+    title: "AC & Heating Services",
     description:
       "Cooling system diagnostics, recharging, and leak repairs to keep you comfortable in any weather.",
     icon: "ac_unit",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCz53lU60DDC4pk1qIA4MdLpEqEV6m_uFt4w7UkQLrWK3ivhWcOP_n9WqHUGFGI-8Qg8PByWQfeiTLc7og1UbKGerwqjbXHneKIfnOIvv22dC7J7wfFhz15xgucqZ4BML4UGlJgJJfz7pUwgI4csxaC-i5gCsz0s4r8Q0eW4VpEJ1ZNYQB7m47laG_3N6BbzBjzl9Z6ubij4CI9eC2Akg_2J2gmCgS8NvolpIWdEBsYtXMgggIgfZa6Yn20fZAwGpVAZ2O6RrRH2VMO",
+      "/services/ac-services.jpg",
     imageAlt: "Blue air conditioning coolant manifold gauges on a car engine",
   },
   {
@@ -118,14 +118,91 @@ export const SERVICES: Service[] = [
       "Expert maintenance and replacement of shocks, struts, ball joints, and steering system components.",
     icon: "build_circle",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB4LCu3zuVHujvBumlYWyRwyRwT8y11ZaTybsGTLzZkploOI28Wb_gfEp2nigfT4g2bNKHW84D4BIZ2XoipX1n_hFQPVlmUF9BYjDKr_nOFfFL-oPs1VWpMI3G_BWrgMRnBOGpgpXp8QDCJESU2HZ5bPnExjXif8lI5tyY-MrT8JwUGu-8_sJyIv2tL5Jn6XpVrZgUWEZyOdEYN1WY206Alw6VwJ_vz33ThZ0f-M6hBLKEiTOp6vGFFzB08xvT2jI0ZeRe-Z5MjE_S5",
+      "/services/suspension-repair.jpg",
     imageAlt: "Detailed view of a vehicle's suspension and wheel assembly",
   },
 ];
 
-// ─── Service Detail (brake repair as the exemplar) ───────────────────────────
+// ─── All Service Detail Pages ───────────────────────────
 
 export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
+  "car-maintenance": {
+    slug: "car-maintenance",
+    title: "Car Maintenance",
+    description:
+      "Precision care including oil changes, fluid analysis, and 360° safety inspections to ensure your vehicle's longevity.",
+    icon: "build_circle",
+    tagline: "Preventative Care",
+    heroImage: "/services/maintenance-hero.jpg",
+    heroImageAlt: "Mechanic performing a multi-point inspection on a modern vehicle engine",
+    overviewTitle: "Protect Your Investment with Smart Maintenance",
+    overviewText: [
+      "Modern vehicles are marvels of engineering, but they rely on regular care to stay reliable. Smart, scheduled maintenance is the most effective way to ensure your car remains in peak health while preventing the 'sticker shock' of major emergency repairs.",
+      "At Morgatech Auto Repair, our maintenance programs cover the critical essentials of vehicle longevity. From precision oil changes to seasonal preparation, we help you stay ahead of wear and tear, ensuring your vehicle is safe for daily commutes and long family road trips alike.",
+    ],
+    stats: [
+      { value: "3k-7k", label: "Oil Change Interval" },
+      { value: "360°", label: "Visual Inspection" },
+      { value: "OEM", label: "Quality Parts" },
+      { value: "24/7", label: "Reliability" },
+    ],
+    symptoms: [
+      {
+        icon: "oil_barrel",
+        title: "Oil & Filter Service",
+        description:
+          "Essential lubrication and temperature regulation. Recommended every 3,000–7,500 miles to prevent engine corrosion.",
+      },
+      {
+        icon: "tire_repair",
+        title: "Tire Maintenance",
+        description:
+          "Pressure checks and tread depth analysis to ensure optimum on-road safety and fuel efficiency.",
+      },
+      {
+        icon: "minor_crash",
+        title: "Brake Inspections",
+        description:
+          "Thorough system checks every 10,000 miles. We ensure your stopping power is never compromised.",
+      },
+      {
+        icon: "air_freshener",
+        title: "Air Filter Updates",
+        description:
+          "Protecting your engine (every 15k miles) and your cabin air quality (every 30k miles) from impurities.",
+      },
+      {
+        icon: "battery_charging_full",
+        title: "Battery & Electrical",
+        description:
+          "Bi-annual charge testing and terminal cleaning to ensure your car starts reliably in any Maryland weather.",
+      },
+      {
+        icon: "water_drop",
+        title: "Fluid Health Check",
+        description:
+          "Monitoring coolant, transmission, and power steering fluids to ensure smooth, hydraulic-safe operation.",
+      },
+      {
+        icon: "visibility",
+        title: "Lights & Wipers",
+        description:
+          "Critical visibility checks for headlights, signals, and wiper blades to keep you safe during night or rain.",
+      },
+      {
+        icon: "event_available",
+        title: "Seasonal & Trip Prep",
+        description:
+          "Specialized inspections before long trips or major season shifts (Winter/Summer) to prevent breakdowns.",
+      },
+    ],
+    beforeImage: "/services/maintenance-before.jpg",
+    afterImage: "/services/maintenance-after.jpg",
+    beforeAlt: "Dirty engine oil and clogged air filter",
+    afterAlt: "Clean golden oil and brand new performance air filter",
+    beforeCaption: "Neglected filters and degraded, sludge-prone engine oil.",
+    afterCaption: "Fresh synthetic oil and high-efficiency filtration installed.",
+  },
   "brake-repair": {
     slug: "brake-repair",
     title: "Brake Repair",
@@ -134,7 +211,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     icon: "minor_crash",
     tagline: "Safety Service",
     heroImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBoVexo8KgSBst9vJnBMoP9Tm-nAOGZAv4WGTPu6ZLFeHSd0WSZQ0XxdEghDzMjFr7nWd1A-rG4pZfNGO2IodV5lphd6VCB1qmKPoofzo5vAZ3Ns4b6p5RANYXJWt7N-gfzrqBP2zbbNorFzZVuwZqz1TAm1U5yHQUNmAXziiZdBi_BBMK0TiIN2qqTlETU5v0bwIIPjk5Vm3RqkSrpy4r0zKqtWQ7nQzaquY0sXLRwU-sOB-qj1LH3yaefP5XNzy2F2Bau3wxqkjfR",
+      "/services/car-brake-hero.jpg",
     heroImageAlt: "High performance car ceramic brake disc and red caliper",
     overviewTitle: "Why Brake Maintenance Matters",
     overviewText: [
@@ -174,13 +251,475 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       },
     ],
     beforeImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuARTZk_4Og0E6kDHWRw_2B9IavbftlTJKuy6NTXnm2aN7f1956xcqUQ2hido-3DTAHWmfLkqEyZAj3KZJQhpR7glK5imgEdQyhAyZW-Nsf3xB6asd4xdCHXWDhe8F6zoqfZ632rGI0NLp742p26lWrxdInjpAxpXHIEPe74ECHwRgP0mLY7RJ_t7T2xbVzpyWJl3eRojNZFUI055DPlBN-1UVIejdgevnMsW31yVYd4sRjTmgm2a8QHkxXKXAZs2Q0RfDud2UE1kHAm",
+      "/services/brakes-before.jpg",
     afterImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAfkOS2jrmOBZqyAnc4XCgz6ZZ87gOE4YS1aIrl6b0lVHRhtsknO3XEZXHjizTowtiHljh4nXYwzvoB8q1ziuQ2qCcdN_nFHgUzzjCZmduKteX4_HnyNvpRF551zaONXZ-t395FJSktIvo2-oPNLwginnkqmRLZGjs1yvC5V19XJZQ3cD5nHdJzT4Bigi-EiuK5OSYxHoAlrwwY6hZeYhdfakBKUUEezb_W8oa_sDybY0jHrqxQudwqVKx6H04qbAEHvgw3AQ5MTuMw",
+      "/services/brakes-after.jpg",
     beforeAlt: "Worn and rusted brake rotors on old vehicle",
     afterAlt: "New shiny brake disc and fresh pads installed",
     beforeCaption: "Heavily worn pads and rusted, grooved rotors.",
     afterCaption: "Premium ceramic components with precision installation.",
+  },
+  "engine-diagnostics": {
+    slug: "engine-diagnostics",
+    title: "Engine & Performance",
+    description:
+      "Advanced diagnostics and precision repairs for cooling systems, timing components, and fuel injection to restore your engine's power.",
+    icon: "engine",
+    tagline: "Testing, Not Guessing",
+    heroImage: "/services/engine-hero.jpg",
+    heroImageAlt: "Diagnostic scanner connected to a high-performance engine",
+    overviewTitle: "Expert Engine Repair & Diagnostics in Beltsville",
+    overviewText: [
+      "Your engine is the heart of your vehicle. At Morgatech Auto Repair, we employ a philosophy of 'testing rather than guessing.' Using advanced drivability diagnostics, we pinpoint the root cause of performance issues—from a simple spark plug to complex fuel injection failures—to ensure you only pay for the repairs you actually need.",
+      "Early detection is the key to avoiding a total engine replacement. Whether you are dealing with a persistent check engine light, mysterious vibrations, or overheating, our certified mechanics provide same-day service to restore your car's reliability and fuel efficiency.",
+    ],
+    stats: [
+      { value: "Same", label: "Day Service" },
+      { value: "Digital", label: "Diagnostics" },
+      { value: "OEM", label: "Quality Parts" },
+      { value: "Expert", label: "Technical Team" },
+    ],
+    symptoms: [
+      {
+        icon: "error_outline",
+        title: "Check Engine Light",
+        description:
+          "Advanced scanning to decode error codes and resolve the underlying mechanical or sensor issues immediately.",
+      },
+      {
+        icon: "timer",
+        title: "Timing Belt & Chain",
+        description:
+          "Crucial preventative replacement to avoid catastrophic engine failure. We service both belts and precision chains.",
+      },
+      {
+        icon: "waves",
+        title: "Cooling System & Radiator",
+        description:
+          "Repairing leaks, radiators, and water pumps to prevent overheating and protect your engine from thermal damage.",
+      },
+      {
+        icon: "ev_station",
+        title: "Fuel Injection Service",
+        description:
+          "Cleaning and repairing injectors to restore lost power, improve throttle response, and maximize MPG.",
+      },
+      {
+        icon: "bolt",
+        title: "Ignition & Spark Plugs",
+        description:
+          "Replacing worn plugs and ignition coils to eliminate rough idling, vibrations, and starting difficulties.",
+      },
+      {
+        icon: "history_toggle_off",
+        title: "Starter Motor Repair",
+        description:
+          "Resolving clicking sounds or no-start conditions with high-quality motor replacements and wiring inspections.",
+      },
+      {
+        icon: "cloud_off",
+        title: "Head Gasket Service",
+        description:
+          "Specialized repair for overheating, white exhaust smoke, or power loss to reseal your combustion chamber.",
+      },
+      {
+        icon: "published_with_changes",
+        title: "Engine Replacement",
+        description:
+          "When repairs aren't enough, we offer complete engine swaps to give your vehicle a brand new lease on life.",
+      },
+    ],
+    beforeImage: "/services/engine-before.jpg",
+    afterImage: "/services/engine-after.jpg",
+    beforeAlt: "Engine with oil leaks and worn out timing belt",
+    afterAlt: "Clean, detailed engine bay after professional gasket and belt service",
+    beforeCaption: "Sluggish performance caused by neglected ignition and cooling issues.",
+    afterCaption: "Full restoration of horsepower and cooling efficiency.",
+  },
+  "transmission-service": {
+    slug: "transmission-service",
+    title: "Transmission & Drivetrain",
+    description:
+      "Expert transmission diagnostics, fluid flushes, and drivetrain repairs to ensure smooth gear shifts and efficient power transfer.",
+    icon: "settings_input_component",
+    tagline: "Power & Precision",
+    heroImage: "/services/transmission-hero.jpg",
+    heroImageAlt: "Close-up of a modern automatic transmission gear assembly",
+    overviewTitle: "Affordable Transmission Solutions in Beltsville, MD",
+    overviewText: [
+      "The transmission is one of the most complex systems in your vehicle. At Morgatech Auto Repair, we believe a 'stitch in time saves nine.' Identifying wear on seals, mounts, or torque converters early can prevent the need for a full transmission rebuild and save you thousands in long-term costs.",
+      "Whether you need a precision differential repair, input/output shaft service, or a complete drivetrain overhaul, our technicians ensure your vehicle transfers power efficiently from the engine to the wheels. We specialize in both automatic and manual systems, providing dealership-level expertise with local shop transparency.",
+    ],
+    stats: [
+      { value: "30k", label: "Fluid Change Miles" },
+      { value: "100%", label: "Drivetrain Ready" },
+      { value: "Expert", label: "Rebuild Techs" },
+      { value: "Heavy", label: "Duty Tow Prep" },
+    ],
+    symptoms: [
+      {
+        icon: "opacity",
+        title: "Fluid Exchange & Flush",
+        description:
+          "Standard replacement every 30k–60k miles. For degraded systems, we perform a total machine-assisted flush to remove all contaminants.",
+      },
+      {
+        icon: "tune",
+        title: "Transmission Band Adjustment",
+        description:
+          "Crucial for automatic transmissions to prevent slipping. Recommended for inspection every 60,000 to 100,000 miles.",
+      },
+      {
+        icon: "settings_power",
+        title: "Drivetrain & Driveshaft",
+        description:
+          "Repairing CV joints, U-joints, and shafts to ensure vibration-free power delivery and mechanical efficiency.",
+      },
+      {
+        icon: "Propane",
+        title: "Seal & Gasket Service",
+        description:
+          "Detecting and fixing leaks early to prevent internal overheating and catastrophic gear failure.",
+      },
+      {
+        icon: "monitor_weight",
+        title: "Load Management",
+        description:
+          "Expert advice and service for vehicles used for towing or heavy hauling to prevent premature transmission wear.",
+      },
+      {
+        icon: "speed",
+        title: "Differential Repair",
+        description:
+          "Specialized service for the gears that allow your wheels to turn at different speeds—vital for cornering and control.",
+      },
+      {
+        icon: "error_outline",
+        title: "Diagnostic Analysis",
+        description:
+          "Advanced computer scanning to identify shifting delays, grinding, or 'limp mode' issues before they escalate.",
+      },
+      {
+        icon: "verified",
+        title: "OEM Fluid Matching",
+        description:
+          "We use only manufacturer-stipulated fluids (Dexron, Mercon, CVT, etc.) to maintain your specific vehicle's warranty.",
+      },
+    ],
+    beforeImage: "/services/transmission-before.jpg",
+    afterImage: "/services/transmission-after.jpg",
+    beforeAlt: "Burnt, dark transmission fluid compared to new fluid",
+    afterAlt: "Mechanic installing a new transmission filter and pan gasket",
+    beforeCaption: "Contaminated, oxidized fluid losing its lubricating properties.",
+    afterCaption: "Clean, high-viscosity fluid and new filtration for smooth shifting.",
+  },
+  "auto-electrical-service": {
+    slug: "auto-electrical-service",
+    title: "Electrical & Electronics",
+    description:
+      "Expert diagnostics and repair for complex vehicle electronics, including alternators, starters, and power accessories.",
+    icon: "electrical_services",
+    tagline: "Precision Diagnostics",
+    heroImage: "/services/auto-electrical-service-hero.jpg",
+    heroImageAlt: "Technician testing a car battery and alternator with professional diagnostic equipment",
+    overviewTitle: "Advanced Electrical System Repair in Beltsville, MD",
+    overviewText: [
+      "Modern vehicles are rolling computers, with almost every function controlled by complex electrical networks. When these systems fail, it can be incredibly frustrating. At Morgatech Auto Repair, we specialize in identifying the 'ghosts in the machine'—whether it's a simple blown fuse or a complex wiring harness issue.",
+      "Our technicians are highly trained to ensure we find and solve your electrical problems after the very first visit. From critical starting components like alternators and starters to the power accessories that keep you comfortable, we provide reliable, transparent solutions to keep your vehicle's tech running smoothly.",
+    ],
+    stats: [
+      { value: "100%", label: "Diagnostic Accuracy" },
+      { value: "Modern", label: "Tech Equipped" },
+      { value: "Fast", label: "Bulb/Fuse Swap" },
+      { value: "Expert", label: "Wiring Repair" },
+    ],
+    symptoms: [
+      {
+        icon: "bolt",
+        title: "Alternator & Charging",
+        description:
+          "The heart of your electrical system. We repair and replace alternators to ensure your battery stays charged and your lights stay bright.",
+      },
+      {
+        icon: "play_circle",
+        title: "Starter Motor Service",
+        description:
+          "Reliable repair and replacement of starter motors to ensure your engine fires up every time you turn the key.",
+      },
+      {
+        icon: "lock_open",
+        title: "Power Lock Systems",
+        description:
+          "Restoring security and convenience by repairing faulty door actuators and central locking mechanisms.",
+      },
+      {
+        icon: "lightbulb",
+        title: "Lighting & Signal Repair",
+        description:
+          "Full-service bulb replacement and wiring repair for headlights, taillights, and interior safety signals.",
+      },
+      {
+        icon: "settings_input_antenna",
+        title: "Power Accessories",
+        description:
+          "Expert fixes for power antennas, GPS navigators, USB ports, and premium audio systems to maintain your cabin's comfort.",
+      },
+      {
+        icon: "looks",
+        title: "Electronic Power Steering",
+        description:
+          "Diagnosing stiff or unresponsive steering by servicing the electronic assist motors and sensors.",
+      },
+      {
+        icon: "cleaning_services",
+        title: "Windshield Wiper Systems",
+        description:
+          "Ensuring clear visibility in extreme weather by repairing wiper motors, linkages, and electronic sensors.",
+      },
+      {
+        icon: "memory",
+        title: "General Diagnostics",
+        description:
+          "Comprehensive system scans to locate short circuits, parasitic battery drains, and faulty control modules.",
+      },
+    ],
+    beforeImage: "/services/auto-electrical-service-before.jpg",
+    afterImage: "/services/auto-electrical-service-after.jpg",
+    beforeAlt: "Corroded battery terminals and frayed wiring",
+    afterAlt: "Clean electrical connections and new alternator installation",
+    beforeCaption: "Failing charging system causing dim lights and intermittent power loss.",
+    afterCaption: "Restored electrical integrity with high-output components and secure wiring.",
+  },
+  "exhaust-system": {
+    slug: "exhaust-system",
+    title: "Exhaust & Emissions",
+    description:
+      "Full-service exhaust repair, muffler replacement, and catalytic converter service to keep your vehicle quiet and eco-friendly.",
+    icon: "cloud_done",
+    tagline: "Clean & Quiet Performance",
+    heroImage: "/services/exhaust-system-hero.jpg",
+    heroImageAlt: "Mechanic installing a new stainless steel exhaust muffler",
+    overviewTitle: "Professional Exhaust & Emissions Service in Beltsville",
+    overviewText: [
+      "Your vehicle's exhaust system does more than just dampen noise; it is a critical safety feature that diverts toxic fumes away from the cabin and filters out harmful pollutants. A faulty system poses risks to your engine's backpressure, your health, and the environment.",
+      "At Morgatech Auto Repair, we provide comprehensive diagnostics and repairs for every part of your exhaust—from the manifold to the tailpipe. Whether you are dealing with a loud muffler, a failed emissions test, or a damaged catalytic converter, our team ensures your car runs efficiently, quietly, and stays compliant with environmental standards.",
+    ],
+    stats: [
+      { value: "EPA", label: "Compliant" },
+      { value: "Quiet", label: "Mufflers" },
+      { value: "High", label: "Flow Tech" },
+      { value: "Expert", label: "Welding" },
+    ],
+    symptoms: [
+      {
+        icon: "volume_up",
+        title: "Muffler Repair & Service",
+        description:
+          "Eliminating excessive noise and vibrations by repairing or replacing failed mufflers to keep your ride comfortable and legal.",
+      },
+      {
+        icon: "eco",
+        title: "Catalytic Converters",
+        description:
+          "Repair and replacement of high-value emission units to reduce hydrocarbons and nitrogen oxides for a cleaner environment.",
+      },
+      {
+        icon: "hardware",
+        title: "Exhaust Manifold Service",
+        description:
+          "Expert repair of the manifold to prevent leaks at the engine source, ensuring optimal fuel economy and engine safety.",
+      },
+      {
+        icon: "pipe",
+        title: "Tail Pipe Replacement",
+        description:
+          "Professional-grade tailpipe repairs that restore your vehicle's aesthetic and ensure exhaust gases exit the vehicle safely.",
+      },
+      {
+        icon: "masks",
+        title: "Emission Diagnostics",
+        description:
+          "Identifying the 'Check Engine' codes and sensor failures that lead to high pollution levels and failed state inspections.",
+      },
+      {
+        icon: "settings_suggest",
+        title: "Custom Pipe Fitting",
+        description:
+          "Precision mounting and hangers to prevent the rattling and dragging that leads to expensive system damage.",
+      },
+      {
+        icon: "health_and_safety",
+        title: "Carbon Monoxide Check",
+        description:
+          "Critical inspections to ensure no toxic fumes are leaking into the passenger cabin through floorboards or vents.",
+      },
+      {
+        icon: "shutter_speed",
+        title: "Backpressure Analysis",
+        description:
+          "Advanced testing to ensure your exhaust flow is optimized, preventing engine overheating and power loss.",
+      },
+    ],
+    beforeImage: "/services/exhaust-system-before.jpg",
+    afterImage: "/services/exhaust-system-after.jpg",
+    beforeAlt: "Rusted and leaking exhaust pipe with holes",
+    afterAlt: "New stainless steel exhaust section with clean welds",
+    beforeCaption: "Excessive rust and leaks leading to noise and engine power loss.",
+    afterCaption: "Precision-sealed system for whisper-quiet and efficient operation.",
+  },
+  "ac-heating-services": {
+    slug: "ac&heating-services",
+    title: "A/C & Heating Service",
+    description:
+      "Expert climate control diagnostics, refrigerant recharging, and component repair to keep you comfortable in any Maryland weather.",
+    icon: "ac_unit",
+    tagline: "Year-Round Comfort",
+    heroImage: "/services/ac-services-hero.jpg",
+    heroImageAlt: "Technician performing an A/C pressure test and refrigerant recharge",
+    overviewTitle: "Advanced Climate Control Solutions in Beltsville",
+    overviewText: [
+      "In Maryland's harsh weather, a functional climate control system is more than a luxury—it is essential for a safe and focused driving experience. At Morgatech Auto Repair, we utilize advanced diagnostic equipment to pinpoint leaks and mechanical failures in your heating and cooling systems, ensuring we find the root cause before recommending a repair.",
+      "Whether you are dealing with a faulty compressor, reduced airflow, or unusual odors from your vents, our skilled mechanics have the expertise to restore your vehicle’s interior environment. We use only high-quality parts and industry-standard refrigerants to ensure your system operates at peak efficiency during the hottest summer days and coldest winter nights.",
+    ],
+    stats: [
+      { value: "Fast", label: "A/C Recharge" },
+      { value: "Precise", label: "Leak Detection" },
+      { value: "OEM", label: "Spec Parts" },
+      { value: "All", label: "Makes & Models" },
+    ],
+    symptoms: [
+      {
+        icon: "thermostat",
+        title: "Heating & Cooling Diagnostics",
+        description:
+          "Utilizing advanced pressure testing and thermal imaging to identify blockages or failures in the climate control loop.",
+      },
+      {
+        icon: "toys",
+        title: "Compressor Repair",
+        description:
+          "Specialized service for the heart of your A/C system. We repair or replace faulty compressors to restore full cooling power.",
+      },
+      {
+        icon: "air",
+        title: "Evaporator & Airflow",
+        description:
+          "Resolving reduced cooling performance and eliminating damp, musty odors caused by evaporator issues or cabin filter blockages.",
+      },
+      {
+        icon: "science",
+        title: "Refrigerant Recharge",
+        description:
+          "Evacuating and replenishing A/C gas to manufacturer-specified levels (R134a or R1234yf) for maximum efficiency.",
+      },
+      {
+        icon: "water_drop",
+        title: "Leak Detection & Repair",
+        description:
+          "Dye-testing and sealing leaks in hoses, condensers, and fittings to prevent environmental damage and system failure.",
+      },
+      {
+        icon: "heat_pump",
+        title: "Heater Core Service",
+        description:
+          "Ensuring your cabin stays warm by diagnosing failed heater cores, stuck blend doors, and cooling system thermostats.",
+      },
+      {
+        icon: "settings_input_component",
+        title: "Blower Motor Repair",
+        description:
+          "Fixing issues with weak airflow or noisy fans to ensure air is distributed evenly throughout your vehicle's cabin.",
+      },
+      {
+        icon: "filter_alt",
+        title: "Cabin Air Filtration",
+        description:
+          "Replacing worn filters to improve interior air quality and protect your passengers from pollen, dust, and pollutants.",
+      },
+    ],
+    beforeImage: "/services/ac-services-before.jpg",
+    afterImage: "/services/ac-services-after.jpg",
+    beforeAlt: "Clogged A/C condenser and dirty cabin air filter",
+    afterAlt: "New high-efficiency A/C compressor and clean filter",
+    beforeCaption: "Weak airflow and warm air caused by a failing compressor and leaks.",
+    afterCaption: "Ice-cold performance and improved cabin air quality after full service.",
+  },
+  "suspension-repair": {
+    slug: "suspension-steering",
+    title: "Suspension & Steering",
+    description:
+      "Restore your vehicle's handling, comfort, and safety with expert diagnostics, shock replacement, and precision alignments.",
+    icon: "directions_car",
+    tagline: "Handling & Safety",
+    heroImage: "/services/suspension-repair-hero.jpg",
+    heroImageAlt: "Mechanic inspecting a vehicle's coil spring and strut assembly",
+    overviewTitle: "Is Your Suspension Trying to Tell You Something?",
+    overviewText: [
+      "A compromised suspension system affects more than just ride comfort; it severely impacts steering precision, braking distance, and tire longevity. Our Beltsville technicians specialize in restoring the original handling and safety of all makes and models, with a specific focus on the tight tolerances required for European vehicles.",
+      "We offer a complimentary 15-Minute 'No-Wrench' Inspection to visually and physically assess your major components. This allows us to identify the root cause of your handling issues—whether it's worn bushings or a failing rack and pinion—giving you clear information before any repair costs are committed.",
+    ],
+    stats: [
+      { value: "15min", label: "Free Inspection" },
+      { value: "OEM", label: "Spec Parts" },
+      { value: "4-Wheel", label: "Precision Alignment" },
+      { value: "Full", label: "Labor Warranty" },
+    ],
+    symptoms: [
+      {
+        icon: "height",
+        title: "Bouncy or Harsh Ride",
+        description:
+          "Excessive vertical movement or bouncing after hitting bumps, usually indicating worn shocks or struts.",
+      },
+      {
+        icon: "navigation",
+        title: "Swaying & Leaning",
+        description:
+          "Your vehicle sways excessively during turns or visibly leans to one side while parked or driving.",
+      },
+      {
+        icon: "hearing",
+        title: "Knocking & Creaking",
+        description:
+          "Persistent metallic clunking or squeaking noises when driving over uneven surfaces or speed bumps.",
+      },
+      {
+        icon: "settings_input_component",
+        title: "Loose Steering",
+        description:
+          "The vehicle pulls to one side or the steering wheel feels unresponsive, indicating tie rod or linkage wear.",
+      },
+      {
+        icon: "shutter_speed",
+        title: "Shocks & Struts",
+        description:
+          "Expert replacement of dampening components and coil springs to restore cabin stability and weight distribution.",
+      },
+      {
+        icon: "architecture",
+        title: "Structural Components",
+        description:
+          "Precision service for ball joints, control arm bushings, and axle assemblies to maintain structural integrity.",
+      },
+      {
+        icon: "ev_station",
+        title: "Power Steering Repair",
+        description:
+          "Complete system care including pump replacement, rack and pinion repair, and pressurized fluid flushes.",
+      },
+      {
+        icon: "align_horizontal_center",
+        title: "Wheel Alignment",
+        description:
+          "Correcting vehicle geometry after repairs to prevent uneven tire wear and ensure straight-line tracking.",
+      },
+    ],
+    beforeImage: "/services/suspension-repair-before.jpg",
+    afterImage: "/services/suspension-repair-after.jpg",
+    beforeAlt: "Leaking hydraulic shock absorber and torn rubber bushing",
+    afterAlt: "Newly installed performance strut and polyurethane bushings",
+    beforeCaption: "Leaking dampeners and failed bushings causing unstable handling.",
+    afterCaption: "Premium OEM-spec suspension components for a factory-smooth ride.",
   },
 };
 
