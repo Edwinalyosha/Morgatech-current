@@ -73,3 +73,68 @@ export interface GalleryImage {
   src: string;
   alt: string;
 }
+
+export interface Category {
+  id: string;
+  name: string;
+  slug: string;
+  description?: string; 
+  count?: number;
+}
+
+export interface Author {
+  id: string;
+  name: string;
+  role: string;
+  avatar: string;
+  bio?: string;
+}
+
+export interface Post {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: Category;
+  author: Author;
+  publishedAt: string;
+  coverImage: string;
+  coverImageAlt: string;
+  readingTime?: string;
+  isFeatured?: boolean;
+}
+
+export interface ContentSection {
+  id: string;
+  heading: string;
+  body: string;
+}
+
+export interface PostDetail extends Post {
+  content: string;
+  sections: ContentSection[];
+  tags: string[];
+  relatedPosts: Post[];
+  seoTitle?: string;
+  seoDescription?: string;
+}
+
+export interface SidebarCategory {
+  name: string;
+  slug: string;
+  count: number;
+}
+
+export interface NewsletterCTA {
+  title: string;
+  description: string;
+  buttonText: string;
+  subscriberCount?: string;
+}
+
+export interface SearchResult {
+  query: string;
+  totalResults: number;
+  results: Post[];
+  suggestions?: string[];
+}

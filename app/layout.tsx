@@ -12,6 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://morgatechauto.com"),
   title: {
     default: "Morgatech Auto Repair | Beltsville's Trusted Mechanics",
     template: "%s | Morgatech Auto Repair",

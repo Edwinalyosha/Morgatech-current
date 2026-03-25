@@ -9,6 +9,13 @@ import type {
   HowItWorksStep,
   ValueCard,
   GalleryImage,
+  Category,
+  Author,
+  Post,
+  NewsletterCTA,
+  SearchResult,
+  SidebarCategory,
+  ContentSection,
 } from "@/types";
 
 // ─── Navigation ──────────────────────────────────────────────────────────────
@@ -18,7 +25,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
-  { label: "Blog", href: "#" },
+  { label: "Blog", href: "/blog" },
 ];
 
 // ─── Business Info ───────────────────────────────────────────────────────────
@@ -963,3 +970,277 @@ export const CONTACT_IMAGES = {
 export const BOOKING_IMAGES = {
   hero: "https://lh3.googleusercontent.com/aida-public/AB6AXuCr-_53VgB9lFRTw936B8-q_NzqJar0pmXZ0NgrhiCZaOsc9RouXV3mq-la9Tc-xVnq9XR9FN_FafqIzGII9FT4hgjDsKxJTFeiSF1p8dCtLR_qjsvKv7JYAkmhoQw7oR9maA95u0aAcaNqvZIcTjVFM_nwoKJMtbKRk7pFVSaWS9L4ZYsfqzE_IT-g0EwBk9Pxm7xfk4GcYM3TriYWLPgeA1Lqc5bOawvfYY0XyXSvao-4TzUeqSJ_XsoF4117SKS0Tq0gMTdYE6JC",
 } as const;
+
+// ─── Blog Categories ─────────────────────────────────────────────────────────
+
+export const BLOG_CATEGORIES: Category[] = [
+  {
+    id: "cat-1",
+    name: "Maintenance Tips",
+    slug: "maintenance-tips",
+    description:
+      "Expert advice on keeping your vehicle in peak condition, extending its lifespan, and preventing costly repairs through proactive care.",
+    count: 12,
+  },
+  {
+    id: "cat-2",
+    name: "Car Tech",
+    slug: "car-tech",
+    description:
+      "Deep dives into modern automotive electronics, hybrid systems, and computer-driven diagnostics.",
+    count: 8,
+  },
+  {
+    id: "cat-3",
+    name: "News",
+    slug: "news",
+    description:
+      "Workshop updates, industry announcements, and the latest from Morgatech Auto Repair.",
+    count: 19,
+  },
+  {
+    id: "cat-4",
+    name: "Guides",
+    slug: "guides",
+    description:
+      "Step-by-step technical guides for DIY enthusiasts and professional mechanics alike.",
+    count: 5,
+  },
+  {
+    id: "cat-5",
+    name: "Safety First",
+    slug: "safety-first",
+    description:
+      "Critical information regarding brakes, tires, and passenger protection systems.",
+    count: 15,
+  },
+];
+
+// ─── Sidebar Categories (with counts for widgets) ────────────────────────────
+
+export const SIDEBAR_CATEGORIES: SidebarCategory[] = [
+  { name: "Precision Maintenance", slug: "maintenance-tips", count: 12 },
+  { name: "Advanced Diagnostics", slug: "guides", count: 8 },
+  { name: "Electrical Systems", slug: "car-tech", count: 5 },
+  { name: "Industry Updates", slug: "news", count: 19 },
+];
+
+// ─── Authors ─────────────────────────────────────────────────────────────────
+
+export const AUTHORS: Author[] = [
+  {
+    id: "auth-1",
+    name: "Marcus Vane",
+    role: "Lead Technical Specialist",
+    avatar:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCQIeF45mFAEJJubrHh1W1lJYs2CrgvpW7Me1Icrh7aJ1pxHTiBprlcV4OmMCXxqhQNc0nzXWtYkW2g7PEdjplUWnCPuvU7GkD7nynMG_VuZ3Vdzwh7HltFLehZMWKa5CmpsrBeUo_pqY0AiT6UMOwbSx5yaTGDdwACuJUNEsVfB75TWGtarTudbbxVy6aD6YIDezgPzYAQXU2tRqJElgTS_VApR-ErQ_8xL7VOoGzxxpjMS-QAicGQviqNI0tf793j_gF2QPXojxT4",
+    bio: "With over 20 years in the field, Marcus specializes in complex engine diagnostics and performance tuning for modern vehicles.",
+  },
+  {
+    id: "auth-2",
+    name: "Dr. Elena Ross",
+    role: "Automotive Engineer",
+    avatar:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDWkY23dKQRj5k7v8zxJgITyTOxnvue9WgkGiDUlfGEx_7DCV5kwmlkI__kywONSQawac6iOKHesw92lzPkNe6rioVkB1mOHwivZ_fZ8MS3y9eUhRcdTmxfQCTuZdkFpkJOPgy85ZJ1TxTPdDvjfIboKnIAntsWMdS4NcwbDQhdrf6kdtTcDoW_0e2VO_81h8KRIEljKYgjChlfbTqxDP37Ika0cZoG6TXJEspgMbDLMg2GvavcPvjDoVjvgPpYmH6bwMmj3iZume6F",
+    bio: "Elena holds a PhD in mechanical engineering and leads our R&D team on hybrid and electric vehicle technologies.",
+  },
+];
+
+// ─── Blog Posts ──────────────────────────────────────────────────────────────
+
+export const BLOG_POSTS: Post[] = [
+  {
+    id: "post-1",
+    slug: "maintenance-101-performance-handbook",
+    title: "Maintenance 101: The Modern Performance Handbook",
+    excerpt:
+      "Discover the essential maintenance protocols designed for modern high-performance vehicles. We break down fluid dynamics, sensor calibration, and preventative diagnostic cycles.",
+    category: BLOG_CATEGORIES[0],
+    author: AUTHORS[0],
+    publishedAt: "October 28, 2024",
+    coverImage:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDphsoM_17JO7m9bjaIJ4XRz4WocJeeQz5D3hgj2XuwRwr6TLZtnagkCyAQ7weJTMQmoIReVvZaN5GGnVIjEZVp8a_LImezVVEH6fTefXUHfR0XGtnpBRM_DhnyBfFPtPNCsXoJNLUdA-JB6AgCzbJjwL8DqDyfYlwbEO-UsGbj0nNM7MK7ZwR2_uzbXzlAF2svlXPb7pf6pZcORckRuPc2NsRUq9_pJM9cu6PzHRweYI_OJQzOg0QjUMOj0kU5PKt91R8inz-HW6pQ",
+    coverImageAlt: "Close up of modern engine bay detail",
+    readingTime: "12 Min Read",
+    isFeatured: true,
+  },
+  {
+    id: "post-2",
+    slug: "future-of-hybrid-drive-systems",
+    title: "The Future of Hybrid Drive Systems",
+    excerpt:
+      "Exploring the next generation of regenerative braking and battery management in modern luxury sedans.",
+    category: BLOG_CATEGORIES[1],
+    author: AUTHORS[1],
+    publishedAt: "October 24, 2024",
+    coverImage:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDXYdS7PdohmRGAuV6ATN8xnijKq6ZibJcvkRF_rfOwqrcYHVZShG9GUtUK-QAKXvwKlkIZAP20sM7srBS9zlakVElzX9K1fdo3koGbgRmQOG57pYfgy2wb7Wtuc7X9wt7evmE9WxAdD9GsTFaA4sPTvq9gF7iIYq06PUaObWPzL1NWra3VlljUudj0Dv919ZnxNK9G0P502CjyP7DvtJ_YjlI507K_7-IWENmVsrcfBcQUXo-C7xhGYCwEkChztALUJAwbvq4Wd6Gx",
+    coverImageAlt: "High speed camera shot of sports car detail",
+    readingTime: "8 Min Read",
+  },
+  {
+    id: "post-3",
+    slug: "workshop-update-diagnostic-tech",
+    title: "Workshop Update: New Diagnostic Tech",
+    excerpt:
+      "Morgatech integrates the latest 2025 AI-driven fault detection systems into our facility.",
+    category: BLOG_CATEGORIES[2],
+    author: AUTHORS[0],
+    publishedAt: "October 21, 2024",
+    coverImage:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA3nh0L8tNkL60pHBEADi1UmB1LRGswzoiSvVdMsXI7O2tBz-8MjFgGdwhxm_kdBRROh0ETkUn89WkKHTcsVsodXSgPy8tmwyN1XkG_jhCrKA-9hMH1yh0y7V09PPtWj72DHASoc2mb3F8gVD9ra0BHCyd54vg4ebeeTSwl4jUgB9Jt79GPi4MHmExCAwNcL0hx83fOV-iOkSQeaUplV6qV778pQBu2ErAeJZb40W1dK6fjsyw5TbUS-68B2_yCOZnDfdCzk5iGIzTX",
+    coverImageAlt: "Interior of a luxury vehicle dashboard",
+    readingTime: "5 Min Read",
+  },
+  {
+    id: "post-4",
+    slug: "brake-fade-causes-and-solutions",
+    title: "Brake Fade: Causes and Solutions",
+    excerpt:
+      "Understanding thermal management in performance braking systems for long-term safety.",
+    category: BLOG_CATEGORIES[0],
+    author: AUTHORS[0],
+    publishedAt: "October 15, 2024",
+    coverImage:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDS6JLJOuD8d_R_maA2HIwQ-HDS7xgprIoMAGhgdOtVd6iFreuVRvKjm9aJVtPa_bq5Pbh6gQ6rSedDwA7MigQ4CbzwJUH6QGJlG_lLWXOWkQJhFnc60Xs4HsBXlxj_m3VENpytdZWZnn9suOx-__2lcI6dhXtiN89g-1dOfTIYL5NRrROWNgTFbH6tQZ18zWhyOA45ZrSUhsjOP6_F2Fs4F_uxgoxW9Qo52Osz397OSrRGxG3uVnHmjTM-4m2JX3_ns4AI9nfCzj5Z",
+    coverImageAlt: "Close up of brake disc and caliper",
+    readingTime: "7 Min Read",
+  },
+  {
+    id: "post-5",
+    slug: "ecu-tuning-myths-vs-reality",
+    title: "ECU Tuning: Myths vs Reality",
+    excerpt:
+      "A deep dive into software-based performance enhancement and its impact on longevity.",
+    category: BLOG_CATEGORIES[3],
+    author: AUTHORS[0],
+    publishedAt: "October 08, 2024",
+    coverImage:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBi8gtw61_kNr_S5Vs3dLCRv0i9PxAYxiQ_CVfLl2iisMbuI2DVCoitv5EJ6L1Cx7P0SIel3WlFnnmmI9Wrmk6EW4lCO12IjCUUmOPl0XZQx5_nyLltKURndlWNCu_8T8XLpBmIpMFRDv5Pg1f1faUFQtsEiJqhbHPlcnCyNkQKxLV153nXe2E-gitPCpuDwtUWoGRIjHSMFB5heAm89tm1N3mjsjHoPYWZe_ILEx06wlBjr7Eqw3NMOiXXy83VHJblFl6sE6bpJ733",
+    coverImageAlt: "Abstract blue automotive wire mesh",
+    readingTime: "10 Min Read",
+  },
+  {
+    id: "post-6",
+    slug: "5-essential-brake-maintenance-tips",
+    title: "5 Essential Brake Maintenance Tips",
+    excerpt:
+      "Your brakes are the most critical safety system on your vehicle. Learn the 5 proactive steps to keep them performing at their peak.",
+    category: BLOG_CATEGORIES[4],
+    author: AUTHORS[0],
+    publishedAt: "May 24, 2024",
+    coverImage:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDrj0cIYkmr2uAogvqNsYDt6vP2ocyJJqcJZHUdcs8kt9j5a5Jfazd1oGBnQaZ07I1XA7YICNJtbsqOHDzAD62lWZyMAKoh7brfcL8b4ody8VcuCT3hiO_RVlCZZw6A5EVep_toK3ZgrqECGsvsut1xEx2mR2r75Z6VpsqyWEysmNkaLA57dgrNNUZneJ0wPdpOgZb4EWDlvSbblCmLEyCoUhepRG4SbOSr26MDabF4ftNMHG4RyHaXbv6FIKw7dY-35llpZ2q1cn2G",
+    coverImageAlt: "High performance brake disc and caliper",
+    readingTime: "8 Min Read",
+  },
+];
+
+// ─── Recent Posts (for sidebar widgets) ──────────────────────────────────────
+
+export const RECENT_POSTS = [
+  {
+    title: "Maximizing Tire Longevity for AWD",
+    date: "Oct 28",
+    slug: "maintenance-101-performance-handbook",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBKS9HBZYVjRbXS58a6SECYOnXPSsA1q0zOTjKQuH98SlFTT95mvhkXzdNjcedBAL6PjHfPWYgLJnU76wyNU8WIzht3fh387844gICavlh9lnGl-2AvONytUpElMMDy_JUfmF21XRBmx1JwnIhjrzk42ec0IZhHzIHM08fM8Z9ubLesWiu1aBIaYbAJrooqR3o1meUW4RoPU120celgT_sGQbaYdoPL9Xirt82ynMiBIPchlnUrjZ90XT7fBqBCqwooM_x-gKSutp-A",
+  },
+  {
+    title: "Preserving Performance in Vintage Classics",
+    date: "Oct 25",
+    slug: "future-of-hybrid-drive-systems",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAkj6oqwuwqcD94FJZP53qPDQn6czO7n4ELQU-fUmdvE-bVwgKFal6Yydj5_W4wYw0K6Byv_9Ednx07RPhkhvdZNCnAW0ia4EqZbdNZOGWryWVox8aUJjiqVdyLv98cmM0_yM0WePxBPmOWj6ajqFwd9VIYMyQLEVBbRck1evDZm3KyRDXBC6pZCUrhQPe1LiDLUTCMIn2bzyHZNgX0iqb1b-iJB0CtQZ_IiqUfvG2YYPSjfk8SPw3O_AiQ3ntwbkRTbK7kNei574ws",
+  },
+  {
+    title: "Next-Gen Lighting: Laser Tech",
+    date: "Oct 22",
+    slug: "workshop-update-diagnostic-tech",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDs4Zo84z8lej6CNVGUmFg5S_BKozu3sOVFlqNSB7TOfWQwelvWsvFWN1JBFkKqys8tnfMBk65fu7KJxVewdV5Xn7zMBEKIVFFnmT4qygvTcSsrbiwco3OfiIgEOvmljiI-raOPE4t3W_c5E8Zpru-VnZWiATFjZKk0ilyVlxQghoz5xfHFxotPKYLyTUihGNWZoPpOfjdF8kGVFRokdepScttHU8FR2g_oiuW4LHoevEUhet9vSxHDVhajRX9i0v66cQQ-DIDylUNl",
+  },
+];
+
+// ─── Blog Post Detail (full content for the [slug] page) ─────────────────────
+
+export const BLOG_POST_DETAILS: Record<
+  string,
+  {
+    content: string;
+    sections: ContentSection[];
+    tags: string[];
+  }
+> = {
+  "5-essential-brake-maintenance-tips": {
+    tags: ["Maintenance", "Safety", "DIY Tips"],
+    sections: [
+      { id: "brake-pads", heading: "Brake Pad Thickness", body: "" },
+      { id: "fluid-check", heading: "Brake Fluid Flush", body: "" },
+      { id: "rotor-inspection", heading: "Rotor Inspection", body: "" },
+      { id: "cleaning", heading: "Component Cleaning", body: "" },
+      { id: "driving-habits", heading: "Braking Habits", body: "" },
+    ],
+    content: `
+      <p class="text-xl text-slate-600 leading-relaxed mb-12">
+        Brakes are arguably the most critical safety system on your vehicle. At Morgatech Auto, we emphasize that proactive maintenance doesn't just save you money on expensive repairs; it ensures your stopping power is never compromised when it matters most.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="brake-pads">1. Monitor Brake Pad Thickness</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Your brake pads are the "sacrificial" component of your braking system. They are designed to wear down over time as they provide the friction needed to stop your car. We recommend checking them every 5,000 to 7,000 miles. Once the friction material drops below 3mm, performance begins to degrade rapidly.
+      </p>
+
+      <div class="my-12 p-8 bg-blue-50 border-l-4 border-primary rounded-r-xl">
+        <blockquote class="italic text-xl text-blue-900 font-medium leading-relaxed">
+          "Squealing is your car's way of asking for help. Ignoring that high-pitched sound often leads to rotor damage, which can triple your repair bill."
+        </blockquote>
+        <cite class="block mt-4 text-blue-700 font-bold">&mdash; Marcus R., Master Technician</cite>
+      </div>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="fluid-check">2. Flush Your Brake Fluid Regularly</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Brake fluid is hygroscopic, meaning it absorbs moisture from the air. Over time, this water content can lower the boiling point of the fluid and cause internal corrosion in your calipers and master cylinder.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="rotor-inspection">3. Inspect Rotors for Heat Spots</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        If you feel a vibration or "pulsing" in your brake pedal, your rotors may be warped or have significant heat spots. These are areas of the metal that have become hardened and glassy due to excessive heat, leading to uneven braking performance.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="cleaning">4. Keep Components Clean</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Brake dust is corrosive. Regularly cleaning your wheels and checking that the caliper slider pins are well-lubricated prevents "sticky" brakes that drag while you drive, decreasing fuel efficiency and increasing wear.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="driving-habits">5. Optimize Your Braking Habits</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        The best way to maintain your brakes is to use them correctly. Avoid "two-foot" driving and engine brake where appropriate. Reducing high-speed panic stops through better road anticipation can extend the life of your brake pads by up to 15,000 miles.
+      </p>
+    `,
+  },
+};
+
+// ─── Newsletter CTA ──────────────────────────────────────────────────────────
+
+export const BLOG_NEWSLETTER: NewsletterCTA = {
+  title: "Stay Engineered",
+  description:
+    "Join 5,000+ car enthusiasts getting monthly maintenance alerts and exclusive performance tips.",
+  buttonText: "Subscribe Now",
+  subscriberCount: "5,000+",
+};
+
+// ─── Search Defaults ─────────────────────────────────────────────────────────
+
+export const DEFAULT_SEARCH_STATE: SearchResult = {
+  query: "",
+  totalResults: 0,
+  results: [],
+  suggestions: [
+    "Oil Change Intervals",
+    "Brake Squeaking",
+    "Check Engine Light",
+    "Maryland Inspection",
+  ],
+};

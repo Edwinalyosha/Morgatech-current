@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-import { useBooking } from "@/hooks/useBooking.ts"
+import { useBooking } from "@/hooks/useBooking"
 
 export function CTASection() {
   const { openBooking } = useBooking();
