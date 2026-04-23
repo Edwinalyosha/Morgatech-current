@@ -3,7 +3,7 @@ set -e
 
 # Run: docker inspect caddy --format '{{range $k, $v := .NetworkSettings.Networks}}{{$k}}{{end}}'
 # then paste the result below
-NETWORK="caddy_net"
+NETWORK="shared-network"
 
 IMAGE="morgatech-app"
 CONTAINER="morgatech-app"
