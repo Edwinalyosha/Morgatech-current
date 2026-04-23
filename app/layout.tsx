@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ChatWidgetLoader } from "@/components/ui/ChatWidgetLoader";
 import "./globals.css";
 import Script from "next/script";
 
@@ -70,6 +71,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <ChatWidgetLoader />
 
         {/* --- BOOKING TOOL INTEGRATION --- */}
         {/* This loads the AutoOps logic in the background */}
