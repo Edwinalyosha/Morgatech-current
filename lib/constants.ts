@@ -34,11 +34,11 @@ export const BUSINESS = {
   name: "Morgatech Auto Repair",
   shortName: "Morgatech",
   phone: "(301)-477-4113",
-  email: "service@morgatech.com",
+  email: "info@morgatechauto.com",
   address: "6713 Ammendale Rd, Beltsville, MD 20705",
   hours: {
-    weekday: "Mon - Fri: 8:00 AM - 6:00 PM",
-    saturday: "Sat: 9:00 AM - 2:00 PM",
+    weekday: "Mon - Fri: 9:00 AM - 6:00 PM",
+    saturday: "Sat: Closed",
     sunday: "Sun: Closed",
   },
   emergency: "(301)-477-4113",
@@ -854,19 +854,19 @@ export const CONTACT_CARDS: ContactInfo[] = [
     icon: "mail",
     title: "Email",
     subtitle: "Response within 24h",
-    value: "service@morgatech.com",
+    value: "info@morgatechauto.com",
   },
   {
     icon: "location_on",
     title: "Address",
     subtitle: "Beltsville, MD 20705",
-    value: "123 Industrial Way",
+    value: "6713 Ammendale Rd",
   },
   {
     icon: "schedule",
     title: "Business Hours",
-    subtitle: "Weekdays & Saturday",
-    value: "Mon-Fri: 8AM-6PM",
+    subtitle: "Monday - Friday",
+    value: "Mon-Fri: 9AM-6PM",
   },
 ];
 

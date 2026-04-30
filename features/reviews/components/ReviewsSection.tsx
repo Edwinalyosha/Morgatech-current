@@ -5,11 +5,15 @@ import type { Review } from "@/types";
 interface ReviewsSectionProps {
   reviews: Review[];
   showOverallRating?: boolean;
+  rating?: number;
+  totalRatings?: number;
 }
 
 export function ReviewsSection({
   reviews,
   showOverallRating = true,
+  rating,
+  totalRatings,
 }: ReviewsSectionProps) {
   return (
     <section className="py-24 bg-slate-50 text-slate-900" id="reviews">
@@ -26,7 +30,8 @@ export function ReviewsSection({
                 ))}
               </div>
               <p className="mt-2 text-slate-400">
-                4.9/5 Average based on 500+ reviews
+                {rating ? `${rating.toFixed(1)}/5` : "4.9/5"} Average based on{" "}
+                {totalRatings ? `${totalRatings}+` : "500+"} reviews
               </p>
             </>
           )}
