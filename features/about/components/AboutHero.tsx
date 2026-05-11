@@ -13,11 +13,11 @@ export function AboutHero() {
       >
         <div className="max-w-3xl space-y-6">
           <h1 className="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight">
-            About Morgatech Auto Repair
+            The Auto Repair Shop <br />Beltsville Actually Needs
           </h1>
           <p className="text-slate-200 text-lg md:text-xl font-normal max-w-2xl mx-auto">
-            Trusted automotive repair services in Beltsville with skilled
-            mechanics and honest pricing.
+            7+ years. Family-run. We tell you exactly what we find — and exactly
+            what it costs — before we touch anything.
           </p>
           <div className="pt-4">
             <a

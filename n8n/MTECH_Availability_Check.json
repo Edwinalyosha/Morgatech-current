@@ -1,0 +1,96 @@
+{
+  "name": "MTECH_Availability_Check",
+  "settings": { "timezone": "America/New_York", "executionOrder": "v1" },
+  "nodes": [
+    {
+      "id": "webhook-avail",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "mtech-availability",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "code-slots",
+      "name": "Generate Slots",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "jsCode": "const { date } = $input.first().json.body;\nif (!date) return [{ json: { error: 'date required', slots: [], date: null } }];\n\nconst d = new Date(date + 'T12:00:00Z');\nif (d.getDay() === 0 || d.getDay() === 6) {\n  return [{ json: { date, slots: [], error: 'Closed on weekends' } }];\n}\n\nconst slots = [];\nfor (let h = 9; h < 18; h++) {\n  for (let m = 0; m < 60; m += 30) {\n    const t = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;\n    slots.push({ time: t, datetime: `${date}T${t}:00` });\n  }\n}\nreturn [{ json: { date, slots } }];"
+      }
+    },
+    {
+      "id": "gcal-events",
+      "name": "Get Calendar Events",
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.1,
+      "position": [650, 300],
+      "parameters": {
+        "resource": "event",
+        "operation": "getAll",
+        "calendarId": {
+          "__rl": true,
+          "value": "76b89dc3135661dfd818dde57dba79bd371cd64cad7735844189afc453b6c871@group.calendar.google.com",
+          "mode": "id"
+        },
+        "returnAll": true,
+        "options": {
+          "timeMin": "={{ $json.date + 'T00:00:00-04:00' }}",
+          "timeMax": "={{ $json.date + 'T23:59:59-04:00' }}"
+        }
+      }
+    },
+    {
+      "id": "merge-1",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [850, 300],
+      "parameters": { "mode": "append", "options": {} }
+    },
+    {
+      "id": "code-filter",
+      "name": "Filter Available Slots",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1050, 300],
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst slotsItem = items.find(i => Array.isArray(i.json.slots));\nif (!slotsItem) return [{ json: { error: 'No slot data', available_slots: [] } }];\n\nconst { date, slots, error } = slotsItem.json;\nif (error || !slots.length) return [{ json: { date, available_slots: [], error } }];\n\nconst events = items.filter(i => i.json.id && i.json.start).map(i => i.json);\nconst OFF = '-04:00';\n\nconst available = slots.filter(slot => {\n  const s = new Date(slot.datetime + OFF);\n  const e = new Date(s.getTime() + 1800000);\n  const count = events.filter(ev => {\n    const es = new Date(ev.start.dateTime || ev.start.date + 'T00:00:00' + OFF);\n    const ee = new Date(ev.end.dateTime || ev.end.date + 'T23:59:59' + OFF);\n    return es < e && ee > s;\n  }).length;\n  return count < 2;\n});\n\nreturn [{ json: { date, available_slots: available.map(s => s.time) } }];"
+      }
+    },
+    {
+      "id": "respond-avail",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1250, 300],
+      "parameters": { "respondWith": "json", "responseBody": "={{ $json }}" }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "Generate Slots", "type": "main", "index": 0 }]]
+    },
+    "Generate Slots": {
+      "main": [[
+        { "node": "Get Calendar Events", "type": "main", "index": 0 },
+        { "node": "Merge", "type": "main", "index": 0 }
+      ]]
+    },
+    "Get Calendar Events": {
+      "main": [[{ "node": "Merge", "type": "main", "index": 1 }]]
+    },
+    "Merge": {
+      "main": [[{ "node": "Filter Available Slots", "type": "main", "index": 0 }]]
+    },
+    "Filter Available Slots": {
+      "main": [[{ "node": "Respond to Webhook", "type": "main", "index": 0 }]]
+    }
+  }
+}

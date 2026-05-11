@@ -12,19 +12,21 @@ export function CompanyStory() {
           </span>
         </div>
         <h2 className="text-3xl md:text-4xl font-black text-slate-900">
-          Reliable &amp; Customer-Focused
+          7+ Years Serving Beltsville and the Surrounding Area
         </h2>
         <p className="text-slate-600 text-lg leading-relaxed">
-          Founded on the principles of integrity and excellence, Morgatech has
-          been serving the Beltsville community with top-tier automotive care for
-          years. Our journey began with a simple goal: to provide honest,
-          high-quality repairs that keep our neighbors safe on the road.
+          Morgatech Auto Repair has been the go-to mechanic for drivers in
+          Beltsville, College Park, Laurel, Greenbelt, and across Prince
+          George&apos;s County for over 7 years. We&apos;re a family-run shop
+          and proud of it — small means we know your name, remember your car,
+          and give every job the attention it deserves.
         </p>
         <p className="text-slate-600 text-lg leading-relaxed">
-          Over the decades, we&apos;ve evolved from a small family-owned shop
-          into a state-of-the-art repair center, yet our commitment to
-          personalized service remains unchanged. Every vehicle that enters our
-          bay is treated with the same precision and care as if it were our own.
+          Our technicians are trained to diagnose first and repair second. We
+          follow the fault to its actual cause — not just the part a code
+          happens to point to. That approach is how we catch what other shops
+          miss, and it&apos;s why drivers keep coming back to us for brakes,
+          suspension, cooling systems, and everything in between.
         </p>
       </div>
       <div className="rounded-xl overflow-hidden aspect-video shadow-2xl relative">

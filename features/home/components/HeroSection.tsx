@@ -20,15 +20,16 @@ export function HeroSection() {
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="max-w-2xl">
           <span className="inline-block py-1 px-3 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-4">
-            Certified Expert Mechanics
+            Diagnosed right. Fixed right. Every time.
           </span>
           <h1 className="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
-            Trusted Auto Repair <br />
-            <span className="text-primary">in Beltsville</span>
+            Auto Repair <br />
+            <span className="text-primary">in Beltsville, MD</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed max-w-lg">
-            Certified mechanics, honest pricing, and fast repairs. We keep your
-            vehicle running at peak performance.
+            Tired of the stress of unpredictable repairs? We combine expert
+            diagnosis and repair with clear communication — so you get a
+            reliable car and the peace of mind to go about your day.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <button

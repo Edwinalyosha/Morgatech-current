@@ -30,8 +30,8 @@ export function ReviewsSection({
                 ))}
               </div>
               <p className="mt-2 text-slate-400">
-                {rating ? `${rating.toFixed(1)}/5` : "4.9/5"} Average based on{" "}
-                {totalRatings ? `${totalRatings}+` : "500+"} reviews
+                {rating ? `${rating.toFixed(1)}/5` : "4.5/5"} Average based on{" "}
+                {totalRatings ? `${totalRatings}+` : "70+"} Google reviews
               </p>
             </>
           )}

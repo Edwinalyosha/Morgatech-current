@@ -49,30 +49,50 @@ export const BUSINESS = {
 
 export const SERVICES: Service[] = [
   {
-    slug: "car-maintenance",
-    title: "Car Maintenance",
-    description:
-      "Complete vehicle health and longevity through precision care.",
-    icon: "build_circle",
-    image:
-      "/services/car-maintenance.jpg",
-    imageAlt: "Mechanic performing a multi-point inspection on a modern vehicle engine",
-  },
-  {
     slug: "brake-repair",
     title: "Brake Repair",
     description:
-      "Pads, rotors, and fluid service to ensure your safety on every journey.",
+      "Squealing, grinding, or a soft pedal? We inspect and repair brake pads, rotors, and fluid — and back every job with our 12-month warranty.",
     icon: "minor_crash",
     image:
       "/services/car-brake.jpg",
     imageAlt: "Mechanical inspection of metallic car brake disc and caliper",
   },
   {
+    slug: "suspension-repair",
+    title: "Suspension & Steering",
+    description:
+      "Bouncy ride, pulling to one side, or a knocking sound over bumps? We diagnose and repair shocks, struts, ball joints, and steering components.",
+    icon: "build_circle",
+    image:
+      "/services/suspension-repair.jpg",
+    imageAlt: "Detailed view of a vehicle's suspension and wheel assembly",
+  },
+  {
+    slug: "ac-heating-services",
+    title: "AC & Heating Services",
+    description:
+      "Weak airflow, warm air from the vents, or no heat in winter? We diagnose climate control faults and recharge refrigerant to manufacturer spec.",
+    icon: "ac_unit",
+    image:
+      "/services/ac-services.jpg",
+    imageAlt: "Blue air conditioning coolant manifold gauges on a car engine",
+  },
+  {
+    slug: "car-maintenance",
+    title: "Car Maintenance",
+    description:
+      "Oil changes, fluid checks, filters, and full multi-point inspections — regular maintenance that keeps your car reliable and prevents bigger repairs.",
+    icon: "build_circle",
+    image:
+      "/services/car-maintenance.jpg",
+    imageAlt: "Mechanic performing a multi-point inspection on a modern vehicle engine",
+  },
+  {
     slug: "engine-diagnostics",
     title: "Engine Diagnostics",
     description:
-      "Advanced computer scanning to identify and resolve complex issues quickly.",
+      "Check engine light on, rough idle, or a problem three other shops couldn't find? We follow the fault code to the actual cause — not just the part it points to.",
     icon: "build_circle",
     image:
       "/services/engine.jpg",
@@ -82,7 +102,7 @@ export const SERVICES: Service[] = [
     slug: "transmission-service",
     title: "Transmission Service",
     description:
-      "Expert service and maintenance for automatic and manual transmissions.",
+      "Slipping gears, delayed shifting, or a grinding sensation? We service automatic and manual transmissions and catch wear early before it becomes a full rebuild.",
     icon: "settings_input_component",
     image:
       "/services/transmission-repair.jpg",
@@ -92,7 +112,7 @@ export const SERVICES: Service[] = [
     slug: "auto-electrical-service",
     title: "Auto Electrical Service",
     description:
-      "Specialized wiring, sensor, and electronic module diagnostics and repair.",
+      "Battery draining overnight, lights flickering, or a starter that won't engage? We trace electrical faults across the full system — wiring, alternators, and control modules.",
     icon: "bolt",
     image:
       "/services/auto-electrical-service.jpg",
@@ -100,33 +120,13 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "exhaust-system",
-    title: "Exhaust System",
+    title: "Exhaust & Emissions",
     description:
-      "Full-service exhaust repair to keep your vehicle quiet and eco-friendly.",
+      "Loud exhaust, a failed emissions test, or a smell from under the car? We repair mufflers, catalytic converters, and exhaust manifolds to get you back to quiet and compliant.",
     icon: "battery_charging_full",
     image:
       "/services/exhaust-system.jpg",
     imageAlt: "Close up of a car exhaust system being replaced",
-  },
-  {
-    slug: "ac-heating-services",
-    title: "AC & Heating Services",
-    description:
-      "Cooling system diagnostics, recharging, and leak repairs to keep you comfortable in any weather.",
-    icon: "ac_unit",
-    image:
-      "/services/ac-services.jpg",
-    imageAlt: "Blue air conditioning coolant manifold gauges on a car engine",
-  },
-  {
-    slug: "suspension-repair",
-    title: "Suspension Repair",
-    description:
-      "Expert maintenance and replacement of shocks, struts, ball joints, and steering system components.",
-    icon: "build_circle",
-    image:
-      "/services/suspension-repair.jpg",
-    imageAlt: "Detailed view of a vehicle's suspension and wheel assembly",
   },
 ];
 
@@ -220,16 +220,16 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     heroImage:
       "/services/car-brake-hero.jpg",
     heroImageAlt: "High performance car ceramic brake disc and red caliper",
-    overviewTitle: "Why Brake Maintenance Matters",
+    overviewTitle: "Brake Repair in Beltsville, MD",
     overviewText: [
-      "Your brakes are the most critical safety feature of your vehicle. Over time, friction material wears down, heat warps rotors, and brake fluid absorbs moisture, significantly reducing your stopping power.",
-      "Regular maintenance doesn't just keep you safe—it prevents costly repairs. Catching a worn pad early prevents the metal-on-metal contact that destroys expensive rotors and calipers. Our certified technicians provide thorough inspections to ensure your system performs at its peak.",
+      "Squealing when you stop, a pedal that pulses, or a car that pulls to one side under braking — these are your brakes asking for attention. Ignoring them usually turns a pad replacement into a rotor replacement, which costs significantly more.",
+      "At Morgatech Auto Repair we inspect the full brake system: pads, rotors, callipers, and fluid. We tell you what we find, what needs doing now, and what can wait — then we get your approval before anything is touched. Every brake repair is backed by our 12-month / 12,000-mile warranty.",
     ],
     stats: [
       { value: "15ft", label: "Avg. Shorter Stop" },
       { value: "20k", label: "Miles Inspection Interval" },
       { value: "100%", label: "Safety Certified" },
-      { value: "2yr", label: "Service Warranty" },
+      { value: "12mo", label: "Repair Warranty" },
     ],
     symptoms: [
       {
@@ -583,10 +583,10 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     tagline: "Year-Round Comfort",
     heroImage: "/services/ac-services-hero.jpg",
     heroImageAlt: "Technician performing an A/C pressure test and refrigerant recharge",
-    overviewTitle: "Advanced Climate Control Solutions in Beltsville",
+    overviewTitle: "AC & Heating Repair in Beltsville, MD",
     overviewText: [
-      "In Maryland's harsh weather, a functional climate control system is more than a luxury—it is essential for a safe and focused driving experience. At Morgatech Auto Repair, we utilize advanced diagnostic equipment to pinpoint leaks and mechanical failures in your heating and cooling systems, ensuring we find the root cause before recommending a repair.",
-      "Whether you are dealing with a faulty compressor, reduced airflow, or unusual odors from your vents, our skilled mechanics have the expertise to restore your vehicle’s interior environment. We use only high-quality parts and industry-standard refrigerants to ensure your system operates at peak efficiency during the hottest summer days and coldest winter nights.",
+      "Air conditioning that blows warm in a Maryland summer, or a heater that barely works when the temperature drops — climate control faults make every drive uncomfortable and, in extreme heat, unsafe. These problems usually come down to a refrigerant leak, a failing compressor, or a blocked evaporator.",
+      "At Morgatech Auto Repair we diagnose the full climate control system before recommending any repair. We use proper pressure testing to find leaks and recharge refrigerant to manufacturer specification — not just top it up. Every AC and heating repair is backed by our 12-month / 12,000-mile warranty.",
     ],
     stats: [
       { value: "Fast", label: "A/C Recharge" },
@@ -660,10 +660,10 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     tagline: "Handling & Safety",
     heroImage: "/services/suspension-repair-hero.jpg",
     heroImageAlt: "Mechanic inspecting a vehicle's coil spring and strut assembly",
-    overviewTitle: "Is Your Suspension Trying to Tell You Something?",
+    overviewTitle: "Suspension & Steering Repair in Beltsville, MD",
     overviewText: [
-      "A compromised suspension system affects more than just ride comfort; it severely impacts steering precision, braking distance, and tire longevity. Our Beltsville technicians specialize in restoring the original handling and safety of all makes and models, with a specific focus on the tight tolerances required for European vehicles.",
-      "We offer a complimentary 15-Minute 'No-Wrench' Inspection to visually and physically assess your major components. This allows us to identify the root cause of your handling issues—whether it's worn bushings or a failing rack and pinion—giving you clear information before any repair costs are committed.",
+      "A bouncy ride, a steering wheel that pulls, or a knocking sound every time you hit a bump — suspension problems often start small and quietly get worse. Left too long, worn shocks and struts accelerate tyre wear and increase your braking distance. What feels like a comfort issue is often a safety one.",
+      "At Morgatech Auto Repair in Beltsville, we diagnose the full suspension and steering system — shocks, struts, ball joints, tie rods, and alignment. We catch problems early so you're not paying twice. Every repair is backed by our 12-month / 12,000-mile warranty.",
     ],
     stats: [
       { value: "15min", label: "Free Inspection" },
@@ -790,6 +790,9 @@ export const SERVICE_DETAIL_REVIEWS: Review[] = [
 ];
 
 // ─── Team Members ────────────────────────────────────────────────────────────
+// ⚠️  PLACEHOLDER DATA — names, roles, and photos are AI-generated and NOT real staff.
+// TeamSection component does not exist yet — this data is not rendered anywhere on the site.
+// Do not build TeamSection or use this data until replaced with real names and photos.
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
@@ -825,19 +828,39 @@ export const TEAM_MEMBERS: TeamMember[] = [
 
 export const FAQ_ITEMS: FAQItem[] = [
   {
-    question: "Do I need an appointment?",
+    question: "Will you start work before telling me the cost?",
     answer:
-      "While we accept walk-ins for minor services like oil changes, we highly recommend scheduling an appointment to ensure the quickest turnaround for your repair.",
+      "No. After we diagnose your vehicle we give you a full breakdown of what we found and what it will cost to fix. Work only starts when you approve it — every time, no exceptions.",
   },
   {
-    question: "What vehicles do you repair?",
+    question: "What does your warranty cover?",
     answer:
-      "We service all makes and models, including domestic, foreign, and luxury vehicles. Our technicians are certified for hybrid and electric vehicle maintenance as well.",
+      "All our repairs are backed by a 12-month / 12,000-mile warranty on both parts and labour. If something we fixed isn't right, bring it back and we'll sort it at no charge.",
   },
   {
-    question: "How long do repairs take?",
+    question: "Do you work on all makes and models?",
     answer:
-      "Routine maintenance is usually completed within 1-2 hours. Complex mechanical repairs vary, but we provide a detailed time estimate after our initial diagnostic.",
+      "Yes — domestic, foreign, and luxury vehicles. We service most makes including Honda, Toyota, Ford, Chevrolet, BMW, Mercedes-Benz, Hyundai, Nissan, and more.",
+  },
+  {
+    question: "How long will my car be in the shop?",
+    answer:
+      "Routine services like oil changes and brake pad replacements are usually done the same day, often within 1–3 hours. Complex jobs like suspension or cooling system repairs vary — we give you a time estimate after diagnosis so you can plan your day.",
+  },
+  {
+    question: "What if you find something else while you're in there?",
+    answer:
+      "We'll tell you what we found, explain why it matters, and give you a quote. You decide whether to add it to the job or come back another time. We don't pressure and we don't rush.",
+  },
+  {
+    question: "Do I need an appointment or can I walk in?",
+    answer:
+      "Walk-ins are welcome for straightforward services. For repairs — especially brake work, suspension, or diagnostics — calling ahead helps us have the right time and parts ready so you're not waiting.",
+  },
+  {
+    question: "How much does a brake repair cost in Beltsville?",
+    answer:
+      "Brake repair costs depend on what needs replacing — pads only, pads and rotors, or a full system service. We diagnose first and give you an exact quote before any work starts. Call (301)-477-4113 for a quick estimate.",
   },
 ];
 
@@ -875,23 +898,23 @@ export const CONTACT_CARDS: ContactInfo[] = [
 export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
   {
     number: 1,
-    title: "Book Appointment",
-    description: "Select your service and time online or by phone.",
+    title: "Call or Drop In",
+    description: "Call us at (301)-477-4113 or bring your car to 6713 Ammendale Rd, Beltsville.",
   },
   {
     number: 2,
-    title: "Bring Your Vehicle",
-    description: "Drop off your car at our Beltsville location.",
+    title: "We Diagnose",
+    description: "Our technicians find the real problem — not just what the code points to.",
   },
   {
     number: 3,
-    title: "Diagnose Problem",
-    description: "Our experts identify the issue and provide a quote.",
+    title: "You Approve",
+    description: "We explain what we found and what it costs. Nothing starts until you say yes.",
   },
   {
     number: 4,
-    title: "Repair & Pickup",
-    description: "We fix it fast and notify you when it's ready.",
+    title: "Repaired & Ready",
+    description: "We fix it right and call you when it's done. Every repair backed by our 12-month warranty.",
   },
 ];
 
@@ -899,28 +922,28 @@ export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
 
 export const CORE_VALUES: ValueCard[] = [
   {
-    icon: "precision_manufacturing",
-    title: "Quality Workmanship",
+    icon: "search",
+    title: "Diagnose First",
     description:
-      "We use the latest tools and high-grade parts to ensure every repair meets industry standards.",
+      "We follow the fault to its actual cause — not just the part a code points to. That is how we catch what other shops miss on brake, suspension, and electrical jobs.",
   },
   {
-    icon: "payments",
-    title: "Honest Pricing",
+    icon: "fact_check",
+    title: "You Approve Before We Start",
     description:
-      "No hidden fees or surprise charges. We provide detailed estimates before any work begins.",
+      "After diagnosis we walk you through exactly what we found and what it costs. Nothing gets touched until you say go — every time, no exceptions.",
   },
   {
-    icon: "sentiment_very_satisfied",
-    title: "Customer Satisfaction",
+    icon: "build",
+    title: "Thorough by Default",
     description:
-      "Your peace of mind is our priority. We go the extra mile to make your visit stress-free.",
+      "We look at the whole vehicle, not just the symptom. A cooling system check that catches a worn belt. A brake inspection that spots a suspension issue before it gets expensive.",
   },
   {
-    icon: "engineering",
-    title: "Experienced Techs",
+    icon: "handshake",
+    title: "Family-Run, Community-Focused",
     description:
-      "Our ASE-certified technicians bring years of diagnostic expertise to every vehicle.",
+      "7+ years serving Beltsville drivers. We remember your car, your history, and we back every repair with a 12-month / 12,000-mile warranty.",
   },
 ];
 
@@ -1027,22 +1050,20 @@ export const SIDEBAR_CATEGORIES: SidebarCategory[] = [
 
 // ─── Authors ─────────────────────────────────────────────────────────────────
 
+// ⚠️  TODO: Replace avatar URL with a real photo of Edwin. Replace bio with real text.
+// Blog posts currently have placeholder content — see BLOG_POSTS below.
+// Guidelines for writing real blog content: write from the perspective of a mechanic who
+// has seen these problems first-hand. Open with the symptom, explain the cause plainly,
+// describe what the repair involves, and close with what happens if you ignore it.
+// Target: 600–900 words per post. One primary keyword per post (e.g. "brake pad replacement
+// Beltsville", "suspension repair Maryland"). Add to BLOG_POST_DETAILS keyed by slug.
 export const AUTHORS: Author[] = [
   {
     id: "auth-1",
-    name: "Marcus Vane",
-    role: "Lead Technical Specialist",
-    avatar:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCQIeF45mFAEJJubrHh1W1lJYs2CrgvpW7Me1Icrh7aJ1pxHTiBprlcV4OmMCXxqhQNc0nzXWtYkW2g7PEdjplUWnCPuvU7GkD7nynMG_VuZ3Vdzwh7HltFLehZMWKa5CmpsrBeUo_pqY0AiT6UMOwbSx5yaTGDdwACuJUNEsVfB75TWGtarTudbbxVy6aD6YIDezgPzYAQXU2tRqJElgTS_VApR-ErQ_8xL7VOoGzxxpjMS-QAicGQviqNI0tf793j_gF2QPXojxT4",
-    bio: "With over 20 years in the field, Marcus specializes in complex engine diagnostics and performance tuning for modern vehicles.",
-  },
-  {
-    id: "auth-2",
-    name: "Dr. Elena Ross",
-    role: "Automotive Engineer",
-    avatar:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDWkY23dKQRj5k7v8zxJgITyTOxnvue9WgkGiDUlfGEx_7DCV5kwmlkI__kywONSQawac6iOKHesw92lzPkNe6rioVkB1mOHwivZ_fZ8MS3y9eUhRcdTmxfQCTuZdkFpkJOPgy85ZJ1TxTPdDvjfIboKnIAntsWMdS4NcwbDQhdrf6kdtTcDoW_0e2VO_81h8KRIEljKYgjChlfbTqxDP37Ika0cZoG6TXJEspgMbDLMg2GvavcPvjDoVjvgPpYmH6bwMmj3iZume6F",
-    bio: "Elena holds a PhD in mechanical engineering and leads our R&D team on hybrid and electric vehicle technologies.",
+    name: "Edwin",
+    role: "Owner, Morgatech Auto Repair",
+    avatar: "/logo.png", // ⚠️  Replace with real headshot photo
+    bio: "Owner of Morgatech Auto Repair in Beltsville, MD. 7+ years diagnosing and fixing the problems other shops miss.", // ⚠️  Update with real bio
   },
 ];
 
@@ -1071,7 +1092,7 @@ export const BLOG_POSTS: Post[] = [
     excerpt:
       "Exploring the next generation of regenerative braking and battery management in modern luxury sedans.",
     category: BLOG_CATEGORIES[1],
-    author: AUTHORS[1],
+    author: AUTHORS[0],
     publishedAt: "October 24, 2024",
     coverImage:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDXYdS7PdohmRGAuV6ATN8xnijKq6ZibJcvkRF_rfOwqrcYHVZShG9GUtUK-QAKXvwKlkIZAP20sM7srBS9zlakVElzX9K1fdo3koGbgRmQOG57pYfgy2wb7Wtuc7X9wt7evmE9WxAdD9GsTFaA4sPTvq9gF7iIYq06PUaObWPzL1NWra3VlljUudj0Dv919ZnxNK9G0P502CjyP7DvtJ_YjlI507K_7-IWENmVsrcfBcQUXo-C7xhGYCwEkChztALUJAwbvq4Wd6Gx",

@@ -1,0 +1,107 @@
+{
+  "name": "MTECH_Booking_Intake",
+  "settings": { "timezone": "America/New_York", "executionOrder": "v1" },
+  "nodes": [
+    {
+      "id": "webhook-book",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "mtech-booking",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "code-prep",
+      "name": "Prepare Booking Data",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [450, 300],
+      "parameters": {
+        "jsCode": "const { name, email, phone, service, date, time, notes } = $input.first().json.body;\nif (!name || !email || !date || !time || !service) {\n  throw new Error('Missing required fields: name, email, date, time, service');\n}\n\nconst OFF = '-04:00';\nconst startISO = `${date}T${time}:00${OFF}`;\nconst endISO = new Date(new Date(startISO).getTime() + 1800000).toISOString();\n\nconst d = new Date(startISO);\nconst displayDate = d.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric', timeZone:'America/New_York' });\nconst displayTime = d.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit', timeZone:'America/New_York' });\n\nreturn [{ json: {\n  name, email,\n  phone: phone || 'N/A',\n  service,\n  notes: notes || 'None',\n  startISO, endISO,\n  summary: `Appt: ${service} — ${name}`,\n  description: `Phone: ${phone || 'N/A'}\\nEmail: ${email}\\nService: ${service}\\nNotes: ${notes || 'None'}`,\n  displayDate, displayTime\n} }];"
+      }
+    },
+    {
+      "id": "gcal-create",
+      "name": "Create Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "typeVersion": 1.1,
+      "position": [650, 300],
+      "parameters": {
+        "resource": "event",
+        "operation": "create",
+        "calendarId": {
+          "__rl": true,
+          "value": "76b89dc3135661dfd818dde57dba79bd371cd64cad7735844189afc453b6c871@group.calendar.google.com",
+          "mode": "id"
+        },
+        "start": "={{ $json.startISO }}",
+        "end": "={{ $json.endISO }}",
+        "summary": "={{ $json.summary }}",
+        "additionalFields": { "description": "={{ $json.description }}" }
+      }
+    },
+    {
+      "id": "gmail-customer",
+      "name": "Customer Confirmation Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [850, 300],
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "sendTo": "={{ $('Prepare Booking Data').first().json.email }}",
+        "subject": "Your Morgatech Appointment is Confirmed",
+        "emailType": "html",
+        "message": "={{ '<h2>Appointment Confirmed</h2><p>Hi ' + $('Prepare Booking Data').first().json.name + ',</p><p>Your appointment at <strong>Morgatech Auto Repair</strong> is booked:</p><ul><li><strong>Service:</strong> ' + $('Prepare Booking Data').first().json.service + '</li><li><strong>Date:</strong> ' + $('Prepare Booking Data').first().json.displayDate + '</li><li><strong>Time:</strong> ' + $('Prepare Booking Data').first().json.displayTime + ' ET</li></ul><p>To reschedule or cancel, call <strong>(301)-477-4113</strong>.</p><p>Morgatech Auto Repair<br>6713 Ammendale Rd, Beltsville, MD 20705</p>' }}"
+      }
+    },
+    {
+      "id": "gmail-shop",
+      "name": "Shop Notification Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [1050, 300],
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "sendTo": "info@morgatechauto.com",
+        "subject": "={{ 'New Booking: ' + $('Prepare Booking Data').first().json.service + ' — ' + $('Prepare Booking Data').first().json.displayDate }}",
+        "emailType": "html",
+        "message": "={{ '<h2>New Appointment</h2><ul><li><strong>Name:</strong> ' + $('Prepare Booking Data').first().json.name + '</li><li><strong>Phone:</strong> ' + $('Prepare Booking Data').first().json.phone + '</li><li><strong>Email:</strong> ' + $('Prepare Booking Data').first().json.email + '</li><li><strong>Service:</strong> ' + $('Prepare Booking Data').first().json.service + '</li><li><strong>Date:</strong> ' + $('Prepare Booking Data').first().json.displayDate + '</li><li><strong>Time:</strong> ' + $('Prepare Booking Data').first().json.displayTime + ' ET</li><li><strong>Notes:</strong> ' + $('Prepare Booking Data').first().json.notes + '</li></ul>' }}"
+      }
+    },
+    {
+      "id": "respond-book",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1250, 300],
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ success: true, message: 'Booking confirmed', appointment: { service: $('Prepare Booking Data').first().json.service, date: $('Prepare Booking Data').first().json.displayDate, time: $('Prepare Booking Data').first().json.displayTime } }) }}"
+      }
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "Prepare Booking Data", "type": "main", "index": 0 }]]
+    },
+    "Prepare Booking Data": {
+      "main": [[{ "node": "Create Calendar Event", "type": "main", "index": 0 }]]
+    },
+    "Create Calendar Event": {
+      "main": [[{ "node": "Customer Confirmation Email", "type": "main", "index": 0 }]]
+    },
+    "Customer Confirmation Email": {
+      "main": [[{ "node": "Shop Notification Email", "type": "main", "index": 0 }]]
+    },
+    "Shop Notification Email": {
+      "main": [[{ "node": "Respond to Webhook", "type": "main", "index": 0 }]]
+    }
+  }
+}

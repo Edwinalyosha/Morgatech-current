@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ChatWidgetLoader } from "@/components/ui/ChatWidgetLoader";
+import { BookingProvider } from "@/context/BookingContext";
+import { BookingModal } from "@/features/booking/components/BookingModal";
 import "./globals.css";
 import Script from "next/script";
 
@@ -15,12 +17,21 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://morgatechauto.com"),
   title: {
-    default: "Morgatech Auto Repair | Beltsville's Trusted Mechanics",
+    default: "Morgatech Auto Repair — Beltsville, MD | Diagnosed Right. Fixed Right.",
     template: "%s | Morgatech Auto Repair",
   },
   description:
-    "Certified mechanics, honest pricing, and fast repairs in Beltsville, MD. We keep your vehicle running at peak performance.",
-    keywords: ["Auto repair", "car service", "european auto repair", "car mechanic", "Beltsville MD"],
+    "Family-run auto repair in Beltsville, MD. Brakes, suspension, cooling system and more. Diagnosed right. Fixed right. Every time. 70+ Google reviews. Call (301)-477-4113.",
+  keywords: [
+    "auto repair Beltsville MD",
+    "car repair Beltsville",
+    "brake repair Beltsville MD",
+    "suspension repair Beltsville",
+    "mechanic Beltsville Maryland",
+    "family auto repair shop Beltsville",
+    "engine diagnostics Beltsville",
+    "Morgatech Auto Repair",
+  ],
   
   // Geographic SEO (The "Juice")
   other: {
@@ -31,8 +42,8 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Auto Repair Shop in Beltsville, MD | Morgatech Auto Repair",
-    description: "Certified mechanics and honest pricing in Beltsville, MD.",
+    title: "Morgatech Auto Repair — Beltsville, MD | Diagnosed Right. Fixed Right.",
+    description: "Family-run auto repair in Beltsville, MD. Brakes, suspension, cooling system and more. 70+ Google reviews. 12-month/12k warranty on every repair.",
     url: "https://morgatechauto.com",
     siteName: "Morgatech Auto Repair",
     images: [
@@ -66,26 +77,69 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
+        {/* LocalBusiness structured data — tells Google who we are, where we are, and when we're open */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AutoRepair",
+              name: "Morgatech Auto Repair",
+              url: "https://morgatechauto.com",
+              telephone: "(301)-477-4113",
+              email: "info@morgatechauto.com",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "6713 Ammendale Rd",
+                addressLocality: "Beltsville",
+                addressRegion: "MD",
+                postalCode: "20705",
+                addressCountry: "US",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 39.05,
+                longitude: -76.9,
+              },
+              openingHoursSpecification: [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  opens: "09:00",
+                  closes: "18:00",
+                },
+              ],
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.5",
+                reviewCount: "70",
+                bestRating: "5",
+              },
+              priceRange: "$$",
+              currenciesAccepted: "USD",
+              paymentAccepted: "Cash, Credit Card",
+              description:
+                "Family-run auto repair shop in Beltsville, MD. Specialising in brake repair, suspension, cooling systems, and engine diagnostics. Diagnosed right. Fixed right. Every time.",
+              sameAs: [
+                "https://www.google.com/maps/place/Morgatech+Auto+Repair",
+              ],
+            }),
+          }}
+        />
       </head>
       <body className="bg-slate-50 font-display text-slate-900 antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-        <ChatWidgetLoader />
+        <BookingProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+          <ChatWidgetLoader />
+          <BookingModal />
+        </BookingProvider>
 
-        {/* --- BOOKING TOOL INTEGRATION --- */}
-        {/* This loads the AutoOps logic in the background */}
-        <Script
-          id="portal-scripts"
-          src="https://portal.autoops.com/portal-scripts.js"
-          data-api-key="0e6b17283832489ca613af6cda22bc3e"
-          strategy="lazyOnload"
-        />
-        
         {/* Shapo Reviews Widget */}
-        <Script 
-          src="https://cdn.shapo.io/js/embed.js" 
-          strategy="lazyOnload" 
+        <Script
+          src="https://cdn.shapo.io/js/embed.js"
+          strategy="lazyOnload"
         />
       </body>
     </html>

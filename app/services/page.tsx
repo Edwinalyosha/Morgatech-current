@@ -4,13 +4,13 @@ import { ServiceDetailGrid } from "@/features/services/components/ServiceDetailG
 import { ServiceCTA } from "@/features/services/components/ServiceCTA";
 
 export const metadata: Metadata = {
-  title: "Professional Services",
+  title: "Auto Repair Services",
   description:
-    "Expert automotive services including oil changes, brake repair, engine diagnostics, transmission repair, and more at Morgatech Auto Repair in Beltsville.",
+    "Brake repair, suspension, cooling system, engine diagnostics and more in Beltsville, MD. Honest diagnosis, clear pricing, 12-month/12k warranty on every repair. Call (301)-477-4113.",
   openGraph: {
-    title: "Professional Services | Morgatech Auto Repair",
+    title: "Auto Repair Services — Morgatech, Beltsville MD",
     description:
-      "Expert automotive services including oil changes, brake repair, engine diagnostics, and more.",
+      "Brakes, suspension, cooling system and more. Honest diagnosis, clear pricing, 12-month/12k warranty. Beltsville, MD.",
   },
 };
 

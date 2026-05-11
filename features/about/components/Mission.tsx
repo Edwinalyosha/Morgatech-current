@@ -9,9 +9,11 @@ export function Mission() {
           Our Mission
         </h2>
         <p className="text-xl text-slate-800 italic font-medium leading-relaxed">
-          &ldquo;To redefine the automotive repair experience by delivering
-          uncompromising quality, radical transparency, and a level of customer
-          satisfaction that builds lifelong relationships.&rdquo;
+          &ldquo;To be the auto repair shop families in Beltsville and the
+          surrounding area can rely on completely — for brake repair,
+          suspension work, cooling systems, engine diagnostics, and everything
+          in between. We diagnose the real problem and fix it right the first
+          time.&rdquo;
         </p>
       </div>
     </section>
