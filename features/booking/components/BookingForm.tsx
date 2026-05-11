@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useBookingContext } from "@/context/BookingContext";
+import { useBookingContext } from "@/providers/BookingContext";
 import { SERVICES } from "@/lib/constants";
 
 interface BookingFormData {

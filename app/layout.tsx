@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ChatWidgetLoader } from "@/components/ui/ChatWidgetLoader";
-import { BookingProvider } from "@/context/BookingContext";
+import { BookingProvider } from "@/providers/BookingContext";
 import { BookingModal } from "@/features/booking/components/BookingModal";
 import "./globals.css";
 import Script from "next/script";

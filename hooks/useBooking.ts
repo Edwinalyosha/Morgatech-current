@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback } from "react";
-import { useBookingContext } from "@/context/BookingContext";
+import { useBookingContext } from "@/providers/BookingContext";
 
 export function useBooking() {
   const { openBooking: open } = useBookingContext();

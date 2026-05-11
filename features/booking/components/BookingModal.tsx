@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { useBookingContext } from "@/context/BookingContext";
+import { useBookingContext } from "@/providers/BookingContext";
 import { BookingForm } from "./BookingForm";
 
 export function BookingModal() {
