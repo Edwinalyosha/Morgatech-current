@@ -19,6 +19,7 @@ docker run -d \
   --name $CONTAINER \
   --network $NETWORK \
   --restart unless-stopped \
+  --env-file /root/docker/morgatech/.env \
   $IMAGE
 
 echo "Deployed — https://test.morgatechauto.com"

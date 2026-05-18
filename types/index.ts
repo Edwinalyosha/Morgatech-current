@@ -138,3 +138,36 @@ export interface SearchResult {
   results: Post[];
   suggestions?: string[];
 }
+
+export interface ChatBookingPrefill {
+  name: string | null;
+  phone: string | null;
+  email: string | null;
+  service_type: string | null;
+  vehicle: string | null;
+}
+
+export interface ChatBookingForm {
+  url: string;
+  prefill: ChatBookingPrefill;
+  confirmed_slot: string | null;
+  alternative_slot: string | null;
+  available_slots: string[] | null;
+  date: string | null;
+}
+
+export interface ChatApiResponse {
+  session_id: string | null;
+  message: string;
+  intent: "answer" | "qualifying" | "booking" | "escalation" | "unknown" | "error" | null;
+  booking_form: ChatBookingForm | null;
+  timed_out: boolean;
+}
+
+export interface ChatMessage {
+  id: string;
+  role: "bot" | "user";
+  text: string;
+  intent?: string | null;
+  booking_form?: ChatBookingForm | null;
+}

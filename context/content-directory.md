@@ -94,25 +94,25 @@ Guides              guides              Step-by-step technical guides for DIY an
 Safety First        safety-first        Brakes, tires, passenger protection systems. (15 posts)
 
 Published Posts
-Slug                                    Title                                           Category            Author          Date              Notes
-maintenance-101-performance-handbook    Maintenance 101: The Modern Performance Handbook Maintenance Tips    Marcus Vane     Oct 28, 2024      FEATURED. 12 min read.
-future-of-hybrid-drive-systems          The Future of Hybrid Drive Systems              Car Tech            Dr. Elena Ross  Oct 24, 2024      8 min read.
-workshop-update-diagnostic-tech         Workshop Update: New Diagnostic Tech            News                Marcus Vane     Oct 21, 2024      5 min read. AI diagnostic tech.
-brake-fade-causes-and-solutions         Brake Fade: Causes and Solutions                Maintenance Tips    Marcus Vane     Oct 15, 2024      7 min read.
-ecu-tuning-myths-vs-reality             ECU Tuning: Myths vs Reality                    Guides              Marcus Vane     Oct 08, 2024      10 min read.
-5-essential-brake-maintenance-tips      5 Essential Brake Maintenance Tips              Safety First        Marcus Vane     May 24, 2024      8 min read. Full rich content in BLOG_POST_DETAILS.
+NOTE: Slugs/titles updated 2026-05-12. Real content written, pending Edwin review + BLOG_POST_DETAILS update.
+Slug                                    Title                                             Category            Author    Date              Notes
+when-do-brake-pads-need-replacing       When Your Brakes Are Telling You Something        Maintenance Tips    Edwin     TBD               Keyword: brake pad replacement Beltsville MD
+signs-your-suspension-needs-repair      Your Car Is Pulling to One Side. Here's Why.      Guides              Edwin     TBD               Keyword: suspension repair Beltsville MD
+check-engine-light-what-it-means        The Check Engine Light Came On. Now What?         Guides              Edwin     TBD               Keyword: check engine light Beltsville MD
+car-ac-not-blowing-cold                 Why Your Car's AC Stopped Blowing Cold            Guides              Edwin     TBD               Keyword: AC repair Beltsville MD
+how-often-does-your-car-need-servicing  How Often Does Your Car Actually Need Servicing?  Maintenance Tips    Edwin     TBD               Keyword: car maintenance Beltsville MD
+transmission-warning-signs              Transmission Warning Signs You Shouldn't Ignore   Guides              Edwin     TBD               Keyword: transmission service Beltsville MD
 
 Post summaries:
-  maintenance-101       — Essential maintenance protocols for modern high-performance vehicles. Fluid dynamics, sensor calibration, preventative diagnostics.
-  hybrid-drive-systems  — Next-gen regenerative braking and battery management in luxury sedans.
-  diagnostic-tech       — Morgatech integrates 2025 AI-driven fault detection systems.
-  brake-fade            — Thermal management in performance braking for long-term safety.
-  ecu-tuning            — Software-based performance enhancement and longevity impact.
-  brake-tips            — 5 proactive steps: pad thickness, fluid flush, rotor inspection, cleaning, braking habits.
+  brake-pads            — Squeal = wear indicator. Explains pad/rotor relationship. Symptom-first.
+  suspension            — Pulling, bouncing, clunking. Ball joints, tie rods, struts explained.
+  check-engine          — OBD-II fault codes, diagnostic process, Maryland emissions context.
+  ac-repair             — Refrigerant loss, compressor failure, condenser. Maryland summer urgency.
+  car-maintenance       — Realistic service intervals: oil, brakes, tires, transmission, coolant.
+  transmission          — Slipping, delayed engagement, hard shifts, fluid condition signs.
 
 Authors:
-  Marcus Vane      — Lead Technical Specialist, 20+ years, engine diagnostics + performance tuning.
-  Dr. Elena Ross   — Automotive Engineer, PhD mechanical engineering, hybrid/EV technologies.
+  Edwin — Owner, Morgatech Auto Repair. Bio and headshot pending (placeholder /logo.png in use).
 
 ---
 
@@ -130,8 +130,7 @@ Do NOT use:        Aggressive upsell language, generic automotive clichés witho
 
 ---
 
-URL Population (for when live site is confirmed)
-Base URL: https://morgatechauto.com (to be confirmed)
-Test URL: https://test.morgatechauto.com
-When live URLs confirmed: populate URL columns in Pages, Services, and Blog sections above.
+URL Population
+Base URL: https://morgatechauto.com (CONFIRMED LIVE — 2026-05-12)
+Test URL: https://test.morgatechauto.com (still active as staging)
 For RAG integration: each row = one chunk candidate (one service, one post).
