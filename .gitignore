@@ -47,3 +47,4 @@ peers/
 
 # working documents
 *.html
+/docs/

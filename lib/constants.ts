@@ -1072,88 +1072,88 @@ export const AUTHORS: Author[] = [
 export const BLOG_POSTS: Post[] = [
   {
     id: "post-1",
-    slug: "maintenance-101-performance-handbook",
-    title: "Maintenance 101: The Modern Performance Handbook",
+    slug: "auto-repair-beltsville-md",
+    title: "Seven Years on the Same Beltsville Streets — Here's What We See Most",
     excerpt:
-      "Discover the essential maintenance protocols designed for modern high-performance vehicles. We break down fluid dynamics, sensor calibration, and preventative diagnostic cycles.",
+      "After seven years doing auto repair in Beltsville, MD, we know which problems show up most often — and which ones get ignored until they cost more than they should have.",
     category: BLOG_CATEGORIES[0],
     author: AUTHORS[0],
-    publishedAt: "October 28, 2024",
+    publishedAt: "May 12, 2025",
     coverImage:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDphsoM_17JO7m9bjaIJ4XRz4WocJeeQz5D3hgj2XuwRwr6TLZtnagkCyAQ7weJTMQmoIReVvZaN5GGnVIjEZVp8a_LImezVVEH6fTefXUHfR0XGtnpBRM_DhnyBfFPtPNCsXoJNLUdA-JB6AgCzbJjwL8DqDyfYlwbEO-UsGbj0nNM7MK7ZwR2_uzbXzlAF2svlXPb7pf6pZcORckRuPc2NsRUq9_pJM9cu6PzHRweYI_OJQzOg0QjUMOj0kU5PKt91R8inz-HW6pQ",
-    coverImageAlt: "Close up of modern engine bay detail",
-    readingTime: "12 Min Read",
+    coverImageAlt: "Close up of mechanic working on a car in a Beltsville auto repair shop",
+    readingTime: "5 Min Read",
     isFeatured: true,
   },
   {
     id: "post-2",
-    slug: "future-of-hybrid-drive-systems",
-    title: "The Future of Hybrid Drive Systems",
+    slug: "brake-repair-beltsville-md",
+    title: "When Your Brakes Are Telling You Something — And What It Actually Means",
     excerpt:
-      "Exploring the next generation of regenerative braking and battery management in modern luxury sedans.",
-    category: BLOG_CATEGORIES[1],
+      "A squeal, a shudder, a soft pedal — your brakes give warnings before they fail. Here's what each symptom actually means and what happens if you wait.",
+    category: BLOG_CATEGORIES[4],
     author: AUTHORS[0],
-    publishedAt: "October 24, 2024",
+    publishedAt: "May 5, 2025",
     coverImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDXYdS7PdohmRGAuV6ATN8xnijKq6ZibJcvkRF_rfOwqrcYHVZShG9GUtUK-QAKXvwKlkIZAP20sM7srBS9zlakVElzX9K1fdo3koGbgRmQOG57pYfgy2wb7Wtuc7X9wt7evmE9WxAdD9GsTFaA4sPTvq9gF7iIYq06PUaObWPzL1NWra3VlljUudj0Dv919ZnxNK9G0P502CjyP7DvtJ_YjlI507K_7-IWENmVsrcfBcQUXo-C7xhGYCwEkChztALUJAwbvq4Wd6Gx",
-    coverImageAlt: "High speed camera shot of sports car detail",
-    readingTime: "8 Min Read",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDS6JLJOuD8d_R_maA2HIwQ-HDS7xgprIoMAGhgdOtVd6iFreuVRvKjm9aJVtPa_bq5Pbh6gQ6rSedDwA7MigQ4CbzwJUH6QGJlG_lLWXOWkQJhFnc60Xs4HsBXlxj_m3VENpytdZWZnn9suOx-__2lcI6dhXtiN89g-1dOfTIYL5NRrROWNgTFbH6tQZ18zWhyOA45ZrSUhsjOP6_F2Fs4F_uxgoxW9Qo52Osz397OSrRGxG3uVnHmjTM-4m2JX3_ns4AI9nfCzj5Z",
+    coverImageAlt: "Close up of brake disc and caliper being inspected",
+    readingTime: "5 Min Read",
   },
   {
     id: "post-3",
-    slug: "workshop-update-diagnostic-tech",
-    title: "Workshop Update: New Diagnostic Tech",
+    slug: "suspension-repair-beltsville",
+    title: "What a Rough Ride Is Actually Telling You",
     excerpt:
-      "Morgatech integrates the latest 2025 AI-driven fault detection systems into our facility.",
-    category: BLOG_CATEGORIES[2],
+      "Suspension wear happens gradually — your body adjusts before you notice. Here's how to read the signs before worn parts start taking other components with them.",
+    category: BLOG_CATEGORIES[4],
     author: AUTHORS[0],
-    publishedAt: "October 21, 2024",
+    publishedAt: "April 28, 2025",
     coverImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA3nh0L8tNkL60pHBEADi1UmB1LRGswzoiSvVdMsXI7O2tBz-8MjFgGdwhxm_kdBRROh0ETkUn89WkKHTcsVsodXSgPy8tmwyN1XkG_jhCrKA-9hMH1yh0y7V09PPtWj72DHASoc2mb3F8gVD9ra0BHCyd54vg4ebeeTSwl4jUgB9Jt79GPi4MHmExCAwNcL0hx83fOV-iOkSQeaUplV6qV778pQBu2ErAeJZb40W1dK6fjsyw5TbUS-68B2_yCOZnDfdCzk5iGIzTX",
-    coverImageAlt: "Interior of a luxury vehicle dashboard",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDrj0cIYkmr2uAogvqNsYDt6vP2ocyJJqcJZHUdcs8kt9j5a5Jfazd1oGBnQaZ07I1XA7YICNJtbsqOHDzAD62lWZyMAKoh7brfcL8b4ody8VcuCT3hiO_RVlCZZw6A5EVep_toK3ZgrqECGsvsut1xEx2mR2r75Z6VpsqyWEysmNkaLA57dgrNNUZneJ0wPdpOgZb4EWDlvSbblCmLEyCoUhepRG4SbOSr26MDabF4ftNMHG4RyHaXbv6FIKw7dY-35llpZ2q1cn2G",
+    coverImageAlt: "Vehicle suspension and wheel assembly under inspection",
     readingTime: "5 Min Read",
   },
   {
     id: "post-4",
-    slug: "brake-fade-causes-and-solutions",
-    title: "Brake Fade: Causes and Solutions",
+    slug: "cooling-system-repair-beltsville",
+    title: "Why Your Cooling System Is the Repair You Can't Afford to Ignore",
     excerpt:
-      "Understanding thermal management in performance braking systems for long-term safety.",
+      "A temperature gauge that creeps up, a sweet smell from the engine bay — these signs give you less margin than you think. Here's why cooling issues escalate fast.",
     category: BLOG_CATEGORIES[0],
     author: AUTHORS[0],
-    publishedAt: "October 15, 2024",
+    publishedAt: "April 14, 2025",
     coverImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDS6JLJOuD8d_R_maA2HIwQ-HDS7xgprIoMAGhgdOtVd6iFreuVRvKjm9aJVtPa_bq5Pbh6gQ6rSedDwA7MigQ4CbzwJUH6QGJlG_lLWXOWkQJhFnc60Xs4HsBXlxj_m3VENpytdZWZnn9suOx-__2lcI6dhXtiN89g-1dOfTIYL5NRrROWNgTFbH6tQZ18zWhyOA45ZrSUhsjOP6_F2Fs4F_uxgoxW9Qo52Osz397OSrRGxG3uVnHmjTM-4m2JX3_ns4AI9nfCzj5Z",
-    coverImageAlt: "Close up of brake disc and caliper",
-    readingTime: "7 Min Read",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA3nh0L8tNkL60pHBEADi1UmB1LRGswzoiSvVdMsXI7O2tBz-8MjFgGdwhxm_kdBRROh0ETkUn89WkKHTcsVsodXSgPy8tmwyN1XkG_jhCrKA-9hMH1yh0y7V09PPtWj72DHASoc2mb3F8gVD9ra0BHCyd54vg4ebeeTSwl4jUgB9Jt79GPi4MHmExCAwNcL0hx83fOV-iOkSQeaUplV6qV778pQBu2ErAeJZb40W1dK6fjsyw5TbUS-68B2_yCOZnDfdCzk5iGIzTX",
+    coverImageAlt: "Mechanic checking a car cooling system and radiator",
+    readingTime: "5 Min Read",
   },
   {
     id: "post-5",
-    slug: "ecu-tuning-myths-vs-reality",
-    title: "ECU Tuning: Myths vs Reality",
+    slug: "engine-diagnostics-beltsville",
+    title: "Why Two Other Shops Couldn't Fix It — And What We Do Differently",
     excerpt:
-      "A deep dive into software-based performance enhancement and its impact on longevity.",
+      "A fault code points to a system — not a cause. Here's why replacing the part the code names often doesn't work, and how we find what other shops missed.",
     category: BLOG_CATEGORIES[3],
     author: AUTHORS[0],
-    publishedAt: "October 08, 2024",
+    publishedAt: "April 1, 2025",
     coverImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBi8gtw61_kNr_S5Vs3dLCRv0i9PxAYxiQ_CVfLl2iisMbuI2DVCoitv5EJ6L1Cx7P0SIel3WlFnnmmI9Wrmk6EW4lCO12IjCUUmOPl0XZQx5_nyLltKURndlWNCu_8T8XLpBmIpMFRDv5Pg1f1faUFQtsEiJqhbHPlcnCyNkQKxLV153nXe2E-gitPCpuDwtUWoGRIjHSMFB5heAm89tm1N3mjsjHoPYWZe_ILEx06wlBjr7Eqw3NMOiXXy83VHJblFl6sE6bpJ733",
-    coverImageAlt: "Abstract blue automotive wire mesh",
-    readingTime: "10 Min Read",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuC5D-LK-4btshdnWMjyRq0aepwO_rUeMA8AgUwYeK4zCgc24cJ4ToMOfMvJiIhYRcYC78QVaaGAIDDDxkugnPc-lf3BlP0ZiQ2ZwiBdL2HWY7HUmYRC_njMY-25Yjt515X_1LNImkk1f_HIiOK_wSkzrUjAeEcNTk8VlK1NnXYZyJltFLUOaPROwceWvQom0mP_j6zxBPiAZ5LfoZNm_oSsYv-SFyGEo2DNLmUOcl7EbjHzmG6Ilo_0VzGFjWsKx_jsNnOVC4iJqzY-",
+    coverImageAlt: "Mechanic using an advanced diagnostic scanner on a car engine",
+    readingTime: "5 Min Read",
   },
   {
     id: "post-6",
-    slug: "5-essential-brake-maintenance-tips",
-    title: "5 Essential Brake Maintenance Tips",
+    slug: "car-maintenance-beltsville-md",
+    title: "The Things We Look At on Every Car That Comes Through Our Door",
     excerpt:
-      "Your brakes are the most critical safety system on your vehicle. Learn the 5 proactive steps to keep them performing at their peak.",
-    category: BLOG_CATEGORIES[4],
+      "We focus on what brought the car in. But while we're in there, we look at the whole vehicle — because the presenting symptom is rarely the only thing worth knowing about.",
+    category: BLOG_CATEGORIES[0],
     author: AUTHORS[0],
-    publishedAt: "May 24, 2024",
+    publishedAt: "March 17, 2025",
     coverImage:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDrj0cIYkmr2uAogvqNsYDt6vP2ocyJJqcJZHUdcs8kt9j5a5Jfazd1oGBnQaZ07I1XA7YICNJtbsqOHDzAD62lWZyMAKoh7brfcL8b4ody8VcuCT3hiO_RVlCZZw6A5EVep_toK3ZgrqECGsvsut1xEx2mR2r75Z6VpsqyWEysmNkaLA57dgrNNUZneJ0wPdpOgZb4EWDlvSbblCmLEyCoUhepRG4SbOSr26MDabF4ftNMHG4RyHaXbv6FIKw7dY-35llpZ2q1cn2G",
-    coverImageAlt: "High performance brake disc and caliper",
-    readingTime: "8 Min Read",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBi8gtw61_kNr_S5Vs3dLCRv0i9PxAYxiQ_CVfLl2iisMbuI2DVCoitv5EJ6L1Cx7P0SIel3WlFnnmmI9Wrmk6EW4lCO12IjCUUmOPl0XZQx5_nyLltKURndlWNCu_8T8XLpBmIpMFRDv5Pg1f1faUFQtsEiJqhbHPlcnCyNkQKxLV153nXe2E-gitPCpuDwtUWoGRIjHSMFB5heAm89tm1N3mjsjHoPYWZe_ILEx06wlBjr7Eqw3NMOiXXy83VHJblFl6sE6bpJ733",
+    coverImageAlt: "Mechanic performing a full vehicle inspection in the shop",
+    readingTime: "5 Min Read",
   },
 ];
 
@@ -1161,25 +1161,25 @@ export const BLOG_POSTS: Post[] = [
 
 export const RECENT_POSTS = [
   {
-    title: "Maximizing Tire Longevity for AWD",
-    date: "Oct 28",
-    slug: "maintenance-101-performance-handbook",
+    title: "Seven Years on the Same Beltsville Streets",
+    date: "May 12",
+    slug: "auto-repair-beltsville-md",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBKS9HBZYVjRbXS58a6SECYOnXPSsA1q0zOTjKQuH98SlFTT95mvhkXzdNjcedBAL6PjHfPWYgLJnU76wyNU8WIzht3fh387844gICavlh9lnGl-2AvONytUpElMMDy_JUfmF21XRBmx1JwnIhjrzk42ec0IZhHzIHM08fM8Z9ubLesWiu1aBIaYbAJrooqR3o1meUW4RoPU120celgT_sGQbaYdoPL9Xirt82ynMiBIPchlnUrjZ90XT7fBqBCqwooM_x-gKSutp-A",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDphsoM_17JO7m9bjaIJ4XRz4WocJeeQz5D3hgj2XuwRwr6TLZtnagkCyAQ7weJTMQmoIReVvZaN5GGnVIjEZVp8a_LImezVVEH6fTefXUHfR0XGtnpBRM_DhnyBfFPtPNCsXoJNLUdA-JB6AgCzbJjwL8DqDyfYlwbEO-UsGbj0nNM7MK7ZwR2_uzbXzlAF2svlXPb7pf6pZcORckRuPc2NsRUq9_pJM9cu6PzHRweYI_OJQzOg0QjUMOj0kU5PKt91R8inz-HW6pQ",
   },
   {
-    title: "Preserving Performance in Vintage Classics",
-    date: "Oct 25",
-    slug: "future-of-hybrid-drive-systems",
+    title: "When Your Brakes Are Telling You Something",
+    date: "May 5",
+    slug: "brake-repair-beltsville-md",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAkj6oqwuwqcD94FJZP53qPDQn6czO7n4ELQU-fUmdvE-bVwgKFal6Yydj5_W4wYw0K6Byv_9Ednx07RPhkhvdZNCnAW0ia4EqZbdNZOGWryWVox8aUJjiqVdyLv98cmM0_yM0WePxBPmOWj6ajqFwd9VIYMyQLEVBbRck1evDZm3KyRDXBC6pZCUrhQPe1LiDLUTCMIn2bzyHZNgX0iqb1b-iJB0CtQZ_IiqUfvG2YYPSjfk8SPw3O_AiQ3ntwbkRTbK7kNei574ws",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDS6JLJOuD8d_R_maA2HIwQ-HDS7xgprIoMAGhgdOtVd6iFreuVRvKjm9aJVtPa_bq5Pbh6gQ6rSedDwA7MigQ4CbzwJUH6QGJlG_lLWXOWkQJhFnc60Xs4HsBXlxj_m3VENpytdZWZnn9suOx-__2lcI6dhXtiN89g-1dOfTIYL5NRrROWNgTFbH6tQZ18zWhyOA45ZrSUhsjOP6_F2Fs4F_uxgoxW9Qo52Osz397OSrRGxG3uVnHmjTM-4m2JX3_ns4AI9nfCzj5Z",
   },
   {
-    title: "Next-Gen Lighting: Laser Tech",
-    date: "Oct 22",
-    slug: "workshop-update-diagnostic-tech",
+    title: "What a Rough Ride Is Actually Telling You",
+    date: "Apr 28",
+    slug: "suspension-repair-beltsville",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDs4Zo84z8lej6CNVGUmFg5S_BKozu3sOVFlqNSB7TOfWQwelvWsvFWN1JBFkKqys8tnfMBk65fu7KJxVewdV5Xn7zMBEKIVFFnmT4qygvTcSsrbiwco3OfiIgEOvmljiI-raOPE4t3W_c5E8Zpru-VnZWiATFjZKk0ilyVlxQghoz5xfHFxotPKYLyTUihGNWZoPpOfjdF8kGVFRokdepScttHU8FR2g_oiuW4LHoevEUhet9vSxHDVhajRX9i0v66cQQ-DIDylUNl",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDrj0cIYkmr2uAogvqNsYDt6vP2ocyJJqcJZHUdcs8kt9j5a5Jfazd1oGBnQaZ07I1XA7YICNJtbsqOHDzAD62lWZyMAKoh7brfcL8b4ody8VcuCT3hiO_RVlCZZw6A5EVep_toK3ZgrqECGsvsut1xEx2mR2r75Z6VpsqyWEysmNkaLA57dgrNNUZneJ0wPdpOgZb4EWDlvSbblCmLEyCoUhepRG4SbOSr26MDabF4ftNMHG4RyHaXbv6FIKw7dY-35llpZ2q1cn2G",
   },
 ];
 
@@ -1193,50 +1193,318 @@ export const BLOG_POST_DETAILS: Record<
     tags: string[];
   }
 > = {
-  "5-essential-brake-maintenance-tips": {
-    tags: ["Maintenance", "Safety", "DIY Tips"],
+  "auto-repair-beltsville-md": {
+    tags: ["Auto Repair", "Beltsville", "Local"],
     sections: [
-      { id: "brake-pads", heading: "Brake Pad Thickness", body: "" },
-      { id: "fluid-check", heading: "Brake Fluid Flush", body: "" },
-      { id: "rotor-inspection", heading: "Rotor Inspection", body: "" },
-      { id: "cleaning", heading: "Component Cleaning", body: "" },
-      { id: "driving-habits", heading: "Braking Habits", body: "" },
+      { id: "brake-work", heading: "Deferred brake work", body: "" },
+      { id: "suspension-wear", heading: "Suspension wear", body: "" },
+      { id: "cooling-issues", heading: "Cooling system issues", body: "" },
+      { id: "related-wear", heading: "Related wear", body: "" },
+      { id: "what-we-do", heading: "What we do differently", body: "" },
     ],
     content: `
       <p class="text-xl text-slate-600 leading-relaxed mb-12">
-        Brakes are arguably the most critical safety system on your vehicle. At Morgatech Auto, we emphasize that proactive maintenance doesn't just save you money on expensive repairs; it ensures your stopping power is never compromised when it matters most.
+        Most cars that come through our door in Beltsville aren't emergencies. They're cars that have been quietly telling their owners something for weeks — a sound that shows up on cold mornings, a pull to one side the driver learned to compensate for, a temperature gauge that sits just a little higher than it used to. By the time someone calls us, they've usually been putting it off.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        That's not a criticism. It's just what we've learned after seven years doing auto repair in Beltsville, MD. We've worked on the cars in this neighbourhood long enough to know which problems show up seasonally, which ones are common to the makes and models people drive around here, and which ones get misdiagnosed most often.
       </p>
 
-      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="brake-pads">1. Monitor Brake Pad Thickness</h2>
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="brake-work">The most common thing we find: deferred brake work</h2>
       <p class="text-slate-600 mb-8 leading-relaxed">
-        Your brake pads are the "sacrificial" component of your braking system. They are designed to wear down over time as they provide the friction needed to stop your car. We recommend checking them every 5,000 to 7,000 miles. Once the friction material drops below 3mm, performance begins to degrade rapidly.
+        Brake jobs make up a significant portion of what we do, and most of them could have been simpler and cheaper six months earlier. Brake pads wear gradually. The grinding sound that finally sends someone in is the metal-on-metal stage — the pads are gone and the rotor is being scored. At that point, a pad replacement becomes a pad-and-rotor job. The difference in cost is real.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        We're not saying that to pressure anyone. We're saying it because it's true, and because we'd rather tell you the honest picture than watch someone spend more than they needed to.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="suspension-wear">Suspension wear that got written off as "just how the car drives"</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Suspension components wear slowly enough that most drivers adjust without realising. The car starts pulling slightly. The ride gets rougher. The steering feels vague. These aren't personality quirks — they're worn parts. And when they go, they usually take something else with them if you wait long enough.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        We catch a lot of suspension wear on cars that came in for something else entirely. That's intentional. When a car is here, we look at the whole thing — not just the symptom that brought it in.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="cooling-issues">Cooling system issues that show up in summer and get ignored until winter</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Beltsville summers push cooling systems hard. We see overheating issues spike between June and August, and we see the consequences year-round. A cooling system with a slow leak is one hot day away from a serious repair bill. The engine doesn't forgive overheating the way it forgives most other problems.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="related-wear">The thing nobody warns you about: related wear</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Sometimes a car comes in for one thing — a leaking hose, say — and while we're looking at it we find that two or three other hoses nearby have dried out and are starting to crack. They haven't failed yet. But they will.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        We tell you what we found and let you decide. We don't fix things without your go-ahead. But this is where price can creep up from what you expected — not because we're adding work for the sake of it, but because your car has more going on than the one symptom that sent you in.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="what-we-do">What we do differently</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        We look at the car you brought us, tell you everything we find, and sort each issue by how urgent it is. Some things need attention now. Others can wait. You leave with a clear picture — not just the answer to the question you came in with.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Every qualifying repair is covered by the TechNet nationwide warranty: 24 months or 24,000 miles, whichever comes first. We're at 6713 Ammendale Rd, Beltsville, MD 20705. Open Monday through Friday, 9 AM to 6 PM.
+      </p>
+    `,
+  },
+
+  "brake-repair-beltsville-md": {
+    tags: ["Brake Repair", "Safety", "Beltsville"],
+    sections: [
+      { id: "the-squeal", heading: "The squeal", body: "" },
+      { id: "the-grind", heading: "The grind", body: "" },
+      { id: "the-shudder", heading: "The shudder", body: "" },
+      { id: "the-pull", heading: "The pull", body: "" },
+      { id: "soft-pedal", heading: "The soft pedal", body: "" },
+      { id: "brake-job", heading: "What a brake job involves", body: "" },
+    ],
+    content: `
+      <p class="text-xl text-slate-600 leading-relaxed mb-12">
+        You noticed it a few weeks ago. Maybe a squeal when you first hit the brakes in the morning. Maybe the steering wheel shudders when you slow down. Maybe there's a slight pull to one side, or the pedal feels softer than it used to. You told yourself you'd look into it.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Here's the thing about brakes: they give you warnings before they fail. The problem is that the warnings are easy to dismiss — until they're not.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="the-squeal">The squeal</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Most brake pads have a small wear indicator built in — a metal tab that contacts the rotor when the pad gets thin and produces a high-pitched squeal. That sound is a designed warning. It means the pads are getting close to the end of their life. At this stage a brake job is typically straightforward — new pads, a look at the rotors and calipers, and you're sorted.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        If you keep driving on squealing brakes, the pad wears through completely. Then you get the grind.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="the-grind">The grind</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Metal on metal. The pad is gone and the hardware is scoring the rotor with every stop. At this point you're not just replacing pads — you're replacing rotors too, and possibly looking at caliper damage if it's gone far enough. What would have been a straightforward job is now a significantly more expensive one.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        We see this regularly. Not because people don't care about their cars — because the squeal is easy to live with, and then suddenly it isn't.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="the-shudder">The shudder</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        If the steering wheel vibrates or the whole car shakes when you apply the brakes, that's usually a warped rotor. Rotors can warp from heat cycles — repeated hard braking, or braking while the rotors are hot and then sitting in water. The shudder is the rotor running unevenly against the pad. It will get worse, and driving on warped rotors accelerates pad wear.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="the-pull">The pull</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        A car that pulls to one side under braking usually has a sticking caliper — one side is applying more braking force than the other. A sticking caliper doesn't just affect how the car stops; it causes the pad on that side to wear faster than the other. You burn through one side while the other still has plenty of life. This is the kind of thing that gets missed when a shop replaces pads without looking at the rest of the system.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="soft-pedal">The soft pedal</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        A brake pedal that feels spongy or travels further before the car responds is a fluid issue — either air in the lines or a leak somewhere. This one is not something to monitor. It means braking performance is compromised and it needs to be looked at.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="brake-job">What a brake job at Morgatech actually involves</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        We start by looking at the whole system — pads, rotors, calipers, brake lines, and brake fluid. We look at the condition of everything and tell you what we find before we start any work. If something is fine and doesn't need attention, we tell you that too.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        All brake repairs are covered by the TechNet nationwide warranty: 24 months or 24,000 miles. Morgatech Auto Repair — 6713 Ammendale Rd, Beltsville, MD 20705. Monday to Friday, 9 AM to 6 PM. Call us at (301)-477-4113.
+      </p>
+    `,
+  },
+
+  "suspension-repair-beltsville": {
+    tags: ["Suspension", "Steering", "Beltsville"],
+    sections: [
+      { id: "what-it-does", heading: "What the suspension actually does", body: "" },
+      { id: "symptoms", heading: "The symptoms", body: "" },
+      { id: "what-we-do", heading: "What we do", body: "" },
+    ],
+    content: `
+      <p class="text-xl text-slate-600 leading-relaxed mb-12">
+        Most drivers don't think about their suspension until something goes obviously wrong. And by the time something goes obviously wrong — a clunk over bumps, a car that wanders on the highway, a steering wheel that vibrates at speed — the wear has usually been building for a long time.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        The tricky thing about suspension is that it wears gradually. Your body adjusts to the changes without registering them as problems. The ride gets a little rougher. The steering feels a little less precise. The car takes corners with a little more lean. None of it is dramatic enough to send you to a shop — until it is.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="what-it-does">What the suspension actually does</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Your suspension has one job: keep your tyres in contact with the road. Every component — shocks, struts, ball joints, tie rods, control arms, sway bar links — exists to manage how the car moves over uneven surfaces and through corners. When any of these wear out, the tyre's contact with the road becomes inconsistent. That affects stopping distance, steering response, and tyre wear.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        It also affects the components around them. Worn suspension parts don't fail in isolation. A worn ball joint puts stress on the control arm. A failing shock accelerates tyre wear and puts more load on the struts. Catching it early is almost always cheaper than waiting for it to cascade.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="symptoms">The symptoms — and what they usually mean</h2>
+      <p class="text-slate-600 mb-4 leading-relaxed">
+        <strong>The car pulls to one side.</strong> Not while braking — that's often a caliper issue — but consistently while driving. This usually points to worn tie rods, misalignment from suspension wear, or a strut that's lost its damping on one side.
+      </p>
+      <p class="text-slate-600 mb-4 leading-relaxed">
+        <strong>Bumps feel sharper than they used to.</strong> Shocks and struts are supposed to absorb road impact. When they wear out, that impact transfers directly to the car body and to you. If Beltsville's roads feel rougher than they did a year ago, it might not be the roads.
+      </p>
+      <p class="text-slate-600 mb-4 leading-relaxed">
+        <strong>The car bounces after a bump.</strong> Push down on the front of the car and let go. It should settle quickly. If it keeps bouncing, the shocks or struts aren't doing their job.
+      </p>
+      <p class="text-slate-600 mb-4 leading-relaxed">
+        <strong>A clunk or knock over bumps.</strong> Usually a worn ball joint, sway bar end links, or a failing strut mount. These are the sounds you don't want to ignore.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        <strong>Uneven tyre wear.</strong> If one tyre is wearing faster than the others, or wearing unevenly across its width, the suspension geometry is off. It's also a fast way to destroy expensive tyres.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="what-we-do">What we do</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        When a car comes in with any of these symptoms, we go through the suspension — not just the component the symptom points to. We look at what's there, check for wear and movement in each part, and look at how the tyres are wearing. Then we tell you what we found in plain language before we start any work.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        All suspension repairs are covered by the TechNet nationwide warranty: 24 months or 24,000 miles. We're at 6713 Ammendale Rd, Beltsville, MD 20705. Monday to Friday, 9 AM to 6 PM. Call (301)-477-4113 or bring it in.
+      </p>
+    `,
+  },
+
+  "cooling-system-repair-beltsville": {
+    tags: ["Cooling System", "Overheating", "Beltsville"],
+    sections: [
+      { id: "temp-gauge", heading: "Temperature gauge running high", body: "" },
+      { id: "sweet-smell", heading: "The sweet smell", body: "" },
+      { id: "visible-leak", heading: "The visible leak", body: "" },
+      { id: "what-goes-wrong", heading: "What actually goes wrong", body: "" },
+      { id: "what-we-do", heading: "What we do", body: "" },
+    ],
+    content: `
+      <p class="text-xl text-slate-600 leading-relaxed mb-12">
+        Most car problems give you some warning time. The cooling system gives you less than most people realise. A temperature gauge that creeps upward, a warning light that flickers, a sweet smell coming from the engine bay — these are signs that something is wrong and the margin for error is getting small.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="temp-gauge">The temperature gauge is running high</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        The gauge is telling you the engine is working harder than it should to stay cool. This could be a low coolant level, a failing thermostat, a water pump that isn't moving coolant efficiently, or a blockage somewhere in the system. It could also be a small leak that hasn't made itself visible yet. Any of these, caught early, is a manageable repair.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="sweet-smell">The sweet smell</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Coolant has a distinctly sweet smell. If you notice it coming from the engine bay — especially after you've been driving — it means coolant is escaping somewhere and burning off on a hot surface. It could be a hose, a connection, or the radiator itself. The smell usually shows up before the leak is obvious to the eye.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="visible-leak">The leak you can see</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        A puddle under the car that isn't oil — coolant is typically green, orange, or pink depending on the type — is a leak that needs attention. Coolant leaks don't fix themselves. A slow drip becomes a faster drip. A low coolant level puts the engine at risk on any hot day or in any traffic jam.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="what-goes-wrong">What actually goes wrong — and what it costs to ignore it</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        An engine that overheats can warp the cylinder head. It can damage the head gasket — the seal between the engine block and the head. Head gasket repairs are among the most labour-intensive jobs in auto repair. The engine has to come apart. The cost reflects that.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        We see cars come in after an overheating event that the driver thought would sort itself out. Sometimes it does. Often it doesn't, and the repair cost is many times what it would have been if the first warning sign had been taken seriously.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="what-we-do">What we do</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        When a car comes in with cooling concerns, we look at the whole system — hoses, connections, the radiator, the thermostat, the water pump. We look for where the problem is actually coming from, not just the part that triggered the warning. We'll tell you what we found and what's urgent. You decide what gets done.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        All cooling system repairs are covered by the TechNet nationwide warranty: 24 months or 24,000 miles. We're at 6713 Ammendale Rd, Beltsville, MD 20705. Monday to Friday, 9 AM to 6 PM. Call (301)-477-4113. If you've got a warning light on the dashboard, we offer a free scan with no appointment — just call before you come in.
+      </p>
+    `,
+  },
+
+  "engine-diagnostics-beltsville": {
+    tags: ["Engine Diagnostics", "Check Engine Light", "Beltsville"],
+    sections: [
+      { id: "fault-code", heading: "A fault code is not a diagnosis", body: "" },
+      { id: "following-fault", heading: "Following the fault to the actual cause", body: "" },
+      { id: "in-practice", heading: "What this looks like in practice", body: "" },
+      { id: "free-scan", heading: "The free scan", body: "" },
+    ],
+    content: `
+      <p class="text-xl text-slate-600 leading-relaxed mb-12">
+        It happens more than you'd think. A customer pulls in and explains that the check engine light has been on for months. They've been to two shops. Both replaced parts. The light came back. Nobody has been able to tell them why.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        By the time they get to us, they're frustrated, they've spent money that didn't solve anything, and they're not sure who to trust. We hear this story regularly. And while every car is different, the reason it keeps happening is usually the same.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="fault-code">A fault code is not a diagnosis</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        When your check engine light comes on, a scanner can pull a fault code from the car's computer. That code points to a system or sensor that's reporting a problem. What it does not tell you is <em>why</em> that system or sensor is reporting a problem.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        A code might say the oxygen sensor is reading incorrectly. That could mean the oxygen sensor needs replacing. It could also mean the sensor is fine but there's an exhaust leak affecting its reading. Or a vacuum leak. Or a fuel delivery issue. Replacing the part the code points to without understanding why it triggered is a guess. Sometimes the guess is right. Often it isn't.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="following-fault">Following the fault to the actual cause</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        When we look at a car with a persistent check engine light, we don't start by replacing anything. We start by understanding what the car is actually doing. That means looking at the whole picture — what the code says, how the car is running, what else might be connected to the system that's flagging.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Sometimes the fault leads somewhere unexpected. Sometimes the original repair someone else did was almost right but missed one thing. Sometimes there are two separate issues presenting as one. We tell you what we find before we do anything.
       </p>
 
       <div class="my-12 p-8 bg-blue-50 border-l-4 border-primary rounded-r-xl">
         <blockquote class="italic text-xl text-blue-900 font-medium leading-relaxed">
-          "Squealing is your car's way of asking for help. Ignoring that high-pitched sound often leads to rotor damage, which can triple your repair bill."
+          "We'd rather spend more time getting to the actual cause than replace parts and hope for the best."
         </blockquote>
-        <cite class="block mt-4 text-blue-700 font-bold">&mdash; Marcus R., Master Technician</cite>
+        <cite class="block mt-4 text-blue-700 font-bold">&mdash; Edwin, Owner, Morgatech Auto Repair</cite>
       </div>
 
-      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="fluid-check">2. Flush Your Brake Fluid Regularly</h2>
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="in-practice">What this looks like in practice</h2>
       <p class="text-slate-600 mb-8 leading-relaxed">
-        Brake fluid is hygroscopic, meaning it absorbs moisture from the air. Over time, this water content can lower the boiling point of the fluid and cause internal corrosion in your calipers and master cylinder.
+        A customer came in recently with a car that had been through two shops for an intermittent misfire. Both had replaced ignition components based on the code. The misfire kept coming back. When we looked at it, we found the ignition work was fine — but there was a small vacuum leak that was causing the fuel mixture to run lean under certain conditions. That's what was triggering the misfire. It was a straightforward fix once the actual cause was found.
       </p>
 
-      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="rotor-inspection">3. Inspect Rotors for Heat Spots</h2>
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="free-scan">The free scan</h2>
       <p class="text-slate-600 mb-8 leading-relaxed">
-        If you feel a vibration or "pulsing" in your brake pedal, your rotors may be warped or have significant heat spots. These are areas of the metal that have become hardened and glassy due to excessive heat, leading to uneven braking performance.
+        If you've got a check engine light or any other warning light on the dashboard, we offer a free scan with no appointment needed. We read the codes, tell you what they mean, and give you an honest picture of what might be going on. No charge, no commitment.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Just call before you come in at (301)-477-4113. We're at 6713 Ammendale Rd, Beltsville, MD 20705. Monday to Friday, 9 AM to 6 PM.
+      </p>
+    `,
+  },
+
+  "car-maintenance-beltsville-md": {
+    tags: ["Car Maintenance", "Inspection", "Beltsville"],
+    sections: [
+      { id: "hoses-belts", heading: "Hoses and belts", body: "" },
+      { id: "brake-condition", heading: "Brake condition", body: "" },
+      { id: "fluid-levels", heading: "Fluid levels and condition", body: "" },
+      { id: "tyre-condition", heading: "Tyre condition and wear patterns", body: "" },
+      { id: "underneath", heading: "Anything visible underneath", body: "" },
+      { id: "how-we-tell-you", heading: "How we tell you what we find", body: "" },
+    ],
+    content: `
+      <p class="text-xl text-slate-600 leading-relaxed mb-12">
+        When a car comes in to Morgatech, we're focused on whatever brought it in — the noise, the warning light, the thing the driver noticed on the way to work. That's the job. But after seven years working on the cars in Beltsville, MD, we've learned that what brought the car in is rarely the only thing worth knowing about.
       </p>
 
-      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="cleaning">4. Keep Components Clean</h2>
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="hoses-belts">Hoses and belts</h2>
       <p class="text-slate-600 mb-8 leading-relaxed">
-        Brake dust is corrosive. Regularly cleaning your wheels and checking that the caliper slider pins are well-lubricated prevents "sticky" brakes that drag while you drive, decreasing fuel efficiency and increasing wear.
+        Rubber degrades over time. Hoses dry out, stiffen, and develop small cracks before they fail visibly. Belts fray and glaze. Neither of these tends to announce itself dramatically until something goes wrong — and when a hose lets go or a belt snaps, the consequences can be significant. We look at the condition of what we can see while we're under the bonnet. If something looks like it's on its way out, we'll tell you.
       </p>
 
-      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="driving-habits">5. Optimize Your Braking Habits</h2>
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="brake-condition">Brake condition</h2>
       <p class="text-slate-600 mb-8 leading-relaxed">
-        The best way to maintain your brakes is to use them correctly. Avoid "two-foot" driving and engine brake where appropriate. Reducing high-speed panic stops through better road anticipation can extend the life of your brake pads by up to 15,000 miles.
+        We look at brake wear on every car, not just ones that came in for brake work. This is one of the most common things we find on cars that came in for something unrelated. A customer comes in for a pull to one side, and while we're looking at the suspension we can see the brake pads are getting low. Better to know now than to hear the squeal in three months.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="fluid-levels">Fluid levels and condition</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Fluids tell a story. Old brake fluid darkens. Oil that's been in the engine too long gets thick and loses its protective qualities. Coolant that hasn't been refreshed loses its corrosion-inhibiting properties. We look at what's in the car and note anything that's due for attention. We don't push fluid services — but if something looks like it needs addressing, we'll say so.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="tyre-condition">Tyre condition and wear patterns</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Tyre wear patterns are one of the most useful indicators of what else might be going on with a car. Even wear across both tyres is a good sign. Wear on the inner or outer edges, or uneven wear between left and right, usually points to a suspension or alignment issue. We look at this every time. Tyre condition matters too — cracking in the sidewall, bulging, or tread that's getting close to the legal minimum.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="underneath">Anything visible underneath</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        When the car is on the lift, we look at the underside — exhaust, suspension, any signs of leaking. A weeping seal, a rusting exhaust section, a cracked heat shield. These are the kinds of things that can quietly become worse. We note what we see.
+      </p>
+
+      <h2 class="text-3xl font-extrabold text-slate-900 mt-16 mb-6" id="how-we-tell-you">How we tell you what we find</h2>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        After we've looked at the car, we tell you what we found — everything, not just the thing you came in for. We sort it into what needs attention now, what's worth keeping an eye on, and what looks fine. You decide what gets done. We don't start anything without your go-ahead, and we don't add work to a job without telling you first.
+      </p>
+      <p class="text-slate-600 mb-8 leading-relaxed">
+        Morgatech Auto Repair — 6713 Ammendale Rd, Beltsville, MD 20705. Monday to Friday, 9 AM to 6 PM. Call (301)-477-4113. We offer a free scan for any dashboard warning light — no appointment needed, just call ahead.
       </p>
     `,
   },

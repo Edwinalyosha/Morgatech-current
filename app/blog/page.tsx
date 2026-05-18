@@ -13,13 +13,13 @@ import {
 } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Insights & Expertise | Morgatech Auto",
+  title: "Auto Repair Tips & Guides — Beltsville, MD",
   description:
-    "Your technical guide to automotive excellence. From advanced diagnostic tips to industry news, we share the engineering precision that keeps your vehicle in peak performance.",
+    "Practical auto repair advice from Morgatech in Beltsville, MD. Guides on brake repair, suspension, cooling systems, engine diagnostics, and car maintenance.",
   openGraph: {
-    title: "Insights & Expertise | Morgatech Auto",
+    title: "Auto Repair Tips & Guides — Beltsville, MD | Morgatech Auto Repair",
     description:
-      "Your technical guide to automotive excellence. Explore maintenance tips, car tech, and industry news.",
+      "Practical auto repair advice from Morgatech in Beltsville, MD. Guides on brake repair, suspension, cooling systems, and engine diagnostics.",
   },
 };
 

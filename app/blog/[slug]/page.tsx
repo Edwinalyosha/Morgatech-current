@@ -57,8 +57,45 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = getPost(slug);
   if (!post) notFound();
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.coverImage,
+    datePublished: new Date(post.publishedAt).toISOString(),
+    dateModified: new Date(post.publishedAt).toISOString(),
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+      jobTitle: post.author.role,
+    },
+    publisher: {
+      "@type": "AutoRepair",
+      name: "Morgatech Auto Repair",
+      url: "https://morgatechauto.com",
+      telephone: "(301)-477-4113",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "6713 Ammendale Rd",
+        addressLocality: "Beltsville",
+        addressRegion: "MD",
+        postalCode: "20705",
+        addressCountry: "US",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://morgatechauto.com/blog/${slug}`,
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <ReadingProgressBar />
       <div className="pt-24 pb-24">
         <PostHeader post={post} />
