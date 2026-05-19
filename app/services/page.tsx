@@ -6,11 +6,11 @@ import { ServiceCTA } from "@/features/services/components/ServiceCTA";
 export const metadata: Metadata = {
   title: "Auto Repair Services",
   description:
-    "Brake repair, suspension, cooling system, engine diagnostics and more in Beltsville, MD. Honest diagnosis, clear pricing, 12-month/12k warranty on every repair. Call (301)-477-4113.",
+    "Brake repair, suspension, cooling system, engine diagnostics and more in Beltsville, MD. Honest diagnosis, clear pricing, TechNet 24-month/24k warranty on every repair. Call (301)-477-4113.",
   openGraph: {
     title: "Auto Repair Services — Morgatech, Beltsville MD",
     description:
-      "Brakes, suspension, cooling system and more. Honest diagnosis, clear pricing, 12-month/12k warranty. Beltsville, MD.",
+      "Brakes, suspension, cooling system and more. Honest diagnosis, clear pricing, TechNet 24-month/24k warranty. Beltsville, MD.",
   },
 };
 

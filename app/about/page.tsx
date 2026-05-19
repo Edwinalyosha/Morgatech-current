@@ -8,7 +8,7 @@ import { CTASection } from "@/features/about/components/CTASection";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "7+ years serving Beltsville, MD. Family-run auto repair shop — we tell you exactly what we find, and what it costs, before we touch anything. 12-month/12k warranty on every repair.",
+    "7+ years serving Beltsville, MD. Family-run auto repair shop — we tell you exactly what we find, and what it costs, before we touch anything. TechNet 24-month/24k warranty on qualifying repairs.",
   openGraph: {
     title: "About Morgatech Auto Repair — Beltsville, MD",
     description:

@@ -52,7 +52,7 @@ export const SERVICES: Service[] = [
     slug: "brake-repair",
     title: "Brake Repair",
     description:
-      "Squealing, grinding, or a soft pedal? We inspect and repair brake pads, rotors, and fluid — and back every job with our 12-month warranty.",
+      "Squealing, grinding, or a soft pedal? We inspect and repair brake pads, rotors, and fluid — and back every job with our 24-month / 24,000-mile TechNet warranty.",
     icon: "minor_crash",
     image:
       "/services/car-brake.jpg",
@@ -223,13 +223,13 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     overviewTitle: "Brake Repair in Beltsville, MD",
     overviewText: [
       "Squealing when you stop, a pedal that pulses, or a car that pulls to one side under braking — these are your brakes asking for attention. Ignoring them usually turns a pad replacement into a rotor replacement, which costs significantly more.",
-      "At Morgatech Auto Repair we inspect the full brake system: pads, rotors, callipers, and fluid. We tell you what we find, what needs doing now, and what can wait — then we get your approval before anything is touched. Every brake repair is backed by our 12-month / 12,000-mile warranty.",
+      "At Morgatech Auto Repair we inspect the full brake system: pads, rotors, callipers, and fluid. We tell you what we find, what needs doing now, and what can wait — then we get your approval before anything is touched. Every brake repair is backed by our 24-month / 24,000-mile TechNet nationwide warranty.",
     ],
     stats: [
       { value: "15ft", label: "Avg. Shorter Stop" },
       { value: "20k", label: "Miles Inspection Interval" },
       { value: "100%", label: "Safety Certified" },
-      { value: "12mo", label: "Repair Warranty" },
+      { value: "24mo", label: "Repair Warranty" },
     ],
     symptoms: [
       {
@@ -586,7 +586,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     overviewTitle: "AC & Heating Repair in Beltsville, MD",
     overviewText: [
       "Air conditioning that blows warm in a Maryland summer, or a heater that barely works when the temperature drops — climate control faults make every drive uncomfortable and, in extreme heat, unsafe. These problems usually come down to a refrigerant leak, a failing compressor, or a blocked evaporator.",
-      "At Morgatech Auto Repair we diagnose the full climate control system before recommending any repair. We use proper pressure testing to find leaks and recharge refrigerant to manufacturer specification — not just top it up. Every AC and heating repair is backed by our 12-month / 12,000-mile warranty.",
+      "At Morgatech Auto Repair we diagnose the full climate control system before recommending any repair. We use proper pressure testing to find leaks and recharge refrigerant to manufacturer specification — not just top it up. Every AC and heating repair is backed by our 24-month / 24,000-mile TechNet nationwide warranty.",
     ],
     stats: [
       { value: "Fast", label: "A/C Recharge" },
@@ -663,7 +663,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     overviewTitle: "Suspension & Steering Repair in Beltsville, MD",
     overviewText: [
       "A bouncy ride, a steering wheel that pulls, or a knocking sound every time you hit a bump — suspension problems often start small and quietly get worse. Left too long, worn shocks and struts accelerate tyre wear and increase your braking distance. What feels like a comfort issue is often a safety one.",
-      "At Morgatech Auto Repair in Beltsville, we diagnose the full suspension and steering system — shocks, struts, ball joints, tie rods, and alignment. We catch problems early so you're not paying twice. Every repair is backed by our 12-month / 12,000-mile warranty.",
+      "At Morgatech Auto Repair in Beltsville, we diagnose the full suspension and steering system — shocks, struts, ball joints, tie rods, and alignment. We catch problems early so you're not paying twice. Every repair is backed by our 24-month / 24,000-mile TechNet nationwide warranty.",
     ],
     stats: [
       { value: "15min", label: "Free Inspection" },
@@ -835,7 +835,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "What does your warranty cover?",
     answer:
-      "All our repairs are backed by a 12-month / 12,000-mile warranty on both parts and labour. If something we fixed isn't right, bring it back and we'll sort it at no charge.",
+      "Most repairs are covered by the TechNet nationwide warranty: 24 months or 24,000 miles on parts and labour, whichever comes first. This includes brake, suspension, AC, electrical, exhaust, and engine performance work. Routine maintenance services (oil changes, fluid changes, filters) and internal transmission components are not covered. If something we fixed isn't right, bring it back — or use any TechNet location nationwide.",
   },
   {
     question: "Do you work on all makes and models?",
@@ -856,6 +856,11 @@ export const FAQ_ITEMS: FAQItem[] = [
     question: "Do I need an appointment or can I walk in?",
     answer:
       "Walk-ins are welcome for straightforward services. For repairs — especially brake work, suspension, or diagnostics — calling ahead helps us have the right time and parts ready so you're not waiting.",
+  },
+  {
+    question: "Do you offer free diagnostics for warning lights?",
+    answer:
+      "Yes. If your check engine light or any other dashboard warning light is on, we'll scan the vehicle at no charge. No appointment needed — just call ahead at (301)-477-4113 so we can make sure a technician is available when you arrive.",
   },
   {
     question: "How much does a brake repair cost in Beltsville?",
@@ -914,7 +919,7 @@ export const HOW_IT_WORKS_STEPS: HowItWorksStep[] = [
   {
     number: 4,
     title: "Repaired & Ready",
-    description: "We fix it right and call you when it's done. Every repair backed by our 12-month warranty.",
+    description: "We fix it right and call you when it's done. Most repairs are backed by our 24-month / 24,000-mile TechNet nationwide warranty.",
   },
 ];
 
@@ -943,7 +948,7 @@ export const CORE_VALUES: ValueCard[] = [
     icon: "handshake",
     title: "Family-Run, Community-Focused",
     description:
-      "7+ years serving Beltsville drivers. We remember your car, your history, and we back every repair with a 12-month / 12,000-mile warranty.",
+      "7+ years serving Beltsville drivers. We remember your car, your history, and we back most repairs with our 24-month / 24,000-mile TechNet nationwide warranty.",
   },
 ];
 

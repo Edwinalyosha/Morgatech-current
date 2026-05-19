@@ -50,7 +50,7 @@ export function BeforeAfter() {
             <ul className="space-y-4">
               {[
                 "Certified Technicians",
-                "12-Month / 12k Mile Warranty",
+                "24-Month / 24k Mile TechNet Warranty",
                 "Advanced Diagnostic Equipment",
               ].map((item) => (
                 <li

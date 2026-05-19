@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Morgatech Auto Repair — Beltsville, MD | Diagnosed Right. Fixed Right.",
-    description: "Family-run auto repair in Beltsville, MD. Brakes, suspension, cooling system and more. 70+ Google reviews. 12-month/12k warranty on every repair.",
+    description: "Family-run auto repair in Beltsville, MD. Brakes, suspension, cooling system and more. 70+ Google reviews. TechNet 24-month/24k warranty on qualifying repairs.",
     url: "https://morgatechauto.com",
     siteName: "Morgatech Auto Repair",
     images: [
