@@ -4,13 +4,13 @@ import { ServiceDetailGrid } from "@/features/services/components/ServiceDetailG
 import { ServiceCTA } from "@/features/services/components/ServiceCTA";
 
 export const metadata: Metadata = {
-  title: "Auto Repair Services",
+  title: "Auto Repair Services in Beltsville, MD",
   description:
-    "Brake repair, suspension, cooling system, engine diagnostics and more in Beltsville, MD. Honest diagnosis, clear pricing, TechNet 24-month/24k warranty on every repair. Call (301)-477-4113.",
+    "70+ Google reviews. Brakes, suspension, AC, electrical, starter & alternator repair in Beltsville, MD. Honest diagnosis, clear pricing, TechNet 24-month warranty. Call (301)-477-4113.",
   openGraph: {
-    title: "Auto Repair Services — Morgatech, Beltsville MD",
+    title: "Auto Repair Services in Beltsville, MD | Morgatech",
     description:
-      "Brakes, suspension, cooling system and more. Honest diagnosis, clear pricing, TechNet 24-month/24k warranty. Beltsville, MD.",
+      "70+ Google reviews. Brakes, suspension, AC, electrical, starter & alternator and more. Honest diagnosis, TechNet 24-month warranty. Beltsville, MD.",
   },
 };
 

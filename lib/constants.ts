@@ -112,7 +112,7 @@ export const SERVICES: Service[] = [
     slug: "auto-electrical-service",
     title: "Auto Electrical Service",
     description:
-      "Battery draining overnight, lights flickering, or a starter that won't engage? We trace electrical faults across the full system — wiring, alternators, and control modules.",
+      "Starter won't turn over, alternator failing, or battery draining overnight? We trace the fault across the full electrical system — starters, alternators, wiring, and control modules.",
     icon: "bolt",
     image:
       "/services/auto-electrical-service.jpg",
@@ -142,7 +142,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     tagline: "Preventative Care",
     heroImage: "/services/maintenance-hero.jpg",
     heroImageAlt: "Mechanic performing a multi-point inspection on a modern vehicle engine",
-    overviewTitle: "Protect Your Investment with Smart Maintenance",
+    overviewTitle: "Car Maintenance in Beltsville, MD",
     overviewText: [
       "Modern vehicles are marvels of engineering, but they rely on regular care to stay reliable. Smart, scheduled maintenance is the most effective way to ensure your car remains in peak health while preventing the 'sticker shock' of major emergency repairs.",
       "At Morgatech Auto Repair, our maintenance programs cover the critical essentials of vehicle longevity. From precision oil changes to seasonal preparation, we help you stay ahead of wear and tear, ensuring your vehicle is safe for daily commutes and long family road trips alike.",
@@ -424,7 +424,7 @@ export const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     slug: "auto-electrical-service",
     title: "Electrical & Electronics",
     description:
-      "Expert diagnostics and repair for complex vehicle electronics, including alternators, starters, and power accessories.",
+      "Dead battery, failing alternator, or a starter that won't engage? We diagnose and repair the full electrical system — starters, alternators, wiring, and control modules — in Beltsville, MD.",
     icon: "electrical_services",
     tagline: "Precision Diagnostics",
     heroImage: "/services/auto-electrical-service-hero.jpg",

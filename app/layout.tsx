@@ -17,11 +17,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://morgatechauto.com"),
   title: {
-    default: "Morgatech Auto Repair — Beltsville, MD | Diagnosed Right. Fixed Right.",
+    default: "Auto Repair in Beltsville, MD | Morgatech — Diagnosed Right. Fixed Right.",
     template: "%s | Morgatech Auto Repair",
   },
   description:
-    "Family-run auto repair in Beltsville, MD. Brakes, suspension, cooling system and more. Diagnosed right. Fixed right. Every time. 70+ Google reviews. Call (301)-477-4113.",
+    "70+ Google reviews. 7+ years family-run auto repair in Beltsville, MD. Brakes, suspension, AC, electrical, and more. TechNet 24-month warranty. Call (301)-477-4113.",
   keywords: [
     "auto repair Beltsville MD",
     "car repair Beltsville",
@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     "mechanic Beltsville Maryland",
     "family auto repair shop Beltsville",
     "engine diagnostics Beltsville",
+    "alternator repair Beltsville MD",
+    "starter repair Beltsville MD",
+    "auto electrical repair Beltsville",
     "Morgatech Auto Repair",
   ],
   
@@ -42,8 +45,8 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Morgatech Auto Repair — Beltsville, MD | Diagnosed Right. Fixed Right.",
-    description: "Family-run auto repair in Beltsville, MD. Brakes, suspension, cooling system and more. 70+ Google reviews. TechNet 24-month/24k warranty on qualifying repairs.",
+    title: "Auto Repair in Beltsville, MD | Morgatech — Diagnosed Right. Fixed Right.",
+    description: "70+ Google reviews. 7+ years family-run auto repair in Beltsville, MD. Brakes, suspension, AC, electrical, and more. TechNet 24-month warranty. Call (301)-477-4113.",
     url: "https://morgatechauto.com",
     siteName: "Morgatech Auto Repair",
     images: [

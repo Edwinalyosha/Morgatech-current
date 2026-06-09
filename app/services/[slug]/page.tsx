@@ -22,10 +22,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!service) return {};
 
   return {
-    title: `${service.title} Services`,
+    title: service.overviewTitle,
     description: service.description,
     openGraph: {
-      title: `${service.title} Services | Morgatech Auto Repair`,
+      title: `${service.overviewTitle} | Morgatech Auto Repair`,
       description: service.description,
     },
   };
