@@ -79,10 +79,27 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Loaded as print media then swapped to all on load, so it doesn't block first paint */}
         <link
+          id="material-symbols-font"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
+          media="print"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "document.getElementById('material-symbols-font').addEventListener('load',function(){this.media='all';});",
+          }}
+        />
+        <noscript>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+          />
+        </noscript>
         {/* LocalBusiness structured data — tells Google who we are, where we are, and when we're open */}
         <script
           type="application/ld+json"
