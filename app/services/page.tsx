@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Auto Repair Services in Beltsville, MD",
   description:
     "70+ Google reviews. Brakes, suspension, AC, electrical, starter & alternator repair in Beltsville, MD. Honest diagnosis, clear pricing, TechNet 24-month warranty. Call (301)-477-4113.",
+  alternates: {
+    canonical: "/services",
+  },
   openGraph: {
     title: "Auto Repair Services in Beltsville, MD | Morgatech",
     description:

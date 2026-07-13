@@ -40,6 +40,9 @@ export async function generateMetadata({
   return {
     title: `${post.title} | Morgatech Auto`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,

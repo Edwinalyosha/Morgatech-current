@@ -17,11 +17,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://morgatechauto.com"),
   title: {
-    default: "Auto Repair in Beltsville, MD | Morgatech — Diagnosed Right. Fixed Right.",
+    default: "Auto Repair Beltsville, MD | 70+ Reviews | (301) 477-4113",
     template: "%s | Morgatech Auto Repair",
   },
   description:
-    "70+ Google reviews. 7+ years family-run auto repair in Beltsville, MD. Brakes, suspension, AC, electrical, and more. TechNet 24-month warranty. Call (301)-477-4113.",
+    "70+ 5-star Google reviews. Same-day service on most repairs. Domestic, European & luxury makes welcome. Family-run, 7+ years in Beltsville, MD. (301)-477-4113.",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "auto repair Beltsville MD",
     "car repair Beltsville",
@@ -45,8 +48,8 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Auto Repair in Beltsville, MD | Morgatech — Diagnosed Right. Fixed Right.",
-    description: "70+ Google reviews. 7+ years family-run auto repair in Beltsville, MD. Brakes, suspension, AC, electrical, and more. TechNet 24-month warranty. Call (301)-477-4113.",
+    title: "Auto Repair Beltsville, MD | 70+ Reviews | (301) 477-4113",
+    description: "70+ 5-star Google reviews. Same-day service on most repairs. Domestic, European & luxury makes welcome. Family-run, 7+ years in Beltsville, MD. (301)-477-4113.",
     url: "https://morgatechauto.com",
     siteName: "Morgatech Auto Repair",
     images: [

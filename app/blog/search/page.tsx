@@ -8,6 +8,13 @@ import { BLOG_POSTS } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Search Results | Morgatech Auto",
   description: "Search our archive of automotive engineering insights.",
+  alternates: {
+    canonical: "/blog/search",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 interface SearchPageProps {

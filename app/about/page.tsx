@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "About Us",
   description:
     "7+ years serving Beltsville, MD. Family-run auto repair shop — we tell you exactly what we find, and what it costs, before we touch anything. TechNet 24-month/24k warranty on qualifying repairs.",
+  alternates: {
+    canonical: "/about",
+  },
   openGraph: {
     title: "About Morgatech Auto Repair — Beltsville, MD",
     description:

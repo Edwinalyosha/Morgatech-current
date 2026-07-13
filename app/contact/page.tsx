@@ -6,13 +6,18 @@ import { EmergencyCTA } from "@/features/contact/components/EmergencyCTA";
 import { FAQ_ITEMS } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: {
+    absolute: "Contact Morgatech | (301) 477-4113 | Beltsville, MD",
+  },
   description:
-    "Call (301)-477-4113 or visit us at 6713 Ammendale Rd, Beltsville MD 20705. Mon–Fri 9 AM–6 PM. We tell you what we find before we touch anything.",
+    "70+ 5-star Google reviews. Call (301)-477-4113 or visit 6713 Ammendale Rd, Beltsville, MD. Mon–Fri 9 AM–6 PM. Same-day service on most repairs.",
+  alternates: {
+    canonical: "/contact",
+  },
   openGraph: {
     title: "Contact Morgatech Auto Repair — Beltsville, MD",
     description:
-      "Call (301)-477-4113. 6713 Ammendale Rd, Beltsville MD 20705. Mon–Fri 9 AM–6 PM.",
+      "70+ 5-star Google reviews. Call (301)-477-4113. 6713 Ammendale Rd, Beltsville MD 20705. Mon–Fri 9 AM–6 PM.",
   },
 };
 

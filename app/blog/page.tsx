@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Auto Repair Tips & Guides — Beltsville, MD",
   description:
     "Practical auto repair advice from Morgatech in Beltsville, MD. Guides on brake repair, suspension, cooling systems, engine diagnostics, and car maintenance.",
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
     title: "Auto Repair Tips & Guides — Beltsville, MD | Morgatech Auto Repair",
     description:
