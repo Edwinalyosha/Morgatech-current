@@ -1,0 +1,21 @@
+# .graphifyignore — MTECH
+# Claude reads n8n/*.md companion files for workflow reference — JSON extraction wastes tokens.
+
+# n8n workflow JSON files — each has a .md companion in the same folder
+n8n/*.json
+
+# Next.js build output — generated, not source
+.next/
+
+# Node dependencies
+node_modules/
+
+# Graphify's own output
+graphify-out/
+
+# IDE and tool settings
+.claude/
+.git/
+
+# Analytics exports — raw data, not source
+performance/

@@ -2,6 +2,12 @@ CLAUDE.md — Morgatech Auto Repair
 Loaded automatically by Claude Code every session.
 Do NOT delete or rename this file.
 ---
+STEP 0 → /graphify — run ONLY when files have been added, renamed, or architecture has changed since last session.
+          → Skip if no structural changes — existing graph is still valid. Do NOT run every session.
+          → NEVER read graphify-out/graph.json directly — use /graphify query [term] only.
+          → Workflow reference: read n8n/*.md companion files — never read n8n/*.json directly.
+          → Excluded via .graphifyignore: n8n/*.json .next/ node_modules/ graphify-out/
+---
 1. Project Identity
 Name: Morgatech Auto Repair
 Type: Next.js 16 web application (TypeScript + Tailwind CSS v4)
@@ -20,19 +26,20 @@ build across multiple steps — write first section, then continue in follow-up 
 3. Mandatory Session Start Sequence
 Run IN ORDER at the start of EVERY session before doing anything else.
 ```
-STEP 1 → Read context/project-context.md
-           (static architecture, stack, folder structure, component map)
-STEP 2 → Read memory/session-log.md — LAST ENTRY ONLY
+→ Trust the last session-log entry as your primary brief. Read project-context only if architecture questions arise.
+STEP 1 → Read memory/session-log.md — LAST ENTRY ONLY
            (what was done last session, what was left unfinished, next action)
-STEP 3 → Read memory/problems.md — ACTIVE + RECURRING ONLY (skip resolved)
+STEP 2 → Read memory/problems.md — ACTIVE + RECURRING ONLY (skip resolved)
            (persistent problems that affect current work)
-STEP 4 → Read peers/peer-registry.md
-           → Attempt to read AUREA digest at registered path
-           → Attempt to read DONNA digest at registered path
-           → If either unreachable: note in report, skip, continue — do NOT halt
-           → Flag any peer digest with last_generated older than 14 days as [STALE]
-           → If starting a new phase: also read AUREA memory/solutions-log.md
-STEP 5 → Report to user:
+STEP 3 → Read context/project-context.md ONLY IF: starting a new phase, or architecture question arises
+           (static architecture, stack, folder structure, component map)
+STEP 4 → Read peers/hive-config.md               (reads_from list + hive_path)
+STEP 5 → Read HIVE.md at hive_path               (resolve digest paths for projects in reads_from only)
+           → Attempt to read each digest
+           → If unreachable: note in report, skip, do NOT halt
+           → Flag digest older than 14 days as [STALE]
+           → If starting new phase: also read solutions-log.md of each listed peer
+STEP 6 → Report to user:
            - Last session summary (1-2 lines from session-log)
            - Current active problems (names + status only — no full detail)
            - Peer summaries: AUREA + DONNA phase/progress + peer_relevant problems
@@ -62,6 +69,8 @@ STEP 3 → APPEND to memory/solutions-log.md
 STEP 4 → PATCH context/content-directory.md
            → If any new pages, components, services, or blog content was added
 STEP 5 → OVERWRITE peers/peer-digest.md
+          NOTE: To add or remove peers, request Hive Coordinator
+                — never edit peers\hive-config.md directly
            → Regenerate from current state (see Section 13 for format rules)
 ```
 If session ends abruptly with no explicit close:

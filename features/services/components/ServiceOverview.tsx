@@ -33,6 +33,11 @@ export function ServiceOverview({ service }: ServiceOverviewProps) {
             </div>
           ))}
         </div>
+        {service.stats.some((stat) => /warranty/i.test(stat.label)) && (
+          <p className="text-xs text-slate-400 mt-4 text-center">
+            *Terms and conditions apply.
+          </p>
+        )}
       </div>
     </section>
   );

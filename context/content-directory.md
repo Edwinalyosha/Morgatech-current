@@ -21,26 +21,29 @@ Target audience:
   Domestic, foreign, luxury, hybrid, and EV owners.
   Customers who value honest pricing and transparent communication.
 
-Brand voice (extracted from component copy):
-  Tone: Confident, expert, trustworthy, honest. Slightly technical but accessible.
+Brand voice (updated 2026-06-09):
+  Tone: Confident, calm, symptom-first, no pressure. Mechanic POV, accessible to non-technical readers.
+  Tagline: "Diagnosed Right. Fixed Right. Every time."
   Key phrases:
-    "Trusted Auto Repair in Beltsville"
-    "Certified mechanics, honest pricing, and fast repairs."
-    "We keep your vehicle running at peak performance."
+    "Auto Repair in Beltsville, MD"
+    "We tell you exactly what we find — and what it costs — before we touch anything."
+    "7+ years serving Beltsville and surrounding area (College Park, Laurel, Greenbelt, Prince George's County)"
+    "70+ Google reviews"
+    "Diagnose First — follow the fault to its actual cause"
+    "You Approve Before We Start — nothing starts without your go-ahead"
     "Testing, not guessing." (engine diagnostics tagline)
-    "Expert car care for your vehicle's performance and longevity."
-    "From routine maintenance to complex repairs, our trusted automotive specialists are at your service."
-    "Trusted automotive repair services in Beltsville with skilled mechanics and honest pricing."
-  Badge copy: "Certified Expert Mechanics"
-  Primary CTAs: "Book Appointment" / "Schedule Service" / "Call Now"
-  Avoids: fear-mongering, aggressive upsell language, excessive technical jargon.
-  Emphasizes: transparency, certified expertise, local trust, fair pricing.
+    "TechNet Professional member — 24-month / 24,000-mile nationwide warranty on most repairs"
+    "Free warning light scan — no appointment needed, call ahead"
+  Badge copy: "Diagnosed Right. Fixed Right. Every Time."
+  Primary CTAs: "Schedule Service" / "Call (301)-477-4113" / "Get a Free Scan"
+  Avoids: fear-mongering, aggressive upsell, "state-of-the-art", "no hidden fees" (implicit, not stated), generic automotive clichés.
+  Emphasizes: symptom-first copy, diagnostic authority, transparency, local 7-year trust, TechNet warranty.
 
-Core values (from CORE_VALUES):
-  - Quality Workmanship — OEM parts, latest tools, industry-standard repairs
-  - Honest Pricing — no hidden fees, estimates before work begins
-  - Customer Satisfaction — peace of mind, stress-free visits
-  - Experienced Techs — ASE-certified, diagnostic expertise
+Core values (from CORE_VALUES — updated 2026-05-08):
+  - Diagnose First — follow fault to actual cause, not just the code
+  - You Approve Before We Start — no work without go-ahead, every time
+  - Thorough by Default — look at the whole car, not just the symptom
+  - Family-Run, Community-Focused — 7+ years, remember your car and history
 
 ---
 
