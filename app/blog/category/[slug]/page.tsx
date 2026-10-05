@@ -7,10 +7,14 @@ import { Pagination } from "@/features/blogs/components/Pagination";
 import { NewsletterSection } from "@/features/blogs/components/NewsletterSection";
 import Link from "next/link";
 import Image from "next/image";
-import { BLOG_CATEGORIES, BLOG_POSTS } from "@/lib/constants";
+import { BLOG_CATEGORIES } from "@/lib/constants";
+import { getAllBlogPosts } from "@/lib/overrank";
+
+const PER_PAGE = 6;
 
 interface CategoryPageProps {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ page?: string }>;
 }
 
 export async function generateMetadata({
@@ -39,17 +43,24 @@ export function generateStaticParams() {
   return BLOG_CATEGORIES.map((cat) => ({ slug: cat.slug }));
 }
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
+export default async function CategoryPage({
+  params,
+  searchParams,
+}: CategoryPageProps) {
   const { slug } = await params;
+  const { page: pageParam } = await searchParams;
   const category = BLOG_CATEGORIES.find((c) => c.slug === slug);
   if (!category) notFound();
 
-  const postsInCategory = BLOG_POSTS.filter(
-    (p) => p.category.slug === slug
-  );
-  const featuredPost = postsInCategory[0] ?? BLOG_POSTS[0];
+  const allPosts = await getAllBlogPosts();
+  const postsInCategory = allPosts.filter((p) => p.category.slug === slug);
+  const featuredPost = postsInCategory[0] ?? allPosts[0];
   const gridPosts =
-    postsInCategory.length > 1 ? postsInCategory.slice(1) : BLOG_POSTS.slice(1);
+    postsInCategory.length > 1 ? postsInCategory.slice(1) : allPosts.slice(1);
+
+  const totalPages = Math.max(1, Math.ceil(gridPosts.length / PER_PAGE));
+  const page = Math.min(totalPages, Math.max(1, Number(pageParam) || 1));
+  const pagePosts = gridPosts.slice((page - 1) * PER_PAGE, page * PER_PAGE);
 
   return (
     <>
@@ -166,15 +177,15 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
           {/* Grid of posts */}
           <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-            {gridPosts.map((post) => (
+            {pagePosts.map((post) => (
               <PostCard key={post.id} post={post} variant="compact" />
             ))}
           </div>
         </div>
 
         <Pagination
-          currentPage={1}
-          totalPages={3}
+          currentPage={page}
+          totalPages={totalPages}
           basePath={`/blog/category/${slug}`}
         />
       </section>

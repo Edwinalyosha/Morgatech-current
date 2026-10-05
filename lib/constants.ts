@@ -1070,7 +1070,17 @@ export const AUTHORS: Author[] = [
     avatar: "/logo.png", // ⚠️  Replace with real headshot photo
     bio: "Owner of Morgatech Auto Repair in Beltsville, MD. 7+ years diagnosing and fixing the problems other shops miss.", // ⚠️  Update with real bio
   },
+  {
+    // Byline for articles pulled from the Overrank Content API (see lib/overrank.ts)
+    id: "auth-team",
+    name: "Morgatech Team",
+    role: "Morgatech Auto Repair",
+    avatar: "/logo.png",
+  },
 ];
+
+/** Cover image used when an Overrank article has no thumbnail. */
+export const BLOG_FALLBACK_COVER = "/logo.png";
 
 // ─── Blog Posts ──────────────────────────────────────────────────────────────
 

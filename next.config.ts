@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "lh3.googleusercontent.com",
       },
+      // Overrank article images (see lib/overrank.ts)
+      { protocol: "https", hostname: "images.pexels.com" },
+      { protocol: "https", hostname: "overrank-uploads.s3.us-east-2.amazonaws.com" },
     ],
   },
   async redirects() {

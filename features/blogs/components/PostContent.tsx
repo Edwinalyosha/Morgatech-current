@@ -1,13 +1,15 @@
 interface PostContentProps {
   content: string;
   tags: string[];
+  /** Overrides the article wrapper classes (e.g. for unstyled HTML from Overrank). */
+  articleClassName?: string;
 }
 
-export function PostContent({ content, tags }: PostContentProps) {
+export function PostContent({ content, tags, articleClassName }: PostContentProps) {
   return (
     <div className="lg:col-span-7">
       <article
-        className="prose prose-slate prose-lg max-w-none"
+        className={articleClassName ?? "prose prose-slate prose-lg max-w-none"}
         dangerouslySetInnerHTML={{ __html: content }}
       />
 

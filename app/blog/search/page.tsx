@@ -3,7 +3,7 @@ import { SearchBar } from "@/features/blogs/components/SearchBar";
 import { PostCard } from "@/features/blogs/components/PostCard";
 import { Pagination } from "@/features/blogs/components/Pagination";
 import { EmptySearchState } from "@/features/blogs/components/EmptySearchState";
-import { BLOG_POSTS } from "@/lib/constants";
+import { getAllBlogPosts } from "@/lib/overrank";
 
 export const metadata: Metadata = {
   title: "Search Results | Morgatech Auto",
@@ -26,7 +26,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const query = q.trim();
 
   const results = query
-    ? BLOG_POSTS.filter(
+    ? (await getAllBlogPosts()).filter(
         (p) =>
           p.title.toLowerCase().includes(query.toLowerCase()) ||
           p.excerpt.toLowerCase().includes(query.toLowerCase()) ||
